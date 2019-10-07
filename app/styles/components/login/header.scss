@@ -1,0 +1,11 @@
+.header-login {
+  background-color: $white;
+  padding: 2em 1.5em;
+  height: $header-login-height;
+  text-align: center;
+  .logo-img {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}

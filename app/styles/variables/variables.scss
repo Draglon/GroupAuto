@@ -1,0 +1,139 @@
+// ==================== COLORS =====================
+// White
+$white: #fff;
+$white_00: rgba($white, 0);
+
+// Black
+$black: #000;
+$black_80: rgba($black, .8);
+$black_60: rgba($black, .6);
+$black_25: rgba($black, .25);
+
+// Grey
+$gray: #333;
+$gray-dark: #6e7788;
+$gray-light: #b7bcc4;
+$gray-lighter: #d4d9e3;
+$gray-lightest: #e3e3e3;
+
+// Blue
+$blue: #2c80c9;
+
+// Red
+$red: #ff0019;
+
+// ==================== TEXT COLORS ====================
+$text-color-base: $black;
+$text-color-active: $blue;
+
+// Link style
+$link-color: $blue;
+$link-color-hover: $blue;
+$link-color-active: $blue;
+
+// ==================== BACKGROUND ======================
+$bg-base: $white;
+$bg-active: $blue;
+
+// ==================== FONT FAMILY ===================
+$font-serif: serif;
+$font-sans-serif: sans-serif;
+$font-family-base: 'Roboto', sans-serif;
+
+// ==================== FONT SIZE =======================
+// base
+$font-size-base: 10px;
+// font size
+$font-size12: 1.2em;
+$font-size13: 1.3em;
+$font-size14: 1.4em;
+$font-size16: 1.6em;
+$font-size18: 1.8em;
+$font-size20: 2em;
+$font-size24: 2.4em;
+$font-size28: 2.8em;
+$font-size30: 3em;
+$font-size36: 3.6em;
+$font-size48: 4.8em;
+$font-size70: 7em;
+$font-size84: 8.4em;
+
+// tags
+$font-size-h1: $font-size16; // h1
+$font-size-h2: $font-size14; // h2
+$font-size-h3: $font-size12; // h3
+$font-size-p: $font-size14; // p
+$font-size-btn: $font-size16; // button
+$font-size-input: $font-size14; // select, input, textarea
+$font-size-radio: $font-size14; // radio, checkbox
+
+$font-weight-base: normal;
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$line-height-base: 1.4;
+$letter-spacing-base: 0;
+
+// ==================== BORDERS =======================
+$border-color-base: $gray-lighter;
+$border-width-base: 1px;
+
+$border-style-solid: solid;
+$border-style-dotted: dotted;
+$border-style-dashed: dashed;
+
+$border-radius-base: 4px;
+$border-radius-half: 50%;
+
+$border-solid: $border-width-base $border-style-solid;
+$border-dotted: $border-width-base $border-style-dotted;
+$border-dashed: $border-width-base $border-style-dashed;
+
+$border-solid-base: $border-solid $border-color-base;
+
+// ==================== FORMS: Buttons =======================
+$btn-bg-color: $white_00;
+$btn-border-color: $white_00 !important;
+$btn-border: $border-solid;
+$btn-color: $gray;
+$btn-radius: $border-radius-base;
+$btn-font-size: $font-size-btn;
+$btn-font-family: $font-family-base;
+$btn-font-style: normal;
+$btn-font-weight: $font-weight-medium;
+$btn-padding: 0 1em;
+$btn-height: 44px;
+$btn-width: 100%;
+// Primary Button
+$primary-bg-color: $blue;
+$primary-color: $white;
+// Transparent Button
+$transparent-bg-color: $white_00;
+$transparent-bg-color-hover: $white_00;
+$transparent-color: $gray;
+$transparent-color-hover: $blue;
+$transparent-padding: 0;
+$transparent-height: auto;
+$transparent-width: auto;
+// Link Button
+$link-bg-color: $white_00;
+$link-color: $blue;
+$link-padding: 0;
+$link-height: auto;
+$link-width: auto;
+// ==================== FORMS: Inputs =======================
+$input-bg: inherit;
+$input-border: $border-solid $gray-lightest;
+$input-border-color-focus: $blue;
+$input-border-color-error: $red;
+$input-radius: $border-radius-base;
+$input-color: $gray-dark;
+$input-font-size: $font-size-input;
+$input-font-family: $font-family-base;
+$input-weight: $font-weight-base;
+$input-padding: 0 15px;
+$input-shadow: none;
+$input-height: 36px;
+$placeholder-color: $gray-light;
+
+// ==================== HEADER =======================
+$header-login-height: 9em;

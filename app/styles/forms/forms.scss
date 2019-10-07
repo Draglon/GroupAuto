@@ -1,0 +1,81 @@
+input:focus, button:focus {outline: none !important;}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+textarea,
+select {
+  background-color: $input-bg;
+  border: $input-border;
+  border-radius: $input-radius;
+  box-shadow: $input-shadow;
+  color: $input-color;
+  display: block;
+  font-size: $input-font-size;
+  font-family: $input-font-family;
+  font-weight: $input-weight;
+  padding: $input-padding;
+  height: $input-height;
+  width: 100%;
+
+  &:focus {
+    border-color: $input-border-color-focus;
+  }
+  &.error {
+    border-color: $input-border-color-error;
+  }
+}
+::-webkit-input-placeholder {color: $placeholder-color;opacity: 1;}
+:-moz-placeholder {color: $placeholder-color;opacity: 1;}
+::-moz-placeholder {color: $placeholder-color;opacity: 1;}
+:-ms-input-placeholder {color: $placeholder-color;opacity: 1;}
+:focus::-webkit-input-placeholder {opacity: 0;}
+:focus:-moz-placeholder {opacity: 0;}
+:focus::-moz-placeholder {opacity: 0;}
+:focus:-ms-input-placeholder {opacity: 0;}
+textarea {
+  padding: 15px;
+  height: 180px;
+  resize: none;
+  &::-webkit-input-placeholder {color: $placeholder-color;}
+  &:-moz-placeholder {color: $placeholder-color;}
+  &::-moz-placeholder {color: $placeholder-color;}
+  &:-ms-input-placeholder {color: $placeholder-color;}
+}
+
+// ========================= Buttons =========================
+.btn {
+  @include btn();
+  @include btn-border();
+  @include btn-color();
+  @include btn-font();
+  @include btn-size();
+}
+
+.btn-primary {
+  @include btn-color($primary-bg-color, $primary-color);
+}
+
+.btn-transparent {
+  @include btn-color($transparent-bg-color, $transparent-color);
+  @include btn-size($transparent-padding, $transparent-height, $transparent-width);
+  display: inline;
+  font-size: $font-size13;
+  text-transform: uppercase;
+
+  &:hover {
+    @include btn-color($transparent-bg-color-hover, $transparent-color-hover);
+  }
+}
+
+.btn-link {
+  @include btn-color($link-bg-color, $link-color);
+  @include btn-size($link-padding, $link-height, $link-width);
+  display: inline;
+
+  &:active {
+    border-bottom: 1px solid $blue !important;
+    border-radius: 0;
+  }
+}

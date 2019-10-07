@@ -1,0 +1,63 @@
+* {box-sizing: border-box;margin: 0;padding: 0;outline: none;}
+html {font-size: $font-size-base;}
+body {
+  background: $bg-base;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  letter-spacing: $letter-spacing-base;
+  position: relative;
+}
+figure {display: block;}
+img {border: none;display: block;}
+h1, h2, h3, label {font-weight: $font-weight-medium;}
+h1 {font-size: $font-size-h1;}
+h2 {font-size: $font-size-h2;}
+h3 {font-size: $font-size-h3;}
+p {font-size: $font-size-p;}
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: none;
+  }
+  &:active, &.active {color: $link-color-active;}
+}
+ul {list-style-type: none;
+  li {list-style-type: none;display: block;}
+}
+
+// Global Classes
+.align-left {text-align: left !important;}
+.align-right {text-align: right !important;}
+.align-center {text-align: center !important;}
+.hidden {display: none !important;}
+.text-regular {font-weight: normal;}
+.text-bold {font-weight: bold;}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+  }
+}
+
+// Main
+.main {
+  position: relative;
+}
+
+// Section
+.section {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.wrapper {
+  padding: 0 1.5em;
+}

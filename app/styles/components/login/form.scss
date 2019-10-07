@@ -1,0 +1,42 @@
+.login {
+  padding-top: $header-login-height;
+
+  &__form {
+    padding-top: 4em;
+    padding-bottom: 2.6em;
+
+    .form__field {
+      margin-bottom: 3em;
+      label {
+        display: block;
+        font-size: $font-size12;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid;
+        border-radius: 0;
+        font-size: $font-size14;
+        padding: 0;
+        height: 30px;
+
+        &:focus {
+          border-color: $blue;
+        }
+        &.error {
+          border-color: $red;
+        }
+      }
+    }
+
+    .form__btns {
+      text-align: center;
+      .btn-link {
+        font-size: $font-size12;
+        margin-top: 1.6em;
+      }
+    }
+  }
+}

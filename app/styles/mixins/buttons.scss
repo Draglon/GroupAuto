@@ -1,0 +1,46 @@
+@mixin btn() {
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  box-shadow: none;
+}
+
+@mixin btn-font(
+  $size: $btn-font-size,
+  $weight: $btn-font-weight,
+  $style: $btn-font-style,
+  $family: $btn-font-family,
+) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  font-family: $family;
+}
+
+@mixin btn-border(
+  $border-radius: $btn-radius,
+  $border: $btn-border,
+) {
+  border-radius: $border-radius;
+  border: $border;
+}
+
+@mixin btn-color(
+  $background-color: $btn-bg-color,
+  $color: $btn-color,
+  $border-color: $btn-border-color,
+) {
+  background-color: $background-color;
+  color: $color;
+  border-color: $border-color;
+}
+
+@mixin btn-size(
+  $padding: $btn-padding,
+  $height: $btn-height,
+  $width: $btn-width,
+) {
+  padding: $padding;
+  height: $height;
+  width: $width;
+}

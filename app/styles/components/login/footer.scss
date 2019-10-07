@@ -1,0 +1,77 @@
+.login-footer {
+  text-align: center;
+
+  &__item {
+    padding: 2.7em 0 2.6em;
+
+    &:first-child {
+      position: relative;
+      &:before {
+        content: '';
+        background-color: $gray-lightest;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 6em);
+        width: 120px;
+        height: 1px;
+      }
+    }
+
+    &:last-child {
+      padding: 0 0 2em;
+    }
+  }
+
+  .title {
+    color: $gray-dark;
+    font-size: $font-size12;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    padding-top: .2em;
+    &__img {
+      margin: 0 auto;
+    }
+  }
+
+  .phone {
+    padding-top: .3em;
+    margin-bottom: 1.3em;
+
+    &__number {
+      font-size: $font-size28;
+      font-weight: $font-weight-medium;
+    }
+
+    &__text {
+      color: $gray-light;
+      font-size: $font-size-base;
+    }
+  }
+
+  .email {
+    &__link {
+      font-size: $font-size14;
+    }
+  }
+
+  .schedule {
+    padding-top: .2em;
+
+    &__item {
+      margin-bottom: .2em;
+    }
+
+    &__day {
+      font-size: $font-size12;
+      font-weight: $font-weight-medium;
+    }
+
+    &__time {
+      color: $gray-light;
+      font-size: $font-size12;
+      font-weight: $font-weight-medium;
+    }
+  }
+}

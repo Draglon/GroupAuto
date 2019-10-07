@@ -1,0 +1,18 @@
+- var fields = [
+-   {type: 'text', label: 'Логин', placeholder: 'Введите логин'},
+-   {type: 'password', label: 'Пароль', placeholder: 'Введите пароль'},
+-]
+- var button = 'Войти'
+- var forgotPassword = 'Забыли пароль?'
+
+section.section.login
+  .wrapper
+    form.form.login__form(action="")
+      each field in fields
+        .form__field
+          label #{field.label}
+          input(type=field.type placeholder=field.placeholder autocomplete='off')
+
+      .form__btns
+        button.btn.btn-primary(type="submit") #{button}
+        button.btn.btn-link(type="button") #{forgotPassword}
