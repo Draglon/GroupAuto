@@ -3,8 +3,8 @@
 - var btnCancel = 'Отмена'
 - var btnConfirm = 'Подтвердить'
 
-.modal#modalForgotPassword
-  a.modal__close(href="#")
+.modal.modal-forgot-password#modalForgotPassword
+  a.modal__close#modalClose(href="#")
     i.icon-cross
 
   header.modal__header
@@ -16,7 +16,7 @@
         input(type=field.type placeholder=field.placeholder)
 
       .form__btns
-        button.btn.btn-transparent.btn-cancel(type="button") #{btnCancel}
+        button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
         button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}
 
-.modal__overlay
+.modal__overlay#modalOverlay

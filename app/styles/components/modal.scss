@@ -1,0 +1,49 @@
+.modal {
+  background-color: $white;
+  display: none;
+  min-width: 25em;
+  padding: 1.3em 1.5em 1.6em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 102;
+  &.active {
+    display: block;
+  }
+
+  &__close {
+    color: $gray;
+    position: absolute;
+    top: 1.2em;
+    right: 1.4em;
+
+    &:hover {color: $blue;}
+    i {font-size: $font-size24;}
+  }
+
+  &__header {
+    margin-right: 2.5em;
+    margin-bottom: 1.5em;
+  }
+
+  &__title {
+    font-size: $font-size16;
+    line-height: 1.15em;
+  }
+
+  .form__btns {
+    text-align: right;
+  }
+
+  &__overlay {
+    background-color: $black_60;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+  }
+}

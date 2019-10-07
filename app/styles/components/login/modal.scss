@@ -1,43 +1,15 @@
-.modal {
-  background-color: $white;
-  min-width: 25em;
-  padding: 1.5em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 102;
+.modal-forgot-password {
 
-  &__close {
-    color: $gray;
-    position: absolute;
-    top: 1.2em;
-    right: 1.4em;
-
-    &:hover {
-      color: $blue;
-    }
-
-    i {
-      font-size: $font-size24;
-    }
-  }
-
-  &__title {
-    font-size: $font-size16;
+  .form__field {
+    margin-bottom: 2em;
   }
 
   .form__btns {
-    text-align: right;
+    border-top: 1px solid $gray-light;
+    padding-top: 1.6em;
   }
 
-  &__overlay {
-    background-color: $black_60;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 101;
+  .btn-cancel {
+    margin-right: 1em;
   }
 }
