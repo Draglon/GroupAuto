@@ -439,6 +439,62 @@ textarea:-ms-input-placeholder {
   z-index: 100;
 }
 
+.modal {
+  background-color: #fff;
+  display: none;
+  min-width: 25em;
+  padding: 1.3em 1.5em 1.6em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 102;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal__close {
+  color: #333;
+  position: absolute;
+  top: 1.2em;
+  right: 1.4em;
+}
+
+.modal__close:hover {
+  color: #2c80c9;
+}
+
+.modal__close i {
+  font-size: 2.4em;
+}
+
+.modal__header {
+  margin-right: 2.5em;
+  margin-bottom: 1.5em;
+}
+
+.modal__title {
+  font-size: 1.6em;
+  line-height: 1.15em;
+}
+
+.modal .form__btns {
+  text-align: right;
+}
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+
 .header-login {
   background-color: #fff;
   padding: 2em 1.5em;
@@ -576,46 +632,15 @@ textarea:-ms-input-placeholder {
   font-weight: 500;
 }
 
-.modal {
-  background-color: #fff;
-  min-width: 25em;
-  padding: 1.5em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 102;
+.modal-forgot-password .form__field {
+  margin-bottom: 2em;
 }
 
-.modal__close {
-  color: #333;
-  position: absolute;
-  top: 1.2em;
-  right: 1.4em;
+.modal-forgot-password .form__btns {
+  border-top: 1px solid #b7bcc4;
+  padding-top: 1.6em;
 }
 
-.modal__close:hover {
-  color: #2c80c9;
-}
-
-.modal__close i {
-  font-size: 2.4em;
-}
-
-.modal__title {
-  font-size: 1.6em;
-}
-
-.modal .form__btns {
-  text-align: right;
-}
-
-.modal__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 101;
+.modal-forgot-password .btn-cancel {
+  margin-right: 1em;
 }

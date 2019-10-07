@@ -23,7 +23,7 @@
       </div>
       <div class="form__btns">
         <button class="btn btn-primary" type="submit">Войти</button>
-        <button class="btn btn-link" type="button">Забыли пароль?</button>
+        <button class="btn btn-link" id="btnForgotPassword" type="button">Забыли пароль?</button>
       </div>
     </form>
   </div>
@@ -54,7 +54,7 @@
     </ul>
   </div>
 </footer>
-<div class="modal" id="modalForgotPassword"><a class="modal__close" href="#"><i class="icon-cross"></i></a>
+<div class="modal modal-forgot-password" id="modalForgotPassword"><a class="modal__close" id="modalClose" href="#"><i class="icon-cross"></i></a>
   <header class="modal__header">
     <h2 class="modal__title">Введите логин для напоминания пароля</h2>
   </header>
@@ -64,13 +64,13 @@
         <input type="text" placeholder="Введите email">
       </div>
       <div class="form__btns">
-        <button class="btn btn-transparent btn-cancel" type="button">Отмена</button>
+        <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Отмена</button>
         <button class="btn btn-transparent btn-confirm" type="submit">Подтвердить</button>
       </div>
     </form>
   </div>
 </div>
-<div class="modal__overlay"></div>
+<div class="modal__overlay" id="modalOverlay"></div>
     </main>
   <script type="text/javascript" src="js/common_01.js"></script><script type="text/javascript" src="js/index_01.js"></script></body>
 </html>
