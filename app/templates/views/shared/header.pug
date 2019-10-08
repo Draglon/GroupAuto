@@ -1,0 +1,20 @@
+- var logo = {
+-   src: require('../../../images/logo-small.png'),
+-   alt: 'Groupauto',
+-}
+
+header.header
+  .wrapper
+    figure.logo
+      img.logo-img(src=logo.src alt=logo.alt)
+    ul.menu
+      li.menu__item
+        i.icon-phone
+      li.menu__item
+        i.icon-details
+      li.menu__item
+        i.icon-menu
+    .search
+      input(type="text" placeholder="Поиск")
+      button.btn.btn-primary(type="button")
+        i.icon-search

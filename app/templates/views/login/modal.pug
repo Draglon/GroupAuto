@@ -1,0 +1,22 @@
+- var title = 'Введите логин для напоминания пароля'
+- var field = {type: 'text', placeholder: 'Введите email'}
+- var btnCancel = 'Отмена'
+- var btnConfirm = 'Подтвердить'
+
+.modal.modal-forgot-password#modalForgotPassword
+  a.modal__close#modalClose(href="#")
+    i.icon-cross
+
+  header.modal__header
+    h2.modal__title #{title}
+
+  .modal__content
+    form.form(action="")
+      .form__field
+        input(type=field.type placeholder=field.placeholder)
+
+      .form__btns
+        button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
+        button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}
+
+.modal__overlay#modalOverlay

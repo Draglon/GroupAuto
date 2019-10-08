@@ -1,0 +1,50 @@
+- var contacts = {
+-   serviceCenter: {
+-     title: 'Центр Обслуживания Клиентов',
+-     phone: {
+-       number: '0-800-30-15-15',
+-       text: 'Звонки в пределах Украины бесплатны',
+-     },
+-     email: 'order@groupautoukraine.com',
+-   },
+-   support: {
+-     title: 'СЛУЖБА ПОДДЕРЖКИ / ГОРЯЧАЯ ЛИНИЯ',
+-     logo: {
+-       src: require('../../../images/logo-motul.png'),
+-       alt: 'Motul',
+-     },
+-     phone: {
+-       number: '0-800-30-20-02',
+-       text: 'Звонки в пределах Украины бесплатны',
+-     },
+-     email: 'customerservice@groupautoukraine.com',
+-   },
+-   schedule: {
+-     title: 'ГРАФИК РАБОТЫ',
+-     list: [
+-       {day: 'Понедельник - Суббота: ', time: 'круглосуточно'},
+-       {day: 'Воскресенье: ', time: 'с 10:00'},
+-     ],
+-   },
+- }
+
+footer.login-footer
+  each contact in contacts
+    .login-footer__item
+      h3.title #{contact.title}
+      if contact.logo
+        figure.logo
+          img.logo__img(src=contact.logo.src alt=contact.logo.alt)
+      if contact.phone
+        .phone
+          p.phone__number #{contact.phone.number}
+          p.phone__text #{contact.phone.text}
+      if contact.email
+        .email 
+          a.email__link(href="mailto:"+contact.email) #{contact.email}
+      if contact.list
+        ul.schedule
+          each item in contact.list
+            li.schedule__item
+              span.schedule__day #{item.day}
+              span.schedule__time #{item.time}
