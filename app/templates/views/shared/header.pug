@@ -4,7 +4,7 @@
 -}
 
 header.header
-  .wrapper
+  .header__top
     figure.logo
       img.logo-img(src=logo.src alt=logo.alt)
     ul.menu
@@ -14,7 +14,8 @@ header.header
         i.icon-details
       li.menu__item
         i.icon-menu
-    .search
-      input(type="text" placeholder="Поиск")
-      button.btn.btn-primary(type="button")
-        i.icon-search
+
+  .search
+    input(type="text" placeholder="Поиск")
+    button.btn.btn-primary(type="button")
+      i.icon-search

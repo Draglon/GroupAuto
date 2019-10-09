@@ -8,6 +8,7 @@ $black: #000;
 $black_80: rgba($black, .8);
 $black_60: rgba($black, .6);
 $black_25: rgba($black, .25);
+$black_15: rgba($black, .15);
 
 // Grey
 $gray: #333;
@@ -33,6 +34,7 @@ $link-color-active: $blue;
 
 // ==================== BACKGROUND ======================
 $bg-base: $white;
+$bg-footer: $gray-dark;
 $bg-active: $blue;
 
 // ==================== FONT FAMILY ===================
@@ -44,6 +46,7 @@ $font-family-base: 'Roboto', sans-serif;
 // base
 $font-size-base: 10px;
 // font size
+$font-size11: 1.1em;
 $font-size12: 1.2em;
 $font-size13: 1.3em;
 $font-size14: 1.4em;
@@ -51,6 +54,7 @@ $font-size16: 1.6em;
 $font-size18: 1.8em;
 $font-size20: 2em;
 $font-size24: 2.4em;
+$font-size26: 2.6em;
 $font-size28: 2.8em;
 $font-size30: 3em;
 $font-size36: 3.6em;
@@ -136,4 +140,5 @@ $input-height: 36px;
 $placeholder-color: $gray-light;
 
 // ==================== HEADER =======================
+$header-height: 12em;
 $header-login-height: 9em;

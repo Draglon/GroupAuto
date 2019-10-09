@@ -1,6 +1,11 @@
 .header-login {
   background-color: $white;
   padding: 2em 1.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   height: $header-login-height;
   text-align: center;
   .logo-img {

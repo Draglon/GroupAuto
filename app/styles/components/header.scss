@@ -1,7 +1,56 @@
 .header {
+  background-color: $white;
+  border-radius: 0 0 $border-radius-base $border-radius-base;
+  box-shadow: 0 0 1em $black_15;
+  padding: 1.5em;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  height: $header-height;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+  }
+
+  .search {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: calc(100% - 50px);
+      height: 40px;
+    }
+
+    button {
+      padding: 0;
+      width: 40px;
+      height: 40px;
+
+      i {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__item {
+    margin-left: 2.5em;
+
+    i {
+      color: $gray-dark;
+      cursor: pointer;
+      font-size: 24px;
+      
+      &.icon-details {
+        font-size: 26px;
+      }
+    }
+  }
 }
