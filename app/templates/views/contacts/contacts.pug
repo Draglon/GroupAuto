@@ -1,3 +1,4 @@
+- var title = 'Контакты'
 - var contacts = {
 -   serviceCenter: {
 -     title: 'Центр Обслуживания Клиентов',
@@ -36,28 +37,43 @@
 -   },
 - }
 
-section.section
+section.section.section--contacts
   .wrapper
-    each contact in contacts
-      .login-footer__item
-        h3.title #{contact.title}
-        if contact.logo
-          figure.logo
-            img.logo__img(src=contact.logo.src alt=contact.logo.alt)
-        if contact.phone
-          .phone
-            p.phone__number #{contact.phone.number}
-            p.phone__text #{contact.phone.text}
-        if contact.email
-          .email 
-            a.email__link(href="mailto:"+contact.email) #{contact.email}
-        if contact.schedule
-          ul.schedule
-            each item in contact.schedule
-              li.schedule__item
-                span.schedule__day #{item.day}
-                span.schedule__time #{item.time}
-        if contact.address
-          ul.schedule
-            each item in contact.address
-              li.schedule__item #{item}
+    .section__header
+      h1.section__title #{title}
+
+    .contacts
+      each contact in contacts
+        .contacts__item
+          h3.contacts__title #{contact.title}
+
+          if contact.logo
+            figure.logo
+              img.logo__img(src=contact.logo.src alt=contact.logo.alt)
+
+          if contact.phone
+            .phone
+              i.icon-phone
+              p.phone__number #{contact.phone.number}
+              p.phone__text #{contact.phone.text}
+
+          if contact.email
+            .email
+              i.icon-mail
+              a.email__link(href="mailto:"+contact.email) #{contact.email}
+
+          if contact.schedule
+            .schedule
+              i.icon-clock
+              each item in contact.schedule
+                .schedule__item
+                  span.schedule__day #{item.day}
+                  span.schedule__time #{item.time}
+
+          if contact.address
+            .location
+              i.icon-location
+              each item in contact.address
+                .location__item #{item}
+            .location__map
+              img(src=require('../../../images/map.png') alt="Map")

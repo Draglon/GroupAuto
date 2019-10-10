@@ -1,0 +1,118 @@
+.contacts {
+
+  &__item {
+    margin-bottom: 4.5em;
+  }
+
+  &__title {
+    font-size: $font-size14;
+    text-transform: uppercase;
+  }
+
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:before {
+      color: $blue;
+      font-size: $font-size24;
+    }
+  }
+
+  .logo {
+    padding-top: .2em;
+  }
+  
+  .phone {
+    margin-top: .5em;
+    margin-bottom: 1.3em;
+    padding-left: 3.5em;
+    position: relative;
+
+    i {
+      top: .6em;
+      &:before {
+        font-size: $font-size22;
+      }
+    }
+
+    &__number {
+      font-size: $font-size18;
+      font-weight: $font-weight-medium;
+    }
+
+    &__text {
+      color: $gray-light;
+      font-size: $font-size-base;
+      margin-top: -.3em;
+    }
+  }
+  
+  .email {
+    padding-left: 3.5em;
+    position: relative;
+
+    i {
+      top: -.3em;
+      &:before {
+        font-size: $font-size22;
+      }
+    }
+
+    &__link {
+      font-size: $font-size12;
+      font-weight: $font-weight-medium;
+    }
+  }
+  
+  .schedule {
+    padding-top: 1em;
+    padding-left: 3.5em;
+    position: relative;
+
+    i {
+      top: 1.4em;
+    }
+
+    &__item {
+      margin-bottom: .2em;
+    }
+
+    &__day {
+      color: $gray-dark;
+      font-size: $font-size12;
+    }
+
+    &__time {
+      color: $gray-dark;
+      font-size: $font-size12;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .location {
+    padding-top: 1.6em;
+    padding-left: 3.5em;
+    padding-bottom: 1.6em;
+    position: relative;
+
+    i {
+      top: 1.5em;
+      &:before {
+        font-size: $font-size26;
+      }
+    }
+
+    &__item {
+      color: $gray-dark;
+      font-size: $font-size12;
+      margin-bottom: 2px;
+    }
+
+    &__map {
+      img {
+        max-width: 100%;
+      } 
+    }
+  }
+}

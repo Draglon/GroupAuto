@@ -261,11 +261,24 @@ ul li {
   position: relative;
 }
 
+.page {
+  padding-top: 12em;
+}
+
 .section {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.section__header {
+  padding: 1.6em 0;
+}
+
+.section__title {
+  color: #1e588a;
+  font-size: 1.6em;
 }
 
 .wrapper {
@@ -432,11 +445,85 @@ textarea:-ms-input-placeholder {
 }
 
 .header {
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.15);
+  padding: 1.5em;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  height: 12em;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.header .search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .search input {
+  width: calc(100% - 50px);
+  height: 40px;
+}
+
+.header .search button {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.header .search button i {
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__item {
+  margin-left: 2.5em;
+}
+
+.menu__item i {
+  color: #6e7788;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.menu__item i.icon-details {
+  font-size: 26px;
+}
+
+.footer {
+  background-color: #6e7788;
+  line-height: 4em;
+  padding: 0 1.5em;
+}
+
+.copyright {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.copyright span {
+  font-size: 1.1em;
+}
+
+.copyright span:first-child {
+  margin-right: .5em;
+}
+
+.copyright .icon-copyright {
+  font-size: 2.4em;
+  margin-bottom: 5px;
 }
 
 .modal {
@@ -495,9 +582,22 @@ textarea:-ms-input-placeholder {
   z-index: 101;
 }
 
+.advertising {
+  margin: 3em 0;
+}
+
+.advertising img {
+  max-width: 100%;
+}
+
 .header-login {
   background-color: #fff;
   padding: 2em 1.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   height: 9em;
   text-align: center;
 }
@@ -643,4 +743,122 @@ textarea:-ms-input-placeholder {
 
 .modal-forgot-password .btn-cancel {
   margin-right: 1em;
+}
+
+.contacts__item {
+  margin-bottom: 4.5em;
+}
+
+.contacts__title {
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+.contacts i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contacts i:before {
+  color: #2c80c9;
+  font-size: 2.4em;
+}
+
+.contacts .logo {
+  padding-top: .2em;
+}
+
+.contacts .phone {
+  margin-top: .5em;
+  margin-bottom: 1.3em;
+  padding-left: 3.5em;
+  position: relative;
+}
+
+.contacts .phone i {
+  top: .6em;
+}
+
+.contacts .phone i:before {
+  font-size: 2.2em;
+}
+
+.contacts .phone__number {
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.contacts .phone__text {
+  color: #b7bcc4;
+  font-size: 10px;
+  margin-top: -.3em;
+}
+
+.contacts .email {
+  padding-left: 3.5em;
+  position: relative;
+}
+
+.contacts .email i {
+  top: -.3em;
+}
+
+.contacts .email i:before {
+  font-size: 2.2em;
+}
+
+.contacts .email__link {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.contacts .schedule {
+  padding-top: 1em;
+  padding-left: 3.5em;
+  position: relative;
+}
+
+.contacts .schedule i {
+  top: 1.4em;
+}
+
+.contacts .schedule__item {
+  margin-bottom: .2em;
+}
+
+.contacts .schedule__day {
+  color: #6e7788;
+  font-size: 1.2em;
+}
+
+.contacts .schedule__time {
+  color: #6e7788;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.contacts .location {
+  padding-top: 1.6em;
+  padding-left: 3.5em;
+  padding-bottom: 1.6em;
+  position: relative;
+}
+
+.contacts .location i {
+  top: 1.5em;
+}
+
+.contacts .location i:before {
+  font-size: 2.6em;
+}
+
+.contacts .location__item {
+  color: #6e7788;
+  font-size: 1.2em;
+  margin-bottom: 2px;
+}
+
+.contacts .location__map img {
+  max-width: 100%;
 }
