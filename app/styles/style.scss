@@ -14,11 +14,14 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/modal';
+@import 'components/aside';
 @import 'components/advertising';
+@import 'components/overlay';
 // Login - page
 @import 'components/login/header';
 @import 'components/login/form';
 @import 'components/login/footer';
-@import 'components/login/modal';
+@import 'components/modal/forgot-password';
 // contact - page
-@import 'components/contact/contact';
+@import 'components/contacts/contacts';
+@import 'components/modal/contacts';

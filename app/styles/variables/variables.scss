@@ -36,7 +36,9 @@ $link-color-active: $blue;
 // ==================== BACKGROUND ======================
 $bg-base: $white;
 $bg-footer: $gray-dark;
+$bg-aside: $white;
 $bg-active: $blue;
+$bg-overlay: $black_60;
 
 // ==================== FONT FAMILY ===================
 $font-serif: serif;
@@ -68,7 +70,7 @@ $font-size84: 8.4em;
 $font-size-h1: $font-size16; // h1
 $font-size-h2: $font-size14; // h2
 $font-size-h3: $font-size12; // h3
-$font-size-p: $font-size14; // p
+$font-size-p: $font-size13; // p
 $font-size-btn: $font-size16; // button
 $font-size-input: $font-size14; // select, input, textarea
 $font-size-radio: $font-size14; // radio, checkbox
@@ -144,3 +146,6 @@ $placeholder-color: $gray-light;
 // ==================== HEADER =======================
 $header-height: 12em;
 $header-login-height: 9em;
+
+// ==================== FOOTER =======================
+$footer-height: 4em;

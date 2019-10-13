@@ -1,0 +1,135 @@
+.aside {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  overflow: auto;
+  width: 100%;
+  z-index: 105;
+  transition: left .5s ease-out;
+
+  &.active {
+    left: 0;
+  }
+
+  &__close {
+    background-color: $gray;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5.5em;
+    height: 5.5em;
+
+    i {
+      color: $white;
+      font-size: $font-size24; 
+    }
+  }
+
+  &__wrapper {
+    background-color: $bg-aside;
+    padding: 1.5em 1.5em #{$footer-height + 1.5em};
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    width: calc(100% - 5.5em);
+  }
+  
+  &__header {
+    padding: 1.5em 0;
+
+    .logo {
+      margin-bottom: 5em;
+
+      &-img {
+        max-width: 18em;
+        margin: 0  auto;
+      }
+    }
+  }
+
+  &__title {
+    color: $blue;
+    font-size: $font-size18;
+  }
+
+  &__address {
+    color: $gray-dark;
+    font-size: $font-size14;
+    font-weight: $font-weight-medium;
+  }
+
+  &__client {
+    padding-top: .5em;
+  }
+
+  &__client-label {
+    font-size: $font-size14;
+  }
+
+  &__client-code {
+    color: $gray-light;
+    font-size: $font-size14;
+  }
+
+  &__nav {
+    padding: 1.5em 0;
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 4.2em;
+    padding: 0 15px;
+    margin: 0 -15px;
+    position: relative;
+
+    &:before {
+      content: '';
+      background-color: $gray-lightest;
+      position: absolute;
+      left: 1.5em;
+      right: 1.5em;
+      bottom: -1px;
+      height: 1px;
+    }
+
+    &.active {
+      background-color: $blue;
+
+      i {
+        color: $white;
+      }
+
+      span {
+        color: $white;
+      }
+    }
+
+    i {
+      color: $blue;
+      font-size: $font-size24;
+      margin: 0 7px;
+    }
+
+    span {
+      color: $gray;
+      font-size: $font-size14;
+      font-weight: $font-weight-medium;
+      white-space: normal;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 5.5em);
+  }
+}

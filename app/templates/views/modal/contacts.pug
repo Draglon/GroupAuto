@@ -1,0 +1,42 @@
+- var title = 'Вы можете позвонить напрямую с сайта'
+- var contacts = [
+-   {
+-     title: 'Центр Обслуживания Клиентов',
+-     phone: {
+-       number: '0-800-30-15-15',
+-       text: 'Звонки в пределах Украины бесплатны',
+-     },
+-   },
+-   {
+-     title: 'СЛУЖБА ПОДДЕРЖКИ / ГОРЯЧАЯ ЛИНИЯ',
+-     phone: {
+-       number: '0-800-30-20-02',
+-       text: 'Звонки в пределах Украины бесплатны',
+-     },
+-     logo: {
+-       src: require('../../../images/logo-motul.png'),
+-       alt: 'Motul',
+-     },
+-   }
+- ]
+
+.modal.modal-contacts#modalContacts
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header.align-center
+    h2.modal__title #{title}
+
+  .modal__content.align-center
+    each contact in contacts
+      .modal-contacts__item
+        h3.modal-contacts__title #{contact.title}
+
+        if contact.logo
+          figure.modal-contacts__logo
+            img.modal-contacts__logo-img(src=contact.logo.src alt=contact.logo.alt)
+
+        if contact.phone
+          .modal-contacts__phone
+            .modal-contacts__phone-number #{contact.phone.number}
+            .modal-contacts__phone-text #{contact.phone.text}

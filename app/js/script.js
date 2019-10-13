@@ -3,6 +3,19 @@ var win_scroll = 0;
 var win_width = 0;
 var win_height = 0;
 
+// =========================================== Modal =======================================
+function openModal(modal) {
+  $(modal).addClass('active');
+  $('#overlay').addClass('active');
+  $('body').addClass('not-scroll');
+}
+
+function closeModal(modal) {
+  $(modal).removeClass('active');
+  $('#overlay').removeClass('active');
+  $('body').removeClass('not-scroll');
+}
+
 // =========================================== Form - validation =======================================
 $.validator.addMethod("customemail",
   function(value, element) {
@@ -83,28 +96,16 @@ var form = function(formContact) {
 
 // =========================================== Document Ready ======================================
 $(document).ready(function() {
-  $('#asidePanelBtn').on('click', function() {
-    $(this).toggleClass("active");
-    $('.aside').toggleClass("active");
-  });
+  // Open modal
+  $('#btnForgotPassword').on('click', function() { openModal('#modalForgotPassword'); });
+  $('#btnContacts').on('click', function() { openModal('#modalContacts'); });
+  // Close modal
+  $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 
-  $('#btnForgotPassword').on('click', function() {
-    $('#modalOverlay').show();
-    $('#modalForgotPassword').addClass("active");
-  });
-
-  $('#modalCancel').on('click', function() {
-    $('#modalOverlay').hide();
-    $('#modalForgotPassword').removeClass("active");
-  });
-  $('#modalClose').on('click', function() {
-    $('#modalOverlay').hide();
-    $('#modalForgotPassword').removeClass("active");
-  });
-  $('#modalOverlay').on('click', function() {
-    $(this).hide();
-    $('#modalForgotPassword').removeClass("active");
-  });
+  // Open aside panel
+  $('#btnMenu').on('click', function() { openModal('#asidePanel'); });
+  // Close aside panel
+  $('#asidePanelClose').on('click', function() { closeModal('#asidePanel'); });
 });
 
 // =========================================== Window Resize and Document Ready ====================

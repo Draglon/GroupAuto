@@ -32,9 +32,9 @@ const common = merge([
                 template: PATHS.source + '/templates/pages/login.pug'
             }),
             new HtmlWebpackPlugin({
-                filename: 'contact.html',
+                filename: 'contacts.html',
                 chunks: ['index', 'common'],
-                template: PATHS.source + '/templates/pages/contact.pug'
+                template: PATHS.source + '/templates/pages/contacts.pug'
             }),
             
             new webpack.optimize.CommonsChunkPlugin({

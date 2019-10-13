@@ -1,0 +1,34 @@
+- var aside = {
+-   title: 'Test 33',
+-   address: '“Euro Gold” г.Днепропетровск',
+-   label: 'Код клиента: ',
+-   clientCode: '1189-10',
+-   menu: [
+-     {href: '/orders', text: 'Заказы', icon: 'icon-cart', active: 'active'},
+-     {href: '/contracts', text: 'Контракты', icon: 'icon-contract', active: ''},
+-     {href: '/contacts', text: 'Контакты', icon: 'icon-phone', active: ''},
+-     {href: '/', text: 'http://order.vladislav.ua.', icon: 'icon-link', active: ''},
+-     {href: '/', text: 'Выход', icon: 'icon-exit', active: ''},
+-   ]
+- }
+
+.aside#asidePanel
+  .aside__close#asidePanelClose
+    i.icon-cross
+
+  .aside__wrapper
+    header.aside__header
+      include ./logo
+      h1.aside__title #{aside.title}
+      .aside__address #{aside.address}
+      .aside__client
+        label.aside__client-label #{aside.label}
+        span.aside__client-code #{aside.clientCode}
+
+    nav.aside__nav
+      each navItem in aside.menu
+        a.aside__nav-item(class=navItem.active href=navItem.href)
+          i(class=navItem.icon)
+          span #{navItem.text}
+
+  include ./footer

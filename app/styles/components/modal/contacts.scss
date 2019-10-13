@@ -1,0 +1,58 @@
+.modal-contacts {
+  min-width: 28em;
+
+  header {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    &:first-child {
+      padding-top: 2.2em;
+      padding-bottom: 2.8em;
+      position: relative;
+      &:before {
+        content: '';
+        background-color: $gray-lightest;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 6em);
+        width: 120px;
+        height: 1px;
+      }
+    }
+
+    &:last-child {
+      padding-top: 2.6em;
+      padding-bottom: 1em;
+    }
+  }
+
+  &__title {
+    color: $gray-light;
+    text-transform: uppercase;
+  }
+
+  &__logo {
+
+  }
+
+  &__logo-img {
+    margin: 0  auto;
+  }
+
+  &__phone {
+    padding-top: .7em;
+  }
+
+  &__phone-number {
+    color: $blue;
+    font-size: $font-size24;
+    font-weight: $font-weight-medium;
+  }
+
+  &__phone-text {
+    color: $gray-light;
+    margin-top: -.3em;
+  }
+}
