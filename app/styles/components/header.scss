@@ -15,26 +15,6 @@
     justify-content: space-between;
     margin-bottom: 1.5em;
   }
-
-  .search {
-    display: flex;
-    justify-content: space-between;
-
-    input {
-      width: calc(100% - 50px);
-      height: 40px;
-    }
-
-    button {
-      padding: 0;
-      width: 40px;
-      height: 40px;
-
-      i {
-        font-size: 24px;
-      }
-    }
-  }
 }
 
 .menu {
@@ -51,6 +31,76 @@
       &.icon-details {
         font-size: 26px;
       }
+    }
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+
+  &__field {
+    position: relative;
+    width: calc(100% - 50px);
+
+    .icon-arrow-down {
+      color: $gray-dark;
+      font-size: $font-size24;
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+    }
+
+    input {
+      height: 40px;
+    }
+  }
+
+  button {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    i {
+      font-size: 24px;
+    }
+  }
+
+  &__dropdown {
+    background-color: $white;
+    box-shadow: 0 .4em .8em $black_25;
+    border-radius: $border-radius-base;
+    padding: 1.5em 1.5em 1em;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 30em;
+    overflow: auto;
+  }
+
+  &__item {
+    margin-bottom: 1em;
+    a {
+      color: $gray-dark;
+      font-size: $font-size14;
+      font-weight: $font-weight-base;
+    }
+  }
+
+  &__btns {
+    border-top: 1px solid $gray-lightest;
+    padding-top: 1.4em;
+  }
+
+  &__btn {
+    margin-bottom: 1em;
+    &:last-child {margin: 0;}
+    .btn {
+      color: $gray-dark;
+      font-size: $font-size14;
+      font-weight: $font-weight-base;
     }
   }
 }

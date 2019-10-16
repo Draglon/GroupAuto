@@ -467,26 +467,6 @@ textarea:-ms-input-placeholder {
   margin-bottom: 1.5em;
 }
 
-.header .search {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header .search input {
-  width: calc(100% - 50px);
-  height: 40px;
-}
-
-.header .search button {
-  padding: 0;
-  width: 40px;
-  height: 40px;
-}
-
-.header .search button i {
-  font-size: 24px;
-}
-
 .menu {
   display: flex;
 }
@@ -503,6 +483,81 @@ textarea:-ms-input-placeholder {
 
 .menu__item i.icon-details {
   font-size: 26px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search__field {
+  position: relative;
+  width: calc(100% - 50px);
+}
+
+.search__field .icon-arrow-down {
+  color: #6e7788;
+  font-size: 2.4em;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.search__field input {
+  height: 40px;
+}
+
+.search button {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.search button i {
+  font-size: 24px;
+}
+
+.search__dropdown {
+  background-color: #fff;
+  box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 1.5em 1.5em 1em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 30em;
+  overflow: auto;
+}
+
+.search__item {
+  margin-bottom: 1em;
+}
+
+.search__item a {
+  color: #6e7788;
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.search__btns {
+  border-top: 1px solid #e3e3e3;
+  padding-top: 1.4em;
+}
+
+.search__btn {
+  margin-bottom: 1em;
+}
+
+.search__btn:last-child {
+  margin: 0;
+}
+
+.search__btn .btn {
+  color: #6e7788;
+  font-size: 1.4em;
+  font-weight: normal;
 }
 
 .footer {
@@ -730,8 +785,8 @@ textarea:-ms-input-placeholder {
 .alert__close {
   cursor: pointer;
   position: absolute;
-  top: 1px;
-  right: 5px;
+  top: .1em;
+  right: .5em;
 }
 
 .alert__close i {
@@ -739,7 +794,7 @@ textarea:-ms-input-placeholder {
 }
 
 .alert__content {
-  box-shadow: 0 0 6em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 1.3em 2.3em 1.2em 5.5em;
   position: relative;
@@ -750,12 +805,12 @@ textarea:-ms-input-placeholder {
   font-size: 3.4em;
   position: absolute;
   top: 50%;
-  left: 8px;
+  left: .8em;
   transform: translateY(-50%);
 }
 
 .alert__title {
-  margin-bottom: 4px;
+  margin-bottom: .4em;
 }
 
 .alert__text {

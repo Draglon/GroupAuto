@@ -4,8 +4,8 @@
   &__close {
     cursor: pointer;
     position: absolute;
-    top: 1px;
-    right: 5px;
+    top: .1em;
+    right: .5em;
 
     i {
       font-size: $font-size24;
@@ -13,7 +13,7 @@
   }
 
   &__content {
-    box-shadow: 0 0 6em $black_10;
+    box-shadow: 0 0 .6em $black_10;
     border-radius: $border-radius-base;
     padding: 1.3em 2.3em 1.2em 5.5em;
     position: relative;
@@ -24,12 +24,12 @@
     font-size: $font-size34;
     position: absolute;
     top: 50%;
-    left: 8px;
+    left: .8em;
     transform: translateY(-50%);
   }
 
   &__title {
-    margin-bottom: 4px;
+    margin-bottom: .4em;
   }
 
   &__text {

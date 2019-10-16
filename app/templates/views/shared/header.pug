@@ -1,7 +1,15 @@
 - var logo = {
 -   src: require('../../../images/logo-small.png'),
 -   alt: 'Groupauto',
--}
+- }
+- var results = [
+-   'фильтр маслянный',
+-   'насос',
+-   '914/5',
+-   'тяга стабилизатора',
+-   'W 912/8',
+-   'DS DOX-1349',
+- ]
 
 header.header
   .header__top
@@ -16,6 +24,19 @@ header.header
         i.icon-menu
 
   .search
-    input(type="text" placeholder="Поиск")
-    button.btn.btn-primary(type="button")
+    .search__field
+      i.icon-arrow-down
+      input(type="text" placeholder="Поиск")
+      .search__dropdown
+        .search__results
+          each result in results
+            .search__item
+              a(href="#") #{result}
+        .search__btns
+          .search__btn
+            a(href="#").btn.btn-transparent Распродажа
+          .search__btn
+            a(href="#").btn.btn-transparent Уценка
+
+    button.btn.btn-primary.btn-search#btnSearch(type="button")
       i.icon-search
