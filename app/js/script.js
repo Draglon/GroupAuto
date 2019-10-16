@@ -107,6 +107,11 @@ $(document).ready(function() {
   $('#btnMenu').on('click', function() { openModal('#asidePanel'); });
   // Close aside panel
   $('#asidePanelClose').on('click', function() { closeModal('#asidePanel'); });
+
+  // Close alert
+  $('#alertClose').on('click', function() {
+    $(this).parent().parent().hide();
+  });
 });
 
 // =========================================== Window Resize and Document Ready ====================

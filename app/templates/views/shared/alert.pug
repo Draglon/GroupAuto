@@ -1,0 +1,14 @@
+- var alert = {
+-   title: 'Уважаемые клиенты!',
+-   text: 'С правой стороны указывается информация о пользователе (контактное лицо, название карточки клиента), номер выбранного контракта, склад отгрузки по умолчанию. Также отображается информация по изменениям графика рабочего дня, акций и тд.',
+-}
+
+.alert#alert
+  .alert__content
+    span.alert__close#alertClose
+      i.icon-cross
+
+    i.icon-attention
+
+    h3.alert__title #{alert.title}
+    p.alert__text #{alert.text}
