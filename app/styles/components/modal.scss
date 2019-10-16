@@ -2,6 +2,8 @@
   background-color: $white;
   display: none;
   min-width: 25em;
+  max-height: 90%;
+  overflow: auto;
   padding: 1.6em 1.5em;
   position: fixed;
   top: 50%;
@@ -32,7 +34,8 @@
     }
   }
 
-  .form__btns {
-    text-align: right;
+  &__footer {
+    border-top: 1px solid $gray-lightest;
+    padding-top: 1.7em;
   }
 }

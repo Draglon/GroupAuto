@@ -329,7 +329,7 @@ input[type=email].error,
 input[type=tel].error,
 textarea.error,
 select.error {
-  border-color: #ff0019;
+  border-color: #f00;
 }
 
 ::-webkit-input-placeholder {
@@ -536,6 +536,8 @@ textarea:-ms-input-placeholder {
   background-color: #fff;
   display: none;
   min-width: 25em;
+  max-height: 90%;
+  overflow: auto;
   padding: 1.6em 1.5em;
   position: fixed;
   top: 50%;
@@ -572,8 +574,9 @@ textarea:-ms-input-placeholder {
   line-height: 1.15em;
 }
 
-.modal .form__btns {
-  text-align: right;
+.modal__footer {
+  border-top: 1px solid #e3e3e3;
+  padding-top: 1.7em;
 }
 
 .aside {
@@ -584,7 +587,7 @@ textarea:-ms-input-placeholder {
   overflow: auto;
   width: 100%;
   z-index: 105;
-  transition: left .5s ease-out;
+  transition: left .3s ease-out;
 }
 
 .aside.active {
@@ -734,7 +737,69 @@ textarea:-ms-input-placeholder {
 .overlay.active {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 101;
-  transition: background-color .3s ease-out;
+}
+
+.modal-details {
+  min-width: 29em;
+}
+
+.modal-details header {
+  margin-right: 7em;
+}
+
+.modal-details h1 {
+  color: #1e588a;
+}
+
+.modal-details__info {
+  border-top: 1px solid #e3e3e3;
+  margin-top: .7em;
+  padding-top: 1.2em;
+}
+
+.modal-details__request {
+  border-top: 1px solid #e3e3e3;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  padding-top: 1em;
+}
+
+.modal-details__sale {
+  margin-bottom: 2em;
+}
+
+.modal-details__request > div,
+.modal-details__sale > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .7em;
+}
+
+.modal-details__item {
+  margin-bottom: 1.5em;
+}
+
+.modal-details__item:last-child {
+  margin: 0;
+}
+
+.modal-details__title {
+  margin-bottom: 2px;
+}
+
+.modal-details__text {
+  color: #6e7788;
+  font-size: 1.4em;
+}
+
+.modal-details__label {
+  color: #6e7788;
+  font-size: 1.2em;
+}
+
+.modal-details__value {
+  color: #b7bcc4;
+  font-size: 1.2em;
 }
 
 .header-login {
@@ -789,7 +854,7 @@ textarea:-ms-input-placeholder {
 }
 
 .login__form .form__field input.error {
-  border-color: #ff0019;
+  border-color: #f00;
 }
 
 .login__form .form__btns {
@@ -1070,4 +1135,104 @@ textarea:-ms-input-placeholder {
 .modal-contacts__phone-text {
   color: #b7bcc4;
   margin-top: -.3em;
+}
+
+.orders__header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  overflow: hidden;
+  padding-top: 2.2em;
+  padding-bottom: .4em;
+  position: relative;
+}
+
+.orders__title {
+  color: #1e588a;
+}
+
+.orders__filter i {
+  color: #6e7788;
+  font-size: 2.4em;
+}
+
+.order {
+  box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.1);
+  margin: 0 -1.5em 1em;
+  padding: 1.2em 1.5em 0;
+  position: relative;
+  z-index: 1;
+}
+
+.order__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .6em;
+}
+
+.order__label {
+  font-size: 1.4em;
+  flex: 0 0 40%;
+}
+
+.order__value {
+  color: #6e7788;
+  font-size: 1.4em;
+  text-align: right;
+}
+
+.order__value.formed {
+  color: #6e7788;
+  font-weight: 500;
+}
+
+.order__value.onProcessing {
+  color: #f00;
+  font-weight: 500;
+}
+
+.order__value.onProcessing > span {
+  color: #6e7788;
+  font-weight: normal;
+}
+
+.order__value.accepted {
+  color: #ff7a00;
+  font-weight: 500;
+}
+
+.order__value.closed {
+  color: #333;
+  font-weight: 500;
+}
+
+.order__value.canceled {
+  color: #6e7788;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.order__value.contract {
+  color: #2c80c9;
+}
+
+.order__show-more {
+  border-top: 1px solid #e3e3e3;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.6em;
+  height: 3.6em;
+}
+
+.order__show-more.active i {
+  transform: rotate(180deg);
+}
+
+.order__show-more i {
+  color: #b7bcc4;
+  font-size: 2.4em;
 }

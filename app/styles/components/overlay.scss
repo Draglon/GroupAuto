@@ -11,6 +11,5 @@
   &.active {
     background-color: $bg-overlay;
     z-index: 101;
-    transition: background-color .3s ease-out;
   }
 }

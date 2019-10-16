@@ -17,11 +17,15 @@
 @import 'components/aside';
 @import 'components/advertising';
 @import 'components/overlay';
+// Modals
+@import 'components/modal/details';
 // Login - page
 @import 'components/login/header';
 @import 'components/login/form';
 @import 'components/login/footer';
 @import 'components/modal/forgot-password';
-// contact - page
+// Contact - page
 @import 'components/contacts/contacts';
 @import 'components/modal/contacts';
+// Orders - page
+@import 'components/orders/orders';

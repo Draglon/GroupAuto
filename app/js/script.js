@@ -99,6 +99,7 @@ $(document).ready(function() {
   // Open modal
   $('#btnForgotPassword').on('click', function() { openModal('#modalForgotPassword'); });
   $('#btnContacts').on('click', function() { openModal('#modalContacts'); });
+  $('#btnDetails').on('click', function() { openModal('#modalDetails'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 

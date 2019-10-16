@@ -1,0 +1,57 @@
+- var title = 'Дополнительная информация'
+- var details = [
+-   {title: 'Способ получения', text: 'Доставка'},
+-   {title: 'Торговая точка', text: 'Основная, д.154, ул.Чорновола, г.Хмельницкий, Хмелн-ая обл. Украина'},
+-   {title: 'Время отгрузки со склада', text: '02.09.2019 в 14:00'},
+-   {title: 'Способ доставки', text: 'Доставка по городу'},
+-   {title: 'Планируемое прибытие', text: '03.09.2019 в 16:00'},
+-   {title: 'Комментарий', text: 'Заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4'},
+- ]
+- var request = {
+-   title: 'Заявка',
+-   list: [
+-     {label: 'Номер заявки', text: '538393'},
+-     {label: 'Дата заявки', text: '02.09.2019'},
+-     {label: 'Сумма заявки', text: '4,42 у.е'},
+-   ]
+- }
+- var sale = {
+-   title: 'Продажа',
+-   list: [
+-     {label: 'Номер продажи', text: '-'},
+-     {label: 'Дата продажи', text: '-'},
+-     {label: 'Сумма продажи', text: '-'},
+-   ]
+- }
+- var btnClose = 'Закрыть'
+
+.modal.modal-details#modalDetails
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  .modal__content
+    .modal-details__info
+      each detail in details
+        .modal-details__item
+          h2.modal-details__title #{detail.title}
+          .modal-details__text #{detail.text}
+
+    .modal-details__request
+      h2.modal-details__title #{request.title}
+      each item in request.list
+        .modal-details__item
+          label.modal-details__label #{item.label}
+          span.modal-details__value #{item.text}
+
+    .modal-details__sale
+      h2.modal-details__title #{sale.title}
+      each item in sale.list
+        .modal-details__item
+          label.modal-details__label #{item.label}
+          span.modal-details__value #{item.text}
+
+  footer.modal__footer.align-right
+    button.btn.btn-transparent.btn-close#modalCancel #{btnClose}

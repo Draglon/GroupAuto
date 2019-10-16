@@ -6,7 +6,7 @@
   overflow: auto;
   width: 100%;
   z-index: 105;
-  transition: left .5s ease-out;
+  transition: left .3s ease-out;
 
   &.active {
     left: 0;

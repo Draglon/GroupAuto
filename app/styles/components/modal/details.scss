@@ -1,0 +1,60 @@
+.modal-details {
+  min-width: 29em;
+
+  header {
+    margin-right: 7em;
+  }
+
+  h1 {
+    color: $blue-dark;
+  }
+
+  &__info {
+    border-top: 1px solid $gray-lightest;
+    margin-top: .7em;
+    padding-top: 1.2em;
+  }
+
+  &__request {
+    border-top: 1px solid $gray-lightest;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    padding-top: 1em;
+  }
+
+  &__sale {
+    margin-bottom: 2em;
+  }
+
+  &__request, &__sale {
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: .7em;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1.5em;
+    &:last-child {margin: 0;}
+  }
+
+  &__title {
+    margin-bottom: 2px;
+  }
+
+  &__text {
+    color: $gray-dark;
+    font-size: $font-size14;
+  }
+
+  &__label {
+    color: $gray-dark;
+    font-size: $font-size12;
+  }
+
+  &__value {
+    color: $gray-light;
+    font-size: $font-size12;
+  }
+}

@@ -1,0 +1,99 @@
+- var title = 'Заказы'
+- var orders = [
+-   {
+-     orderNumber: '101_W_189',
+-     orderDate: '21.08.2019',
+-     amount: '9,45 у.е',
+-     status: 'formed',
+-     contract: '7248-12 Нал/ДН',
+-     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
+-   },
+-   {
+-     orderNumber: '101_W_354',
+-     orderDate: '21.08.2019',
+-     amount: '10,45 у.е',
+-     status: 'onProcessing',
+-     contract: '7248-12 Нал/ДН',
+-     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
+-   },
+-   {
+-     orderNumber: '101_W_354',
+-     orderDate: '21.08.2019',
+-     amount: '10,45 у.е',
+-     status: 'accepted',
+-     contract: '7248-12 Нал/ДН',
+-     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
+-     document: 'Заявка',
+-   },
+-   {
+-     orderNumber: '101_W_354',
+-     orderDate: '21.08.2019',
+-     amount: '10,45 у.е',
+-     status: 'closed',
+-     contract: '7248-12 Нал/ДН',
+-     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
+-     document: 'Продажа',
+-   },
+-   {
+-     orderNumber: '101_W_354',
+-     orderDate: '21.08.2019',
+-     amount: '9,45 у.е',
+-     status: 'canceled',
+-     contract: '7248-12 Нал/ДН',
+-     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
+-   },
+- ]
+- var status = {
+-   formed: 'Формируется',
+-   onProcessing: 'На обработке',
+-   accepted: 'Принят',
+-   closed: 'Закрыт',
+-   canceled: 'Аннулирован',
+- }
+- var startProcessing = ' с 21.02.2019'
+
+section.section.section--orders
+  .wrapper
+    header.orders__header
+      h1.orders__title #{title}
+      .orders__filter
+        i.icon-filter
+
+    .orders__content
+      each order in orders
+        .order
+          .order__item
+            label.order__label Номер заказа:
+            span.order__value
+              a(href="#") #{order.orderNumber}
+
+          .order__item
+            label.order__label Дата заказа:
+            span.order__value #{order.orderDate}
+
+          .order__item
+            label.order__label Сумма:
+            span.order__value #{order.amount}
+
+          .order__item
+            label.order__label Статус:
+            span.order__value(class=order.status)
+              | #{status[order.status]}
+              if order.status === 'onProcessing'
+                span #{startProcessing}
+
+          .order__item
+            label.order__label Контракт:
+            span.order__value.contract #{order.contract}
+
+          .order__item
+            label.order__label Пометка:
+            span.order__value #{order.mark}
+
+          if order.document
+            .order__item
+              label.order__label Тип документа:
+              span.order__value #{order.document}
+
+          .order__show-more#btnShowMore
+            i.icon-arrow-down
