@@ -1,0 +1,32 @@
+.exchange {
+  display: flex;
+  justify-content: space-between;
+  max-width: 29em;
+  margin: 0 auto;
+
+  button {
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    font-size: $font-size11;
+    font-weight: $font-weight-base;
+    height: 30px;
+    width: 140px;
+    i {
+      font-size: $font-size20;
+      margin-right: .15em;
+    }
+  }
+
+  .btn-currency {
+    background-color: $blue-light;
+    color: $blue-dark;
+    margin-right: 7px;
+  }
+  
+  .btn-exchange {
+    background-color: $blue-lighter;
+    color: $blue;
+    margin-left: 7px;
+  }
+}

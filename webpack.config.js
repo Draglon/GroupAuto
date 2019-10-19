@@ -17,53 +17,58 @@ const PATHS = {
 };
 
 const common = merge([
-    {
-        entry: {
-            'index': PATHS.source + '/index.js'
-        },
-        output: {
-            path: PATHS.build,
-            filename: 'js/[name]_01.js'
-        },
-        plugins: [
-            new HtmlWebpackPlugin({
-                filename: 'index.html',
-                chunks: ['index', 'common'],
-                template: PATHS.source + '/templates/pages/login.pug'
-            }),
-            new HtmlWebpackPlugin({
-                filename: 'contacts.html',
-                chunks: ['index', 'common'],
-                template: PATHS.source + '/templates/pages/contacts.pug'
-            }),
-            new HtmlWebpackPlugin({
-              filename: 'orders.html',
-              chunks: ['index', 'common'],
-              template: PATHS.source + '/templates/pages/orders.pug'
-            }),
-            new HtmlWebpackPlugin({
-              filename: 'order.html',
-              chunks: ['index', 'common'],
-              template: PATHS.source + '/templates/pages/order.pug'
-            }),
-            new HtmlWebpackPlugin({
-              filename: 'contracts.html',
-              chunks: ['index', 'common'],
-              template: PATHS.source + '/templates/pages/contracts.pug'
-            }),
-            
-            new webpack.optimize.CommonsChunkPlugin({
-                name: 'common'
-            }),
-            new webpack.ProvidePlugin({
-                $: 'jquery',
-                jQuery: 'jquery'
-            })
-        ]
+  {
+    entry: {
+      'index': PATHS.source + '/index.js'
     },
-    pug(),
-    fonts(),
-    images()
+    output: {
+      path: PATHS.build,
+      filename: 'js/[name]_01.js'
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        filename: 'index.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/index.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'login.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/login.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'contacts.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/contacts.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'orders.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/orders.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'order.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/order.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'contracts.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/contracts.pug'
+      }),
+      
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'common'
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+      })
+    ]
+  },
+  pug(),
+  fonts(),
+  images()
 ]);
 
 module.exports = function(env) {

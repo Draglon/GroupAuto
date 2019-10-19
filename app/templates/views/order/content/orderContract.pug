@@ -1,0 +1,61 @@
+- var order = {
+-   contract: '4598-54 Нал/ДН',
+-   status: 'formed',
+-   orderCreated: 'Test 33',
+-   delivery: {
+-     title: 'Самовывоз',
+-     shipment: '07.09.2019 в 15:00',
+-     deliveryType: 'Доставка по городу г.Депр, Дн-ская обл.,Украина', 
+-     arrivalPlan: '08.09.2019 в 12:00',
+-   },
+-   note: 'для себя',
+- }
+- var status = {
+-   formed: 'Формируется',
+-   onProcessing: 'На обработке',
+-   accepted: 'Принят',
+-   closed: 'Закрыт',
+-   canceled: 'Аннулирован',
+- }
+- var startProcessing = ' с 21.02.2019'
+
+.order.order--details
+  .order__item.active
+    label.order__label Контракт:
+    span.order__value 
+      span.order__contract #{order.contract}
+
+  .order__item
+    label.order__label Статус:
+    span.order__value(class=order.status)
+        | #{status[order.status]}
+        if order.status === 'onProcessing'
+          span #{startProcessing}
+
+  .order__item
+    label.order__label Заказ создал:
+    span.order__value #{order.orderCreated}
+
+  .order__item
+    label.order__label Отгрузка:
+    span.order__value
+      .order__delivery #{order.delivery.title}
+      .order__delivery-list
+        .order__delivery-item
+          label.order__delivery-label Отгрузка:
+          label.order__delivery-value #{order.delivery.shipment}
+
+        .order__delivery-item
+          label.order__delivery-label Способ доставки:
+          label.order__delivery-value #{order.delivery.deliveryType}
+
+        .order__delivery-item
+          label.order__delivery-label План прибытия:
+          label.order__delivery-value #{order.delivery.arrivalPlan}
+
+  .order__item
+    label.order__label Примечание:
+    span.order__value #{order.note}
+
+  .order__show-more
+    i.icon-arrow-down

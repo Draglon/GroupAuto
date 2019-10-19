@@ -777,10 +777,12 @@ textarea:-ms-input-placeholder {
 
 .advertising {
   margin: 3em 0;
+  text-align: center;
 }
 
 .advertising img {
   max-width: 100%;
+  margin: 0 auto;
 }
 
 .alert {
@@ -901,6 +903,23 @@ textarea:-ms-input-placeholder {
 .modal-details__value {
   color: #b7bcc4;
   font-size: 1.2em;
+}
+
+.stub-pages {
+  padding: 2.5em;
+}
+
+.stub-pages__title {
+  font-size: 2.4em;
+  margin-bottom: 1em;
+}
+
+.stub-pages__item {
+  margin-bottom: 1.5em;
+}
+
+.stub-pages__item a {
+  font-size: 1.8em;
 }
 
 .header-login {
@@ -1266,6 +1285,19 @@ textarea:-ms-input-placeholder {
   z-index: 1;
 }
 
+.order__header {
+  padding-top: 1.5em;
+}
+
+.order__title {
+  color: #1e588a;
+}
+
+.order__title:after {
+  content: attr(data-subtitle);
+  color: #6e7788;
+}
+
 .order__item {
   display: none;
   margin-bottom: .6em;
@@ -1341,4 +1373,38 @@ textarea:-ms-input-placeholder {
 .order__show-more i {
   color: #b7bcc4;
   font-size: 2.4em;
+}
+
+.exchange {
+  display: flex;
+  justify-content: space-between;
+  max-width: 29em;
+  margin: 0 auto;
+}
+
+.exchange button {
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: normal;
+  height: 30px;
+  width: 140px;
+}
+
+.exchange button i {
+  font-size: 2em;
+  margin-right: .15em;
+}
+
+.exchange .btn-currency {
+  background-color: #c2d8ed;
+  color: #1e588a;
+  margin-right: 7px;
+}
+
+.exchange .btn-exchange {
+  background-color: #b5ddff;
+  color: #2c80c9;
+  margin-left: 7px;
 }

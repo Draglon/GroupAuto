@@ -1,0 +1,15 @@
+.stub-pages {
+  padding: 2.5em;
+
+  &__title {
+    font-size: $font-size24;
+    margin-bottom: 1em;
+  }
+
+  &__item {
+    margin-bottom: 1.5em;
+    a {
+      font-size: $font-size18;
+    }
+  }
+}

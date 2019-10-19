@@ -1,4 +1,9 @@
 .advertising {
   margin: 3em 0;
-  img {max-width: 100%;}
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
