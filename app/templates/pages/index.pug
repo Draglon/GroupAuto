@@ -1,13 +1,18 @@
-.stub-pages
-  h1.stub-pages__title Страницы
+extends ../base
+block title
+  | Все страницы
 
-  .stub-pages__item
-    a(href='/login.html') Вход
-  .stub-pages__item
-    a(href='/contacts.html') Контакты
-  .stub-pages__item
-    a(href='/orders.html') Заказы
-  .stub-pages__item
-    a(href='/order.html') Заказ
-  .stub-pages__item
-    a(href='/contracts.html') Контракты
+block content
+  .stub-pages
+    h1.stub-pages__title Страницы
+
+    .stub-pages__item
+      a(href='/login.html') Вход
+    .stub-pages__item
+      a(href='/contacts.html') Контакты
+    .stub-pages__item
+      a(href='/orders.html') Заказы
+    .stub-pages__item
+      a(href='/order.html') Заказ
+    .stub-pages__item
+      a(href='/contracts.html') Контракты
