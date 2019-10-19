@@ -522,6 +522,7 @@ textarea:-ms-input-placeholder {
   background-color: #fff;
   box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.25);
   border-radius: 4px;
+  display: none;
   padding: 1.5em 1.5em 1em;
   position: absolute;
   top: 100%;
@@ -529,6 +530,10 @@ textarea:-ms-input-placeholder {
   right: 0;
   max-height: 30em;
   overflow: auto;
+}
+
+.search__dropdown.active {
+  display: block;
 }
 
 .search__item {
@@ -805,7 +810,7 @@ textarea:-ms-input-placeholder {
   font-size: 3.4em;
   position: absolute;
   top: 50%;
-  left: .8em;
+  left: 8px;
   transform: translateY(-50%);
 }
 
@@ -1262,9 +1267,14 @@ textarea:-ms-input-placeholder {
 }
 
 .order__item {
+  display: none;
+  margin-bottom: .6em;
+}
+
+.order__item.active,
+.order__item.visible {
   display: flex;
   justify-content: space-between;
-  margin-bottom: .6em;
 }
 
 .order__label {

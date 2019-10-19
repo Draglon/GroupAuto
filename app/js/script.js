@@ -112,6 +112,16 @@ $(document).ready(function() {
   $('#alertClose').on('click', function() {
     $(this).parent().parent().hide();
   });
+
+  // Search 
+  $('#searchField').on('click', function() {
+    $('#searchDropdown').toggleClass('active');
+  });
+
+  // Orders Show more
+  $('.order__show-more').on('click', function() {
+    $(this).toggleClass('active').parent().find('.order__item').toggleClass('visible');
+  });
 });
 
 // =========================================== Window Resize and Document Ready ====================

@@ -62,20 +62,20 @@ section.section.section--orders
     .orders__content
       each order in orders
         .order
-          .order__item
+          .order__item.active
             label.order__label Номер заказа:
             span.order__value
-              a(href="#") #{order.orderNumber}
+              a(href="/order.html") #{order.orderNumber}
 
-          .order__item
+          .order__item.active
             label.order__label Дата заказа:
             span.order__value #{order.orderDate}
 
-          .order__item
+          .order__item.active
             label.order__label Сумма:
             span.order__value #{order.amount}
 
-          .order__item
+          .order__item.active
             label.order__label Статус:
             span.order__value(class=order.status)
               | #{status[order.status]}
@@ -95,5 +95,5 @@ section.section.section--orders
               label.order__label Тип документа:
               span.order__value #{order.document}
 
-          .order__show-more#btnShowMore
+          .order__show-more
             i.icon-arrow-down

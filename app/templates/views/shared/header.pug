@@ -26,8 +26,8 @@ header.header
   .search
     .search__field
       i.icon-arrow-down
-      input(type="text" placeholder="Поиск")
-      .search__dropdown
+      input#searchField(type="text" placeholder="Поиск")
+      .search__dropdown#searchDropdown
         .search__results
           each result in results
             .search__item

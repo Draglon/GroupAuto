@@ -30,9 +30,13 @@
   z-index: 1;
 
   &__item {
-    display: flex;
-    justify-content: space-between;
+    display: none;
     margin-bottom: .6em;
+
+    &.active, &.visible {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__label {

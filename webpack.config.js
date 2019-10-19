@@ -42,6 +42,11 @@ const common = merge([
               template: PATHS.source + '/templates/pages/orders.pug'
             }),
             new HtmlWebpackPlugin({
+              filename: 'order.html',
+              chunks: ['index', 'common'],
+              template: PATHS.source + '/templates/pages/order.pug'
+            }),
+            new HtmlWebpackPlugin({
               filename: 'contracts.html',
               chunks: ['index', 'common'],
               template: PATHS.source + '/templates/pages/contracts.pug'
