@@ -1,9 +1,30 @@
+.section--order {
+  background-color: $gray-bg;
+}
+
 .order {
   box-shadow: 0 0 .6em $black_10;
   margin: 0 -1.5em 1em;
   padding: 1.2em 1.5em 0;
   position: relative;
   z-index: 1;
+
+  &--details {
+    box-shadow: none;
+  
+    .order__item {
+      border-bottom: 1px solid $gray-lightest;
+      padding-top: .8em;
+      padding-bottom: 1em;
+      margin: 0;
+      &:first-child {padding-top: 0;}
+    }
+  
+    .order__show-more {
+      border: none;
+      margin: 0;
+    }
+  }
 
   &__header {
     padding-top: 1.5em;
@@ -20,6 +41,7 @@
 
   &__item {
     display: none;
+    flex-wrap: wrap;
     margin-bottom: .6em;
 
     &.active, &.visible {
@@ -36,6 +58,7 @@
   &__value {
     color: $gray-dark;
     font-size: $font-size14;
+    flex: 0 0 60%;
     text-align: right;
 
     &.formed {
@@ -89,5 +112,36 @@
       color: $gray-light;
       font-size: $font-size24;
     }
-  }  
+  }
+
+
+  // Delivery
+  &__delivery {
+    background-color: $white;
+    box-shadow: 0 0 .6em $black_10;
+    border-radius: $border-radius-base;
+    flex: 0 0 100%;
+    margin: 1em 0 .5em;
+    padding: .7em 1em .8em;
+    width: 100%;
+  }
+
+  &__delivery-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .8em;
+    &:last-child {margin: 0;}
+  }
+
+  &__delivery-label {
+    font-size: $font-size12;
+    width: 50%;
+  }
+
+  &__delivery-value {
+    color: $gray-light;
+    font-size: $font-size12;
+    text-align: right;
+    width: 50%;
+  }
 }

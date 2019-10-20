@@ -38,20 +38,20 @@
 
   .order__item
     label.order__label Отгрузка:
-    span.order__value
-      .order__delivery #{order.delivery.title}
-      .order__delivery-list
-        .order__delivery-item
-          label.order__delivery-label Отгрузка:
-          label.order__delivery-value #{order.delivery.shipment}
+    span.order__value.delivery #{order.delivery.title}
 
-        .order__delivery-item
-          label.order__delivery-label Способ доставки:
-          label.order__delivery-value #{order.delivery.deliveryType}
+    .order__delivery
+      .order__delivery-item
+        label.order__delivery-label Отгрузка:
+        span.order__delivery-value #{order.delivery.shipment}
 
-        .order__delivery-item
-          label.order__delivery-label План прибытия:
-          label.order__delivery-value #{order.delivery.arrivalPlan}
+      .order__delivery-item
+        label.order__delivery-label Способ доставки:
+        span.order__delivery-value #{order.delivery.deliveryType}
+
+      .order__delivery-item
+        label.order__delivery-label План прибытия:
+        span.order__delivery-value #{order.delivery.arrivalPlan}
 
   .order__item
     label.order__label Примечание:
