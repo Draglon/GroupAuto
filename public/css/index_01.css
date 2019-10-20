@@ -1401,32 +1401,57 @@ textarea:-ms-input-placeholder {
   font-size: 2.4em;
 }
 
-.order__delivery {
+.order__select {
+  color: #2c80c9;
+  cursor: pointer;
+  padding-right: 24px;
+  position: relative;
+}
+
+.order__select i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -10px;
+}
+
+.order__select.active i {
+  transform: rotate(180deg);
+}
+
+.order__dropdown {
   background-color: #fff;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  display: none;
   flex: 0 0 100%;
   margin: 1em 0 .5em;
   padding: .7em 1em .8em;
   width: 100%;
 }
 
-.order__delivery-item {
+.order__dropdown.visible {
+  display: block;
+}
+
+.order__dropdown-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: .8em;
 }
 
-.order__delivery-item:last-child {
+.order__dropdown-item:last-child {
   margin: 0;
 }
 
-.order__delivery-label {
+.order__dropdown-label {
+  color: #6e7788;
   font-size: 1.2em;
   width: 50%;
 }
 
-.order__delivery-value {
+.order__dropdown-value {
   color: #b7bcc4;
   font-size: 1.2em;
   text-align: right;

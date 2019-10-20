@@ -114,31 +114,58 @@
     }
   }
 
+  // Order select
+  &__select {
+    color: $blue;
+    cursor: pointer;
+    padding-right: 24px;
+    position: relative;
 
-  // Delivery
-  &__delivery {
+    i {
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -10px;
+    }
+
+    &.active {
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // Dropdown
+  &__dropdown {
     background-color: $white;
     box-shadow: 0 0 .6em $black_10;
     border-radius: $border-radius-base;
+    display: none;
     flex: 0 0 100%;
     margin: 1em 0 .5em;
     padding: .7em 1em .8em;
     width: 100%;
+
+    &.visible {
+      display: block;
+    }
   }
 
-  &__delivery-item {
+  &__dropdown-item {
     display: flex;
     justify-content: space-between;
     margin-bottom: .8em;
     &:last-child {margin: 0;}
   }
 
-  &__delivery-label {
+  &__dropdown-label {
+    color: $gray-dark;
     font-size: $font-size12;
     width: 50%;
   }
 
-  &__delivery-value {
+  &__dropdown-value {
     color: $gray-light;
     font-size: $font-size12;
     text-align: right;

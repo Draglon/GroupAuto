@@ -23,7 +23,9 @@
   .order__item.active
     label.order__label Контракт:
     span.order__value 
-      span.order__contract #{order.contract}
+      span.order__select
+        | #{order.contract}
+        i.icon-arrow-down
 
   .order__item
     label.order__label Статус:
@@ -38,20 +40,23 @@
 
   .order__item
     label.order__label Отгрузка:
-    span.order__value.delivery #{order.delivery.title}
+    span.order__value
+      span.order__select
+        | #{order.delivery.title}
+        i.icon-arrow-down
 
-    .order__delivery
-      .order__delivery-item
-        label.order__delivery-label Отгрузка:
-        span.order__delivery-value #{order.delivery.shipment}
+    .order__dropdown
+      .order__dropdown-item
+        label.order__dropdown-label Отгрузка:
+        span.order__dropdown-value #{order.delivery.shipment}
 
-      .order__delivery-item
-        label.order__delivery-label Способ доставки:
-        span.order__delivery-value #{order.delivery.deliveryType}
+      .order__dropdown-item
+        label.order__dropdown-label Способ доставки:
+        span.order__dropdown-value #{order.delivery.deliveryType}
 
-      .order__delivery-item
-        label.order__delivery-label План прибытия:
-        span.order__delivery-value #{order.delivery.arrivalPlan}
+      .order__dropdown-item
+        label.order__dropdown-label План прибытия:
+        span.order__dropdown-value #{order.delivery.arrivalPlan}
 
   .order__item
     label.order__label Примечание:

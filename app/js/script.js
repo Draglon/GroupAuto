@@ -122,6 +122,11 @@ $(document).ready(function() {
   $('.order__show-more').on('click', function() {
     $(this).toggleClass('active').parent().find('.order__item').toggleClass('visible');
   });
+
+  // Orders Show more
+  $('.order__select').on('click', function() {
+    $(this).toggleClass('active').parent().next().toggleClass('visible');
+  });
 });
 
 // =========================================== Window Resize and Document Ready ====================
