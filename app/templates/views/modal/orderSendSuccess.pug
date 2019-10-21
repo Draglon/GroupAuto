@@ -1,0 +1,12 @@
+- var title = 'Ваш заказ отправлен в обработку'
+- var btnDone = 'Готово'
+
+.modal.modal-order-send-success#modalOrderSendSuccess
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  footer.modal__footer.align-right
+    button.btn.btn-transparent.btn-done#modalCancel(type="button") #{btnDone}

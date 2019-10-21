@@ -1,5 +1,6 @@
 .modal {
   background-color: $white;
+  border-radius: 2px;
   display: none;
   min-width: 25em;
   max-height: 90%;
@@ -37,5 +38,13 @@
   &__footer {
     border-top: 1px solid $gray-lightest;
     padding-top: 1.7em;
+
+    .btn {
+      margin-left: 13px;
+    }
+
+    .btn-confirm {
+      color: $blue;
+    }
   }
 }

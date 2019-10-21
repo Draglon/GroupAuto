@@ -97,7 +97,7 @@
   <button class="btn btn-exchange" id="btnExchange"><i class="icon-refresh"></i>Обновить цены</button>
 </div>
 <div class="products">
-  <div class="product">
+  <div class="product"><span class="product__cancel"><i class="icon-cross"></i></span>
     <div class="product__label">MANN W 914/2</div>
     <div class="product__title">Поршень охлаждения</div>
     <div class="product__item"><span class="product__item-label">Цена:</span><span class="product__item-value">2.44 y.e</span></div>
@@ -118,7 +118,7 @@
       </div>
     </div>
   </div>
-  <div class="product">
+  <div class="product"><span class="product__cancel"><i class="icon-cross"></i></span>
     <div class="product__label">MANN W 914/2</div>
     <div class="product__title">Поршень охлаждения</div>
     <div class="product__item"><span class="product__item-label">Цена:</span><span class="product__item-value">2.44 y.e</span></div>
@@ -139,7 +139,7 @@
       </div>
     </div>
   </div>
-  <div class="product">
+  <div class="product"><span class="product__cancel"><i class="icon-cross"></i></span>
     <div class="product__label">MANN W 914/2</div>
     <div class="product__title">Поршень охлаждения</div>
     <div class="product__item"><span class="product__item-label">Цена:</span><span class="product__item-value">2.44 y.e</span></div>
@@ -174,7 +174,7 @@
       <label class="products__total-label">Сумма итого:</label><span class="products__total-value">38.65 y.e.</span>
     </div>
   </div>
-  <button class="btn btn-primary btnSend" type="button"><i class="icon-cube"></i>Отправить на обработку</button>
+  <button class="btn btn-primary btnSend" id="btnOrderSend" type="button"><i class="icon-cube"></i>Отправить на обработку</button>
 </div>
   </div>
 </section>
@@ -186,6 +186,36 @@
 </footer>
       </div>
     </main>
+<div class="modal modal-product-cancel" id="modalProductCancel"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+  <header class="modal__header">
+    <h1 class="modal__title">Вы действительно хотите удалить товар?</h1>
+  </header>
+  <footer class="modal__footer align-right">
+    <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Отмена</button>
+    <button class="btn btn-transparent btn-confirm" type="button">Подтвердить</button>
+  </footer>
+</div>
+<div class="modal modal-order-send" id="modalOrderSend"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+  <header class="modal__header">
+    <h1 class="modal__title">Отправить заказ на обработку?</h1>
+  </header>
+  <div class="modal__content">
+    <p>Контракт - 1189-10, Валюта - y.e</p>
+    <p>Склад отгрузки - Центральный склад</p>
+  </div>
+  <footer class="modal__footer align-right">
+    <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Отмена</button>
+    <button class="btn btn-transparent btn-confirm" id="btnConfirmOrderSendSuccess" type="button">Подтвердить</button>
+  </footer>
+</div>
+<div class="modal modal-order-send-success" id="modalOrderSendSuccess"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+  <header class="modal__header">
+    <h1 class="modal__title">Ваш заказ отправлен в обработку</h1>
+  </header>
+  <footer class="modal__footer align-right">
+    <button class="btn btn-transparent btn-done" id="modalCancel" type="button">Готово</button>
+  </footer>
+</div>
 <div class="modal modal-contacts" id="modalContacts"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
   <header class="modal__header align-center">
     <h2 class="modal__title">Вы можете позвонить напрямую с сайта</h2>

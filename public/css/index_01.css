@@ -594,6 +594,7 @@ textarea:-ms-input-placeholder {
 
 .modal {
   background-color: #fff;
+  border-radius: 2px;
   display: none;
   min-width: 25em;
   max-height: 90%;
@@ -637,6 +638,14 @@ textarea:-ms-input-placeholder {
 .modal__footer {
   border-top: 1px solid #e3e3e3;
   padding-top: 1.7em;
+}
+
+.modal__footer .btn {
+  margin-left: 13px;
+}
+
+.modal__footer .btn-confirm {
+  color: #2c80c9;
 }
 
 .aside {
@@ -1545,7 +1554,20 @@ textarea:-ms-input-placeholder {
   border-radius: 4px;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.1);
   padding: 1em 1em 1.5em;
+  position: relative;
   margin-bottom: 1em;
+}
+
+.product__cancel {
+  cursor: pointer;
+  position: absolute;
+  top: 1px;
+  right: .6em;
+}
+
+.product__cancel i {
+  color: #6e7788;
+  font-size: 2.4em;
 }
 
 .product__label {
@@ -1643,4 +1665,51 @@ textarea:-ms-input-placeholder {
   height: 33px;
   padding: 0 5px;
   text-align: center;
+}
+
+.modal-product-cancel header {
+  margin: 0 2em;
+  padding: 1em 0 2.5em;
+  text-align: center;
+}
+
+.modal-product-cancel header h1 {
+  line-height: 1.43;
+}
+
+.modal-order-send {
+  min-width: 28em;
+}
+
+.modal-order-send header {
+  margin: 0 2em;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.modal-order-send header h1 {
+  line-height: 1.43;
+}
+
+.modal-order-send .modal__content {
+  padding-bottom: 2.5em;
+}
+
+.modal-order-send .modal__content p {
+  color: #6e7788;
+  text-align: center;
+}
+
+.modal-order-send-success {
+  min-width: 25em;
+}
+
+.modal-order-send-success header {
+  margin: 0 2.5em;
+  padding: 1em 0 2.5em;
+  text-align: center;
+}
+
+.modal-order-send-success header h1 {
+  line-height: 1.43;
 }

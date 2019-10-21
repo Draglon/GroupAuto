@@ -1,0 +1,14 @@
+- var title = 'Вы действительно хотите удалить товар?'
+- var btnCancel = 'Отмена'
+- var btnConfirm = 'Подтвердить'
+
+.modal.modal-product-cancel#modalProductCancel
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  footer.modal__footer.align-right
+    button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
+    button.btn.btn-transparent.btn-confirm(type="button") #{btnConfirm}

@@ -1,0 +1,20 @@
+- var title = 'Отправить заказ на обработку?'
+- var text1 = 'Контракт - 1189-10, Валюта - y.e'
+- var text2 = 'Склад отгрузки - Центральный склад'
+- var btnCancel = 'Отмена'
+- var btnConfirm = 'Подтвердить'
+
+.modal.modal-order-send#modalOrderSend
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  .modal__content
+    p #{text1}
+    p #{text2}
+
+  footer.modal__footer.align-right
+    button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
+    button.btn.btn-transparent.btn-confirm#btnConfirmOrderSendSuccess(type="button") #{btnConfirm}

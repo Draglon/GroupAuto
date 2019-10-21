@@ -26,6 +26,8 @@
 .products
   each product in products
     .product
+      span.product__cancel
+        i.icon-cross
       .product__label #{product.label}
       .product__title #{product.title}
       .product__item
@@ -64,6 +66,6 @@
       label.products__total-label Сумма итого:
       span.products__total-value 38.65 y.e.
 
-  button.btn.btn-primary.btnSend(type='button')
+  button.btn.btn-primary.btnSend#btnOrderSend(type='button')
     i.icon-cube
     | #{button}

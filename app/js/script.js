@@ -123,9 +123,20 @@ $(document).ready(function() {
     $(this).toggleClass('active').parent().find('.order__item').toggleClass('visible');
   });
 
-  // Orders Show more
+  // Orders dropdown
   $('.order__select').on('click', function() {
     $(this).toggleClass('active').parent().next().toggleClass('visible');
+  });
+
+  // Product cancel
+  $('.product__cancel').on('click', function() {
+    $(this).on('click', function() { openModal('#modalProductCancel'); });
+  });
+  $('#btnOrderSend').on('click', function() {
+    $(this).on('click', function() { openModal('#modalOrderSend'); });
+  });
+  $('#btnConfirmOrderSendSuccess').on('click', function() {
+    $(this).on('click', function() { openModal('#modalOrderSendSuccess'); });
   });
 });
 

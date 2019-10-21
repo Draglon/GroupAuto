@@ -1,0 +1,21 @@
+.modal-order-send {
+  min-width: 28em;
+
+  header {
+    margin: 0 2em;
+    padding: 1em 0;
+    text-align: center;
+
+    h1 {
+      line-height: 1.43;
+    }
+  }
+
+  .modal__content {
+    padding-bottom: 2.5em;
+    p {
+      color: $gray-dark;
+      text-align: center;
+    }
+  }
+}
