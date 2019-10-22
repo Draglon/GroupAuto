@@ -101,7 +101,6 @@ $(document).ready(function() {
   $('#btnContacts').on('click', function() { openModal('#modalContacts'); });
   $('#btnDetails').on('click', function() { openModal('#modalDetails'); });
   $('#btnDetailsInfo').on('click', function() { openModal('#modalDetails'); });
-  
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 
@@ -138,6 +137,7 @@ $(document).ready(function() {
     $(this).on('click', function() { openModal('#modalOrderSend'); });
   });
   $('#btnConfirmOrderSendSuccess').on('click', function() {
+    closeModal('.modal');
     $(this).on('click', function() { openModal('#modalOrderSendSuccess'); });
   });
 });
