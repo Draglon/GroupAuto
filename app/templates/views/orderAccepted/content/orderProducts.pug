@@ -1,0 +1,52 @@
+- var products = [
+-   {
+-     label: 'MANN W 914/2',
+-     title: 'Поршень охлаждения',
+-     price: 2.44,
+-     unit: 0.11,
+-     status: 'green',
+-   },
+-   {
+-     label: 'MANN W 914/2',
+-     title: 'Поршень охлаждения',
+-     price: 2.44,
+-     unit: 0.11,
+-     status: 'red',
+-   },
+-   {
+-     label: 'MANN W 914/2',
+-     title: 'Поршень охлаждения',
+-     price: 2.44,
+-     unit: 0.11,
+-     status: 'yellow',
+-   }
+- ];
+
+.products
+  each product in products
+    .product
+      .product__label #{product.label}
+      .product__title #{product.title}
+      .product__item
+        span.product__item-label Цена:
+        span.product__item-value #{product.price} y.e
+      .product__item
+        span.product__item-label Unit:
+        span.product__item-value #{product.unit} unit
+
+  .products__total
+    .products__total-item
+      label.products__total-label Кол-во товаров:
+      span.products__total-value 3 шт.
+
+    .products__total-item
+      label.products__total-label Кол-во Unit:
+      span.products__total-value 2.12 шт.
+
+    .products__total-item
+      label.products__total-label Вес:
+      span.products__total-value 0.22 шт.
+
+    .products__total-item
+      label.products__total-label Сумма итого:
+      span.products__total-value 38.65 y.e.

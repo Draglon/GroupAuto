@@ -1,0 +1,11 @@
+- var title = 'Заказ №101_W_190'
+- var subTitle = ' от 22.08.19'
+
+section.section.section--order
+  .wrapper
+    header.order__header
+      h1.order__title(data-subtitle=subTitle) #{title}
+
+    include ./content/orderContract.pug
+    include ./content/orderExchange.pug
+    include ./content/orderProducts.pug

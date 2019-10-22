@@ -26,6 +26,12 @@
     }
   }
 
+  &--accepted {
+    .order__dropdown {
+      display: block;
+    }
+  }
+
   &__header {
     padding-top: 1.5em;
   }

@@ -47,7 +47,7 @@
   background-color: $white;
   border-radius: $border-radius-base;
   box-shadow: 0 0 .6em $black_10;
-  padding: 1em 1em 1.5em;
+  padding: 1em;
   position: relative;
   margin-bottom: 1em;
 
@@ -96,6 +96,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 1.5em;
+    padding-bottom: .5em;
     margin-top: 1em;
   }
 

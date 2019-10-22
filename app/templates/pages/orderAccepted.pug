@@ -1,0 +1,16 @@
+extends ../base
+block title
+  | Заказ принят
+
+block content
+  include ../views/shared/header
+  include ../views/shared/aside
+  .page
+    include ../views/orderAccepted/orderAccepted
+    include ../views/shared/advertising
+    include ../views/shared/footer
+
+block modal
+  include ../views/modal/contacts
+  include ../views/modal/details
+  include ../views/shared/overlay

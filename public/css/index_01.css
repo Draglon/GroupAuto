@@ -1318,6 +1318,10 @@ textarea:-ms-input-placeholder {
   margin: 0;
 }
 
+.order--accepted .order__dropdown {
+  display: block;
+}
+
 .order__header {
   padding-top: 1.5em;
 }
@@ -1501,6 +1505,12 @@ textarea:-ms-input-placeholder {
   margin-left: 7px;
 }
 
+.exchange .btn-details-info {
+  background-color: #c2d8ed;
+  color: #2C58C9;
+  margin-left: 7px;
+}
+
 .products {
   padding-top: 1.5em;
 }
@@ -1553,7 +1563,7 @@ textarea:-ms-input-placeholder {
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.1);
-  padding: 1em 1em 1.5em;
+  padding: 1em;
   position: relative;
   margin-bottom: 1em;
 }
@@ -1603,6 +1613,7 @@ textarea:-ms-input-placeholder {
   justify-content: space-between;
   align-items: center;
   padding-top: 1.5em;
+  padding-bottom: .5em;
   margin-top: 1em;
 }
 
