@@ -1,0 +1,18 @@
+.modal-cart {
+  background-color: $gray-bg;
+  min-width: 32em;
+  max-height: inherit;
+  height: 100%;
+
+  header {
+    margin-bottom: .7em;
+  }
+
+  h1 {
+    color: $blue-dark;
+  }
+
+  .products {
+    padding-top: .5em;
+  }
+}

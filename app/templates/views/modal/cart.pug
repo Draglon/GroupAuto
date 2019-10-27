@@ -1,0 +1,117 @@
+- var title = 'Выбранный товар';
+- var subTitle = 'Аналоги';
+
+- var badge = {
+-   stock: 'Акция',
+-   sale: 'Sale',
+-   markdown: 'Уценка',
+- };
+
+- var selectProduct = {
+-   badge: 'stock',
+-   label: 'MANN W 914/2',
+-   title: 'Поршень охлаждения',
+-   price: '4007',
+-   retail: '70 890,77',
+-   unit: '0,11',
+-   status: 'green',
+- };
+
+- var products = [
+-   {
+-     badge: 'sale',
+-     label: 'MANN W 914/2',
+-     title: 'Поршень охлаждения',
+-     price: '4007,44',
+-     retail: '70 890,77',
+-     unit: '0,11',
+-     status: 'red',
+-   },
+-   {
+-     badge: 'markdown',
+-     label: 'MANN W 914/2',
+-     title: 'Поршень охлаждения',
+-     price: '4008',
+-     retail: '70 890,77',
+-     unit: '0,11',
+-     status: 'yellow',
+-   }
+- ];
+
+.modal.modal-cart#modalCart
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  .modal__content
+    .product.product--select
+      .product__badge(class=selectProduct.badge data-badge=badge[selectProduct.badge])
+      .product__label #{selectProduct.label}
+      .product__title #{selectProduct.title}
+      .product__content
+        .product__list
+          .product__item
+            span.product__item-label Входн.
+            span.product__item-value #{selectProduct.price} y.e
+          .product__item
+            span.product__item-label Розн.
+            span.product__item-value #{selectProduct.retail} y.e
+          .product__item
+            span.product__item-label Unit
+            span.product__item-value #{selectProduct.unit} unit
+        .product__category
+          i.icon-car
+          i.icon-motorbike
+          i.icon-truck
+      .product__total
+        .product__total-item
+          .counter
+            .counter__button
+              i.icon-minus
+            .counter__amount
+              input(type='text' value=3)
+            .counter__button
+              i.icon-plus
+          .product__status(class=selectProduct.status)
+        .product__total-item
+          button.btn.btn-cart
+            i.icon-cart
+
+    h1.modal__title #{subTitle}
+
+    .products
+      each product in products
+        .product
+          .product__badge(class=product.badge data-badge=badge[product.badge])
+          .product__label #{product.label}
+          .product__title #{product.title}
+          .product__content
+            .product__list
+              .product__item
+                span.product__item-label Входн.
+                span.product__item-value #{product.price} y.e
+              .product__item
+                span.product__item-label Розн.
+                span.product__item-value #{product.retail} y.e
+              .product__item
+                span.product__item-label Unit
+                span.product__item-value #{product.unit} unit
+            .product__category
+              i.icon-car
+              i.icon-motorbike
+              i.icon-truck
+          .product__total
+            .product__total-item
+              .counter
+                .counter__button
+                  i.icon-minus
+                .counter__amount
+                  input(type='text' value=3)
+                .counter__button
+                  i.icon-plus
+              .product__status(class=product.status)
+            .product__total-item
+              button.btn.btn-cart
+                i.icon-cart

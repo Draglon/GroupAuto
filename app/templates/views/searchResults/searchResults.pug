@@ -1,0 +1,88 @@
+- var title = 'Результаты поиска по строке:';
+- var searchQuery = 'W 914/2';
+- var sortLink = 'Сортировать';
+- var badge = {
+-   stock: 'Акция',
+-   sale: 'Sale',
+-   markdown: 'Уценка',
+- };
+
+- var products = [
+-   {
+-     badge: 'stock',
+-     label: 'MANN W 914/2',
+-     title: 'Поршень охлаждения',
+-     price: '4007',
+-     retail: '70 890,77',
+-     unit: '0,11',
+-     status: 'green',
+-     article: 'a',
+-   },
+-   {
+-     badge: 'sale',
+-     label: 'MANN W 914/2',
+-     title: 'Поршень охлаждения',
+-     price: '4007,44',
+-     retail: '70 890,77',
+-     unit: '0,11',
+-     status: 'red',
+-     article: 'a',
+-   },
+-   {
+-     badge: 'markdown',
+-     label: 'MANN W 914/2',
+-     title: 'Поршень охлаждения',
+-     price: '4008',
+-     retail: '70 890,77',
+-     unit: '0,11',
+-     status: 'yellow',
+-     article: 'a',
+-   }
+- ];
+
+section.section.section--search-results
+  .wrapper
+    header.search-results__header
+      h1.search-results__title
+        | #{title}
+        span.search-results__query #{searchQuery}
+      .search-results__sorts
+        span.search-results__sorts-link
+          | #{sortLink}
+          i.icon-arrow-down
+
+    .products
+      each product in products
+        .product
+          .product__badge(class=product.badge data-badge=badge[product.badge])
+          .product__label #{product.label}
+          .product__title #{product.title}
+          .product__content
+            .product__list
+              .product__item
+                span.product__item-label Входн.
+                span.product__item-value #{product.price} y.e
+              .product__item
+                span.product__item-label Розн.
+                span.product__item-value #{product.retail} y.e
+              .product__item
+                span.product__item-label Unit
+                span.product__item-value #{product.unit} unit
+            .product__category
+              i.icon-car
+              i.icon-motorbike
+              i.icon-truck
+          .product__total
+            .product__total-item
+              .counter
+                .counter__button
+                  i.icon-minus
+                .counter__amount
+                  input(type='text' value=3)
+                .counter__button
+                  i.icon-plus
+              .product__status(class=product.status)
+              .product__article #{product.article}
+            .product__total-item
+              button.btn.btn-cart
+                i.icon-cart

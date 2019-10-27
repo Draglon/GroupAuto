@@ -101,6 +101,7 @@ $(document).ready(function() {
   $('#btnContacts').on('click', function() { openModal('#modalContacts'); });
   $('#btnDetails').on('click', function() { openModal('#modalDetails'); });
   $('#btnDetailsInfo').on('click', function() { openModal('#modalDetails'); });
+  $('.btn-cart').on('click', function() { openModal('#modalCart'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 

@@ -25,18 +25,22 @@ $blue2: #2C58C9;
 $blue-dark: #1e588a;
 $blue-light: #c2d8ed;
 $blue-lighter: #b5ddff;
+$blue-lightest: #F7FAFD;
 
 // Red
 $red: #f00;
+$red_20: rgba($red, .2);
 
 // Orange
 $orange: #ff7a00;
 
 // Yellow
 $yellow: #ffc700;
+$yellow_20: rgba($yellow, .2);
 
 // Green
 $green: #00d763;
+$green_20: rgba($green, .2);
 
 // ==================== TEXT COLORS ====================
 $text-color-base: $black;

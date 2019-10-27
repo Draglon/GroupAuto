@@ -1,0 +1,18 @@
+extends ../base
+block title
+  | Результаты поиска
+
+block content
+  include ../views/shared/header
+  include ../views/shared/aside
+  .page
+    include ../views/searchResults/searchResults
+    include ../views/shared/pagination
+    include ../views/shared/advertising
+    include ../views/shared/footer
+
+block modal
+  include ../views/modal/cart
+  include ../views/modal/contacts
+  include ../views/modal/details
+  include ../views/shared/overlay

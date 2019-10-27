@@ -2,22 +2,22 @@
 -   {
 -     label: 'MANN W 914/2',
 -     title: 'Поршень охлаждения',
--     price: 2.44,
--     unit: 0.11,
+-     price: '2,44',
+-     unit: '0,11',
 -     status: 'green',
 -   },
 -   {
 -     label: 'MANN W 914/2',
 -     title: 'Поршень охлаждения',
--     price: 2.44,
--     unit: 0.11,
+-     price: '2,44',
+-     unit: '0,11',
 -     status: 'red',
 -   },
 -   {
 -     label: 'MANN W 914/2',
 -     title: 'Поршень охлаждения',
--     price: 2.44,
--     unit: 0.11,
+-     price: '2,44',
+-     unit: '0,11',
 -     status: 'yellow',
 -   }
 - ];
@@ -47,7 +47,7 @@
               i.icon-plus
           .product__status(class=product.status)
         .product__total-item
-          .product__sum #{product.price * 3} y.e
+          .product__sum #{parseFloat(product.price) * 3} y.e
 
   .products__total
     .products__total-item

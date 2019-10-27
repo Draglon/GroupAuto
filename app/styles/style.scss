@@ -17,6 +17,7 @@
 @import 'components/aside';
 @import 'components/advertising';
 @import 'components/alert';
+@import 'components/pagination';
 @import 'components/overlay';
 // Modals
 @import 'components/modal/details';
@@ -39,3 +40,6 @@
 @import 'components/modal/product-cancel';
 @import 'components/modal/order-send';
 @import 'components/modal/order-send-success';
+// Search results - page
+@import 'components/searchResults/searchResults';
+@import 'components/modal/cart';
