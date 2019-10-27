@@ -1,23 +1,23 @@
 - var products = [
 -   {
--     label: 'MANN W 914/2',
--     title: 'Поршень охлаждения',
--     price: 2.44,
--     unit: 0.11,
+-     title: 'MANN W 914/2',
+-     label: 'Поршень охлаждения',
+-     price: '2,44',
+-     unit: '0,11',
 -     status: 'green',
 -   },
 -   {
--     label: 'MANN W 914/2',
--     title: 'Поршень охлаждения',
--     price: 2.44,
--     unit: 0.11,
+-     title: 'MANN W 914/2',
+-     label: 'Поршень охлаждения',
+-     price: '2,44',
+-     unit: '0,11',
 -     status: 'red',
 -   },
 -   {
--     label: 'MANN W 914/2',
--     title: 'Поршень охлаждения',
--     price: 2.44,
--     unit: 0.11,
+-     title: 'MANN W 914/2',
+-     label: 'Поршень охлаждения',
+-     price: '2,44',
+-     unit: '0,11',
 -     status: 'yellow',
 -   }
 - ];
@@ -25,8 +25,8 @@
 .products
   each product in products
     .product
+      h2.product__title #{product.title}
       .product__label #{product.label}
-      .product__title #{product.title}
       .product__item
         span.product__item-label Цена:
         span.product__item-value #{product.price} y.e

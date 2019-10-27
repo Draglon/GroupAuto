@@ -1,0 +1,51 @@
+- var slider = [
+-   {src: require('../../../../images/img.png'), alt: 'AVON 130/70R18 63H TL COBRA CHROME F'},
+-   {src: require('../../../../images/img.png'), alt: 'AVON 130/70R18 63H TL COBRA CHROME F'},
+- ];
+
+- var badge = {
+-   stock: 'Акция',
+-   sale: 'Sale',
+-   markdown: 'Уценка',
+- };
+
+- var product = {
+-   badge: 'stock',
+-   title: 'AVON 130/70R18 63H TL COBRA CHROME F',
+-   label: 'Мотошины Avon Cobra Chrome',
+-   price: '4000,44',
+-   retail: '70000,77',
+-   unit: '0,77',
+-   status: 'green',
+- };
+
+.product.product--description
+  .slider
+    .slider__content
+      each slide in slider
+        .slider__item
+          .slider__badge(class=product.badge data-badge=badge[product.badge])
+          figure.slider__figure
+            img(src=slide.src alt=slide.alt)
+    nav.slider__nav
+      a.slider__nav-item
+
+  h1.product__title #{product.title}
+  .product__label #{product.label}
+
+  .product__content
+    .product__list
+      .product__item
+        span.product__item-label Входн.
+        span.product__item-value #{product.price} y.e
+      .product__item
+        span.product__item-label Розн.
+        span.product__item-value #{product.retail} y.e
+      .product__item
+        span.product__item-label Unit
+        span.product__item-value #{product.unit} unit
+
+    .product__cart
+      .product__status(class=product.status)
+      button.btn.btn-cart
+        i.icon-cart

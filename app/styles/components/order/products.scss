@@ -55,6 +55,23 @@
     background-color: $blue-lightest;
   }
 
+  &--description {
+    background-color: $white_00;
+    padding: 0;
+    box-shadow: none;
+
+    .product__label {
+      font-size: $font-size14;
+      padding-top: 4px;
+    }
+
+    .product__content {
+      border-bottom: 1px solid $gray-lightest;
+      align-items: flex-end;
+      padding-bottom: 1em;
+    }
+  }
+
   &__badge {
     border-radius: 1.5em;
     position: absolute;
@@ -97,12 +114,11 @@
     }
   }
 
-  &__label {
+  &__title {
     color: $blue-dark;
-    font-size: $font-size14;
   }
 
-  &__title {
+  &__label {
     color: $gray-light;
     font-size: $font-size12;
     margin-bottom: .5em;
@@ -111,6 +127,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   &__item {
@@ -197,6 +214,12 @@
     font-weight: $font-weight-bold;
   }
 
+  &__cart {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   .btn-cart {
     color: $blue;
     display: flex;
@@ -206,6 +229,95 @@
     padding: 0;
     height: 33px;
     width: 33px;
+  }
+
+  // Details
+  &__details {
+    padding-top: 1em;
+    padding-bottom: 2.5em;
+  }
+
+  &__details-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .6em;
+  }
+
+  &__details-label {
+    font-size: $font-size14;
+    width: 60%;
+    flex: 0 0 60%;
+  }
+
+  &__details-value {
+    color: $gray-dark;
+    font-size: $font-size14;
+    width: 40%;
+    flex: 0 0 40%;
+    text-align: right;
+  }
+
+  // Description
+  &__description {
+    padding-top: 1em;
+  }
+
+  &__description-item {
+
+    h2 {
+      margin-bottom: 7px;
+    }
+
+    p {
+      color: $gray-dark;
+      margin-bottom: 15px;
+    }
+
+    li {
+      color: $gray-dark;
+      font-size: $font-size13;
+      padding-left: 1em;
+      position: relative;
+      margin-bottom: 15px;
+      &:before {
+        content: '';
+        background-color: $gray-light;
+        border-radius: 50%;
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+
+  // Documents
+  &__docs {
+    padding-top: 1em;
+  }
+
+  &__docs-list {
+    padding-top: 1em;
+  }
+
+  &__docs-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1.8em;
+
+    i {
+      color: $gray-dark;
+      font-size: $font-size28;
+    }
+
+    span {
+      color: $gray-light;
+      font-size: $font-size13;
+      margin-top: .5em;
+      margin-left: .5em;
+    }
   }
 }
 
@@ -233,6 +345,7 @@
   &__amount {
 
     input {
+      background-color: $white;
       font-size: $font-size18;
       font-weight: $font-weight-medium;
       width: 33px;

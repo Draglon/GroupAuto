@@ -102,6 +102,7 @@ $(document).ready(function() {
   $('#btnDetails').on('click', function() { openModal('#modalDetails'); });
   $('#btnDetailsInfo').on('click', function() { openModal('#modalDetails'); });
   $('.btn-cart').on('click', function() { openModal('#modalCart'); });
+  $('#btnShowProduct').on('click', function() { openModal('#modalProductDescription'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 

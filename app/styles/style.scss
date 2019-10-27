@@ -17,6 +17,7 @@
 @import 'components/aside';
 @import 'components/advertising';
 @import 'components/alert';
+@import 'components/slider';
 @import 'components/pagination';
 @import 'components/overlay';
 // Modals
@@ -43,3 +44,5 @@
 // Search results - page
 @import 'components/searchResults/searchResults';
 @import 'components/modal/cart';
+// product description - page
+@import 'components/productDescription/productDescription';

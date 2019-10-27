@@ -1,0 +1,21 @@
+- var details = [
+-   {label: 'Производитель:', value: 'Avon'},
+-   {label: 'Кратность отпуска:', value: '1 шт.'},
+-   {label: 'Тип транспортного средства:', value: 'Мотоцикл'},
+-   {label: 'Ширина профиля:', value: '130'},
+-   {label: 'Высота профиля:', value: '70'},
+-   {label: 'Диаметр обода (дюйм):', value: '18'},
+-   {label: 'Предназначение шины:', value: 'Touring'},
+-   {label: 'Жесткость:', value: 'нет'},
+-   {label: 'Расположение:', value: 'Передняя'},
+-   {label: 'Тип шины:', value: 'Бескамерная'},
+-   {label: 'Индекс нагрузки:', value: '63 (272кг)'},
+-   {label: 'Индекс скорости:', value: 'H-210км/ч'},
+-   {label: 'Бренд:', value: 'AVON'},
+- ]
+
+.product__details
+  each item in details
+    .product__details-item
+      label.product__details-label #{item.label}
+      .product__details-value #{item.value}

@@ -1,0 +1,14 @@
+- var title = 'Документы:';
+- var list = [
+-   {icon: 'icon-contract', text: 'Название док-та'},
+-   {icon: 'icon-contract', text: 'Название док-та'},
+-   {icon: 'icon-contract', text: 'Название док-та'},
+- ];
+
+.product__docs
+  h2.product__docs-title #{title}
+  ul.product__docs-list
+    each item in list
+      li.product__docs-item
+        i(class=item.icon)
+        span #{item.text}

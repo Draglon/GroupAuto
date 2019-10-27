@@ -9,8 +9,8 @@
 
 - var selectProduct = {
 -   badge: 'stock',
--   label: 'MANN W 914/2',
--   title: 'Поршень охлаждения',
+-   title: 'MANN W 914/2',
+-   label: 'Поршень охлаждения',
 -   price: '4007',
 -   retail: '70 890,77',
 -   unit: '0,11',
@@ -20,8 +20,8 @@
 - var products = [
 -   {
 -     badge: 'sale',
--     label: 'MANN W 914/2',
--     title: 'Поршень охлаждения',
+-     title: 'MANN W 914/2',
+-     label: 'Поршень охлаждения',
 -     price: '4007,44',
 -     retail: '70 890,77',
 -     unit: '0,11',
@@ -29,8 +29,8 @@
 -   },
 -   {
 -     badge: 'markdown',
--     label: 'MANN W 914/2',
--     title: 'Поршень охлаждения',
+-     title: 'MANN W 914/2',
+-     label: 'Поршень охлаждения',
 -     price: '4008',
 -     retail: '70 890,77',
 -     unit: '0,11',
@@ -48,8 +48,8 @@
   .modal__content
     .product.product--select
       .product__badge(class=selectProduct.badge data-badge=badge[selectProduct.badge])
+      h2.product__title #{selectProduct.title}
       .product__label #{selectProduct.label}
-      .product__title #{selectProduct.title}
       .product__content
         .product__list
           .product__item
@@ -85,8 +85,8 @@
       each product in products
         .product
           .product__badge(class=product.badge data-badge=badge[product.badge])
+          h2.product__title #{product.title}
           .product__label #{product.label}
-          .product__title #{product.title}
           .product__content
             .product__list
               .product__item
