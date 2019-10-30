@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <title>Попап Корзина
+    </title>
+  <link href="./css/index_01.css" rel="stylesheet"></head>
+  <body>
+    <main class="main">
+      <div class="page">
+        <div class="wrapper">
+          <button class="btn btn-primary btn-cart">Корзина</button>
+        </div>
+      </div>
+    </main>
+<div class="modal modal-cart" id="modalCart"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+  <header class="modal__header">
+    <h1 class="modal__title">Выбранный товар</h1>
+  </header>
+  <div class="modal__content">
+    <div class="product product--select">
+      <div class="product__badge stock" data-badge="Акция"></div>
+      <h2 class="product__title">MANN W 914/2</h2>
+      <div class="product__label">Поршень охлаждения</div>
+      <div class="product__content">
+        <div class="product__list">
+          <div class="product__item"><span class="product__item-label">Входн.</span><span class="product__item-value">4007 y.e</span></div>
+          <div class="product__item"><span class="product__item-label">Розн.</span><span class="product__item-value">70 890,77 y.e</span></div>
+          <div class="product__item"><span class="product__item-label">Unit</span><span class="product__item-value">0,11 unit</span></div>
+        </div>
+        <div class="product__category"><i class="icon-car"></i><i class="icon-motorbike"></i><i class="icon-truck"></i></div>
+      </div>
+      <div class="product__total">
+        <div class="product__total-item">
+          <div class="counter">
+            <div class="counter__button"><i class="icon-minus"></i></div>
+            <div class="counter__amount">
+              <input type="text" value="3">
+            </div>
+            <div class="counter__button"><i class="icon-plus"></i></div>
+          </div>
+          <div class="product__status green"></div>
+        </div>
+        <div class="product__total-item">
+          <button class="btn btn-cart"><i class="icon-cart"></i></button>
+        </div>
+      </div>
+    </div>
+    <h1 class="modal__title">Аналоги</h1>
+    <div class="products">
+      <div class="product">
+        <div class="product__badge sale" data-badge="Sale"></div>
+        <h2 class="product__title">MANN W 914/2</h2>
+        <div class="product__label">Поршень охлаждения</div>
+        <div class="product__content">
+          <div class="product__list">
+            <div class="product__item"><span class="product__item-label">Входн.</span><span class="product__item-value">4007,44 y.e</span></div>
+            <div class="product__item"><span class="product__item-label">Розн.</span><span class="product__item-value">70 890,77 y.e</span></div>
+            <div class="product__item"><span class="product__item-label">Unit</span><span class="product__item-value">0,11 unit</span></div>
+          </div>
+          <div class="product__category"><i class="icon-car"></i><i class="icon-motorbike"></i><i class="icon-truck"></i></div>
+        </div>
+        <div class="product__total">
+          <div class="product__total-item">
+            <div class="counter">
+              <div class="counter__button"><i class="icon-minus"></i></div>
+              <div class="counter__amount">
+                <input type="text" value="3">
+              </div>
+              <div class="counter__button"><i class="icon-plus"></i></div>
+            </div>
+            <div class="product__status red"></div>
+          </div>
+          <div class="product__total-item">
+            <button class="btn btn-cart"><i class="icon-cart"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product__badge markdown" data-badge="Уценка"></div>
+        <h2 class="product__title">MANN W 914/2</h2>
+        <div class="product__label">Поршень охлаждения</div>
+        <div class="product__content">
+          <div class="product__list">
+            <div class="product__item"><span class="product__item-label">Входн.</span><span class="product__item-value">4008 y.e</span></div>
+            <div class="product__item"><span class="product__item-label">Розн.</span><span class="product__item-value">70 890,77 y.e</span></div>
+            <div class="product__item"><span class="product__item-label">Unit</span><span class="product__item-value">0,11 unit</span></div>
+          </div>
+          <div class="product__category"><i class="icon-car"></i><i class="icon-motorbike"></i><i class="icon-truck"></i></div>
+        </div>
+        <div class="product__total">
+          <div class="product__total-item">
+            <div class="counter">
+              <div class="counter__button"><i class="icon-minus"></i></div>
+              <div class="counter__amount">
+                <input type="text" value="3">
+              </div>
+              <div class="counter__button"><i class="icon-plus"></i></div>
+            </div>
+            <div class="product__status yellow"></div>
+          </div>
+          <div class="product__total-item">
+            <button class="btn btn-cart"><i class="icon-cart"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+  <script type="text/javascript" src="js/common_01.js"></script><script type="text/javascript" src="js/index_01.js"></script></body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <title>Попап контакты
+    </title>
+  <link href="./css/index_01.css" rel="stylesheet"></head>
+  <body>
+    <main class="main">
+      <div class="page">
+        <div class="wrapper">
+          <button class="btn btn-primary" id="btnContacts">Контакты</button>
+        </div>
+      </div>
+    </main>
+<div class="modal modal-contacts" id="modalContacts"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+  <header class="modal__header align-center">
+    <h2 class="modal__title">Вы можете позвонить напрямую с сайта</h2>
+  </header>
+  <div class="modal__content align-center">
+    <div class="modal-contacts__item">
+      <h3 class="modal-contacts__title">Центр Обслуживания Клиентов</h3>
+      <div class="modal-contacts__phone">
+        <div class="modal-contacts__phone-number">0-800-30-15-15</div>
+        <div class="modal-contacts__phone-text">Звонки в пределах Украины бесплатны</div>
+      </div>
+    </div>
+    <div class="modal-contacts__item">
+      <h3 class="modal-contacts__title">СЛУЖБА ПОДДЕРЖКИ / ГОРЯЧАЯ ЛИНИЯ</h3>
+      <figure class="modal-contacts__logo"><img class="modal-contacts__logo-img" src="./images/logo-motul.png" alt="Motul"></figure>
+      <div class="modal-contacts__phone">
+        <div class="modal-contacts__phone-number">0-800-30-20-02</div>
+        <div class="modal-contacts__phone-text">Звонки в пределах Украины бесплатны</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+  <script type="text/javascript" src="js/common_01.js"></script><script type="text/javascript" src="js/index_01.js"></script></body>
+</html>

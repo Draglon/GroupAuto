@@ -103,6 +103,7 @@ $(document).ready(function() {
   $('#btnDetailsInfo').on('click', function() { openModal('#modalDetails'); });
   $('.btn-cart').on('click', function() { openModal('#modalCart'); });
   $('#btnShowProduct').on('click', function() { openModal('#modalProductDescription'); });
+  $('#btnContracts').on('click', function() { openModal('#modalContracts'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 

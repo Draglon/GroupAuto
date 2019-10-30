@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап выберите контракт 
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnContracts Выберите контракт
+
+block modal
+  include ../../views/modal/contracts
+  include ../../views/shared/overlay

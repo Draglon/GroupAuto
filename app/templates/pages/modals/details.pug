@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап детали
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnDetails Детали
+
+block modal
+  include ../../views/modal/details
+  include ../../views/shared/overlay

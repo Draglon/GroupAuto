@@ -1024,6 +1024,10 @@ textarea:-ms-input-placeholder {
   font-size: 1.8em;
 }
 
+.stub-pages hr {
+  margin: 2em 0;
+}
+
 .header-login {
   background-color: #fff;
   padding: 2em 1.5em;

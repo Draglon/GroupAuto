@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап отменить заказ
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary.product__cancel Отменить заказ
+
+block modal
+  include ../../views/modal/productCancel
+  include ../../views/shared/overlay

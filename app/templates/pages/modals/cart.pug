@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап Корзина
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary.btn-cart Корзина
+
+block modal
+  include ../../views/modal/cart
+  include ../../views/shared/overlay

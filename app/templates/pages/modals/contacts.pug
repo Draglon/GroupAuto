@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап контакты
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnContacts Контакты
+
+block modal
+  include ../../views/modal/contacts
+  include ../../views/shared/overlay

@@ -1,0 +1,103 @@
+- var title = 'Выберите контракт'
+- var contracts = [
+-   {
+-     title: '№ 4598-54 Нал/ДН',
+-     group: true,
+-     fields: [
+-       {label: 'Сумма кредита', value: '250,00', required: true},
+-       {label: 'Отсрочка, дн', value: ' 10', required: true},
+-       {label: 'Долг/переплата', value: '-70,25', required: true},
+-       {label: 'Юр.лицо', value: 'Шевчук ППВ', required: false},
+-       {label: 'Форма оплаты', value: 'безналичная', required: false},
+-       {label: 'Склад отгрузки', value: 'Центр-й склад', required: false},
+-       {label: 'Резерв', value: '0', required: false},
+-       {label: 'Статус:', value: 'Действует', required: false},
+-       {label: 'Просрочено', value: '72,25', required: false},
+-       {label: 'Истекает срок', value: '0', required: false},
+-       {label: 'Комментарий', value: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4', required: false},
+-     ],
+-     conditions: 'общие условия для группы контрактов',
+-   },
+-   {
+-     title: '№ 4598-54 Нал/ДН',
+-     fields: [
+-       {label: 'Сумма кредита', value: '250,00', required: true},
+-       {label: 'Отсрочка, дн', value: ' 10', required: true},
+-       {label: 'Долг/переплата', value: '-70,25', required: true},
+-       {label: 'Юр.лицо', value: 'Шевчук ППВ', required: false},
+-       {label: 'Форма оплаты', value: 'безналичная', required: false},
+-       {label: 'Склад отгрузки', value: 'Центр-й склад', required: false},
+-       {label: 'Резерв', value: '0', required: false},
+-       {label: 'Статус:', value: 'Действует', required: false},
+-       {label: 'Просрочено', value: '72,25', required: false},
+-       {label: 'Истекает срок', value: '0', required: false},
+-       {label: 'Комментарий', value: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4', required: false},
+-     ],
+-     conditions: 'общие условия для группы контрактов',
+-   },
+-   {
+-     title: '№ 4598-54 Нал/ДН',
+-     selected: true,
+-     fields: [
+-       {label: 'Сумма кредита', value: '250,00', required: true},
+-       {label: 'Отсрочка, дн', value: ' 10', required: true},
+-       {label: 'Долг/переплата', value: '-70,25', required: true},
+-       {label: 'Юр.лицо', value: 'Шевчук ППВ', required: false},
+-       {label: 'Форма оплаты', value: 'безналичная', required: false},
+-       {label: 'Склад отгрузки', value: 'Центр-й склад', required: false},
+-       {label: 'Резерв', value: '0', required: false},
+-       {label: 'Статус:', value: 'Действует', required: false},
+-       {label: 'Просрочено', value: '72,25', required: false},
+-       {label: 'Истекает срок', value: '0', required: false},
+-       {label: 'Комментарий', value: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4', required: false},
+-     ],
+-   },
+-   {
+-     title: '№ 4598-54 Нал/ДН',
+-     fields: [
+-       {label: 'Сумма кредита', value: '250,00', required: true},
+-       {label: 'Отсрочка, дн', value: ' 10', required: true},
+-       {label: 'Долг/переплата', value: '-70,25', required: true},
+-       {label: 'Юр.лицо', value: 'Шевчук ППВ', required: false},
+-       {label: 'Форма оплаты', value: 'безналичная', required: false},
+-       {label: 'Склад отгрузки', value: 'Центр-й склад', required: false},
+-       {label: 'Резерв', value: '0', required: false},
+-       {label: 'Статус:', value: 'Действует', required: false},
+-       {label: 'Просрочено', value: '72,25', required: false},
+-       {label: 'Истекает срок', value: '0', required: false},
+-       {label: 'Комментарий', value: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4', required: false},
+-     ],
+-   },
+- ];
+
+.modal.modal-contracts#modalContracts
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h2.modal__title #{title}
+
+  .modal__content
+    .contracts
+      each contract in contracts
+        .contracts__item(class=`${contract.group && 'group'}`)
+          .contracts__header.active
+            h2.contracts__title
+              if contract.selected
+                i.icon-check
+              | #{contract.title}
+            i.icon-arrow-down
+
+          .contracts__content
+            .contracts__list
+              each item in contract.fields
+                .contracts__list-item
+                  label.contracts__label(required=item.required) #{item.label}
+                  label.contracts__value #{item.value}
+
+            if contract.conditions
+              .contracts__conditions #{contract.conditions}
+
+  footer.modal__footer.align-right
+    button.btn.btn-transparent.btn-close#modalCancel #{btnClose}
+    button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}

@@ -71,7 +71,49 @@ const common = merge([
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/contracts.pug'
       }),
-      
+
+      // Modals
+      new HtmlWebpackPlugin({
+        filename: 'forgotPasswordModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/forgotPassword.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'contactsModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/contacts.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'orderSendModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/orderSend.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'orderSendSuccessModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/orderSendSuccess.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'productCancelModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/productCancel.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'cartModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/cart.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'detailsModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/details.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'contractsModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/contracts.pug'
+      }),
+
       new webpack.optimize.CommonsChunkPlugin({
         name: 'common'
       }),

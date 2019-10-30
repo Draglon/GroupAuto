@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап отправить заказ (успешно)
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnConfirmOrderSendSuccess Отправить заказ (успешно)
+
+block modal
+  include ../../views/modal/orderSendSuccess
+  include ../../views/shared/overlay
