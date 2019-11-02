@@ -168,6 +168,7 @@ body {
   line-height: 1.4;
   letter-spacing: 0;
   position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
 figure {
@@ -1189,6 +1190,33 @@ textarea:-ms-input-placeholder {
 
 .modal-forgot-password .btn-cancel {
   margin-right: 1em;
+}
+
+.modal-forgot-password-success {
+  padding-top: 1.3em;
+  width: 25em;
+}
+
+.modal-forgot-password-success header {
+  margin-bottom: .3em;
+}
+
+.modal-forgot-password-success .modal__content {
+  padding-bottom: 2.4em;
+}
+
+.modal-forgot-password-success p {
+  color: #6e7788;
+  margin-bottom: 8px;
+}
+
+.modal-forgot-password-success .email {
+  color: #333;
+  display: block;
+}
+
+.modal-forgot-password-success label {
+  color: #f00;
 }
 
 .contacts__item {

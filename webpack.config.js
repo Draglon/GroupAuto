@@ -79,6 +79,11 @@ const common = merge([
         template: PATHS.source + '/templates/pages/modals/forgotPassword.pug'
       }),
       new HtmlWebpackPlugin({
+        filename: 'forgotPasswordSuccessModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/forgotPasswordSuccess.pug'
+      }),
+      new HtmlWebpackPlugin({
         filename: 'contactsModal.html',
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/modals/contacts.pug'

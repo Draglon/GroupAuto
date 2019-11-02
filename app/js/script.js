@@ -98,6 +98,7 @@ var form = function(formContact) {
 $(document).ready(function() {
   // Open modal
   $('#btnForgotPassword').on('click', function() { openModal('#modalForgotPassword'); });
+  $('#btnForgotPasswordSuccess').on('click', function() { openModal('#modalForgotPasswordSuccess'); });
   $('#btnContacts').on('click', function() { openModal('#modalContacts'); });
   $('#btnDetails').on('click', function() { openModal('#modalDetails'); });
   $('#btnDetailsInfo').on('click', function() { openModal('#modalDetails'); });
