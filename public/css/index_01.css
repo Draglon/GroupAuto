@@ -1225,6 +1225,11 @@ input[type=radio]:checked + label:after {
   min-width: 29em;
 }
 
+.modal-select-model input[type=radio] + label {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
 .modal-schedule {
   min-width: 29em;
 }
