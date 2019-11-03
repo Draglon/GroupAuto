@@ -12,6 +12,7 @@
 @import 'forms/forms';
 @import 'forms/checkbox';
 @import 'forms/buttons';
+@import 'forms/radio';
 // Components
 @import 'components/header';
 @import 'components/footer';
@@ -25,6 +26,7 @@
 // Modals
 @import 'components/modal/details';
 @import 'components/modal/filter';
+@import 'components/modal/select-model';
 // Stubs pages
 @import 'components/stubs/stub-pages';
 // Login - page

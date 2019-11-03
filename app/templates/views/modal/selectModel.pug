@@ -1,0 +1,27 @@
+- var title = 'Для уточнения запроса выберите производителя';
+- var fields = [
+-   {type: 'radio', id: 'model_1', name: 'model', label: 'Renault( 18 моделей)', checked: true},
+-   {type: 'radio', id: 'model_2', name: 'model', label: 'Citroen ( 18 моделей)', checked: false},
+-   {type: 'radio', id: 'model_3', name: 'model', label: 'Ford ( 3 модели)', checked: false},
+-   {type: 'radio', id: 'model_4', name: 'model', label: 'ZAZ ( 2 модели)', checked: false},
+- ];
+- var btnCancel = 'Закрыть';
+- var btnConfirm = 'Подтвердить';
+
+.modal.modal-select-model#modalSelectModel
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  .modal__content
+    form.form(action="")
+      each field in fields
+        .form__field.form__field--full
+          input(type=field.type id=field.id name=field.name checked=field.checked)
+          label(for=field.id) #{field.label}
+
+      footer.modal__footer
+        button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
+        button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}

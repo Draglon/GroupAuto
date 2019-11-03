@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап выбор модели
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnSelectModel Выбор модели
+
+block modal
+  include ../../views/modal/selectModel
+  include ../../views/shared/overlay

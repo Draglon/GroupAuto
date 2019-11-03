@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <title>Попап выбор модели
+    </title>
+  <link href="./css/index_01.css" rel="stylesheet"></head>
+  <body>
+    <main class="main">
+      <div class="page">
+        <div class="wrapper">
+          <button class="btn btn-primary" id="btnSelectModel">Выбор модели</button>
+        </div>
+      </div>
+    </main>
+<div class="modal modal-select-model" id="modalSelectModel"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+  <header class="modal__header">
+    <h1 class="modal__title">Для уточнения запроса выберите производителя</h1>
+  </header>
+  <div class="modal__content">
+    <form class="form" action="">
+      <div class="form__field form__field--full">
+        <input type="radio" id="model_1" name="model" checked>
+        <label for="model_1">Renault( 18 моделей)</label>
+      </div>
+      <div class="form__field form__field--full">
+        <input type="radio" id="model_2" name="model">
+        <label for="model_2">Citroen ( 18 моделей)</label>
+      </div>
+      <div class="form__field form__field--full">
+        <input type="radio" id="model_3" name="model">
+        <label for="model_3">Ford ( 3 модели)</label>
+      </div>
+      <div class="form__field form__field--full">
+        <input type="radio" id="model_4" name="model">
+        <label for="model_4">ZAZ ( 2 модели)</label>
+      </div>
+      <footer class="modal__footer">
+        <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Закрыть</button>
+        <button class="btn btn-transparent btn-confirm" type="submit">Подтвердить</button>
+      </footer>
+    </form>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+  <script type="text/javascript" src="js/common_01.js"></script><script type="text/javascript" src="js/index_01.js"></script></body>
+</html>

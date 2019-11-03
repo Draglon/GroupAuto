@@ -84,14 +84,19 @@ const common = merge([
         template: PATHS.source + '/templates/pages/modals/forgotPasswordSuccess.pug'
       }),
       new HtmlWebpackPlugin({
-        filename: 'filter.html',
+        filename: 'filterModal.html',
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/modals/filter.pug'
       }),
       new HtmlWebpackPlugin({
-        filename: 'search.html',
+        filename: 'searchModal.html',
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/modals/search.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'selectModelModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/selectModel.pug'
       }),
       new HtmlWebpackPlugin({
         filename: 'contactsModal.html',

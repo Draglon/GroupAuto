@@ -122,6 +122,7 @@ $(document).ready(function() {
   $('#btnContracts').on('click', function() { openModal('#modalContracts'); });
   $('#btnFilter').on('click', function() { openModal('#modalFilter'); });
   $('#btnSearch').on('click', function() { openModal('#modalSearch'); });
+  $('#btnSelectModel').on('click', function() { openModal('#modalSelectModel'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 
