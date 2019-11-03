@@ -121,6 +121,7 @@ $(document).ready(function() {
   $('#btnShowProduct').on('click', function() { openModal('#modalProductDescription'); });
   $('#btnContracts').on('click', function() { openModal('#modalContracts'); });
   $('#btnFilter').on('click', function() { openModal('#modalFilter'); });
+  $('#btnSearch').on('click', function() { openModal('#modalSearch'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 

@@ -89,6 +89,11 @@ const common = merge([
         template: PATHS.source + '/templates/pages/modals/filter.pug'
       }),
       new HtmlWebpackPlugin({
+        filename: 'search.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/search.pug'
+      }),
+      new HtmlWebpackPlugin({
         filename: 'contactsModal.html',
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/modals/contacts.pug'

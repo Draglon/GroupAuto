@@ -1,0 +1,38 @@
+- var title = 'Найдено 199 позиций. Для уточнения запроса выберите тип товара';
+- var fields = [
+-   {type: 'checkbox', id: 'id_1', label: 'Комплект сцепления' },
+-   {type: 'checkbox', id: 'id_2', label: 'Топливный насос и комплектующие'},
+-   {type: 'checkbox', id: 'id_3', label: 'Ремкомплект тормозной системы'},
+-   {type: 'checkbox', id: 'id_4', label: 'Комплект сцепления'},
+-   {type: 'checkbox', id: 'id_5', label: 'Топливный насос и комплектующие'},
+-   {type: 'checkbox', id: 'id_6', label: 'Ремкомплект тормозной системы'},
+-   {type: 'checkbox', id: 'id_7', label: 'Комплект сцепления'},
+-   {type: 'checkbox', id: 'id_8', label: 'Ремкомплект тормозной системы'},
+-   {type: 'checkbox', id: 'id_9', label: 'Комплект сцепления'},
+-   {type: 'checkbox', id: 'id_10', label: 'Комплект сцепления'},
+-   {type: 'checkbox', id: 'id_11', label: 'Комплект сцепления'},
+-   {type: 'checkbox', id: 'id_12', label: 'Комплект сцепления'},
+-   {type: 'checkbox', id: 'id_13', label: 'Комплект сцепления'},
+-   {type: 'checkbox', id: 'id_14', label: 'Комплект сцепления'},
+-   {type: 'checkbox', id: 'id_15', label: 'Комплект сцепления'},
+- ];
+- var btnCancel = 'Отмена';
+- var btnConfirm = 'Применить';
+
+.modal.modal-search#modalSearch
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  .modal__content
+    form.form(action="")
+      each field in fields
+        .form__field.form__field--full
+          input(type=field.type id=field.id)
+          label(for=field.id) #{field.label}
+
+      footer.modal__footer
+        button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
+        button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}

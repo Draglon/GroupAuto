@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап уточнение запроса
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnSearch Уточнение запроса
+
+block modal
+  include ../../views/modal/search
+  include ../../views/shared/overlay
