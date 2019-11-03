@@ -684,8 +684,6 @@ input[type=checkbox]:checked + label:after {
   display: none;
   min-width: 25em;
   max-height: 90%;
-  overflow: auto;
-  padding: 1.6em 1.5em;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -703,6 +701,7 @@ input[type=checkbox]:checked + label:after {
   position: absolute;
   top: 1.2em;
   right: 1.4em;
+  z-index: 2;
 }
 
 .modal__close:hover {
@@ -714,20 +713,52 @@ input[type=checkbox]:checked + label:after {
 }
 
 .modal__header {
-  padding-right: 2.5em;
+  background-color: #fff;
+  padding: 1.6em 5em .8em 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.modal__header:before {
+  content: '';
+  background-color: #e3e3e3;
+  position: absolute;
+  bottom: 0;
+  left: 1.5em;
+  height: 1px;
+  width: calc(100% - 3em);
 }
 
 .modal__header h1 {
+  color: #1e588a;
   line-height: 1.15em;
 }
 
 .modal__footer {
-  border-top: 1px solid #e3e3e3;
+  background-color: #fff;
   display: flex;
   justify-content: flex-end;
-  padding-top: 1.7em;
+  padding: 1.7em 1.5em 1.6em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   flex: 0 0 100%;
   width: 100%;
+  z-index: 1;
+}
+
+.modal__footer:before {
+  content: '';
+  background-color: #e3e3e3;
+  position: absolute;
+  top: 0;
+  left: 1.5em;
+  height: 1px;
+  width: calc(100% - 3em);
 }
 
 .modal__footer .btn-cancel {
@@ -1038,17 +1069,11 @@ input[type=checkbox]:checked + label:after {
   min-width: 29em;
 }
 
-.modal-details header {
-  margin-right: 7em;
-}
-
 .modal-details h1 {
   color: #1e588a;
 }
 
 .modal-details__info {
-  border-top: 1px solid #e3e3e3;
-  margin-top: .7em;
   padding-top: 1.2em;
 }
 
@@ -1099,15 +1124,6 @@ input[type=checkbox]:checked + label:after {
 
 .modal-filter {
   min-width: 29em;
-}
-
-.modal-filter header {
-  border-bottom: 1px solid #e3e3e3;
-  padding-bottom: .7em;
-}
-
-.modal-filter h1 {
-  color: #1e588a;
 }
 
 .modal-filter .filter > div:first-child {
@@ -1322,20 +1338,27 @@ input[type=checkbox]:checked + label:after {
   font-weight: 500;
 }
 
-.modal-forgot-password {
-  padding-top: 1.3em;
+.modal-forgot-password h1 {
+  color: #333;
 }
 
 .modal-forgot-password-success {
-  padding-top: 1.3em;
   width: 25em;
 }
 
 .modal-forgot-password-success header {
-  margin-bottom: .3em;
+  padding-bottom: .3em;
 }
 
-.modal-forgot-password-success .modal__content {
+.modal-forgot-password-success header:before {
+  display: none;
+}
+
+.modal-forgot-password-success h1 {
+  color: #333;
+}
+
+.modal-forgot-password-success .modal__wrapper {
   padding-bottom: 2.4em;
 }
 
@@ -1476,12 +1499,15 @@ input[type=checkbox]:checked + label:after {
 }
 
 .modal-contacts header {
-  max-width: 200px;
-  margin: 0 auto;
+  padding: 1.6em 5em .8em;
+}
+
+.modal-contacts header:before {
+  display: none;
 }
 
 .modal-contacts__item:first-child {
-  padding-top: 2.2em;
+  padding-top: 1.4em;
   padding-bottom: 2.8em;
   position: relative;
 }
@@ -1498,7 +1524,7 @@ input[type=checkbox]:checked + label:after {
 
 .modal-contacts__item:last-child {
   padding-top: 2.6em;
-  padding-bottom: 1em;
+  padding-bottom: 2.6em;
 }
 
 .modal-contacts__title {
@@ -1828,7 +1854,7 @@ input[type=checkbox]:checked + label:after {
 }
 
 .product--select {
-  background-color: #F7FAFD;
+  background-color: #f7fafd;
 }
 
 .product--description {
@@ -2125,13 +2151,11 @@ input[type=checkbox]:checked + label:after {
   text-align: center;
 }
 
-.modal-product-cancel header {
-  margin: 0 2em;
-  padding: 1em 0 2.5em;
-  text-align: center;
+.modal-product-cancel .modal__wrapper {
+  padding: 2.5em 2em;
 }
 
-.modal-product-cancel header h1 {
+.modal-product-cancel .modal__wrapper h1 {
   line-height: 1.43;
 }
 
@@ -2139,21 +2163,19 @@ input[type=checkbox]:checked + label:after {
   min-width: 28em;
 }
 
-.modal-order-send header {
-  margin: 0 2em;
-  padding: 1em 0;
-  text-align: center;
-}
-
-.modal-order-send header h1 {
-  line-height: 1.43;
-}
-
-.modal-order-send .modal__content {
+.modal-order-send .modal__wrapper {
+  padding-top: 2.5em;
   padding-bottom: 2.5em;
 }
 
-.modal-order-send .modal__content p {
+.modal-order-send .modal__wrapper h1 {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  margin-bottom: .7em;
+  line-height: 1.43;
+}
+
+.modal-order-send .modal__wrapper p {
   color: #6e7788;
   text-align: center;
 }
@@ -2162,13 +2184,11 @@ input[type=checkbox]:checked + label:after {
   min-width: 25em;
 }
 
-.modal-order-send-success header {
-  margin: 0 2.5em;
-  padding: 1em 0 2.5em;
-  text-align: center;
+.modal-order-send-success .modal__wrapper {
+  padding: 2.5em;
 }
 
-.modal-order-send-success header h1 {
+.modal-order-send-success .modal__wrapper h1 {
   line-height: 1.43;
 }
 
@@ -2247,7 +2267,7 @@ input[type=checkbox]:checked + label:after {
 }
 
 .contracts__header {
-  background-color: #F7FAFD;
+  background-color: #f7fafd;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -2326,4 +2346,12 @@ input[type=checkbox]:checked + label:after {
   position: relative;
   top: 5px;
   line-height: 0;
+}
+
+.modal-contracts {
+  min-width: 29em;
+}
+
+.modal-contracts .contracts {
+  padding: 2em 0 1em;
 }

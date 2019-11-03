@@ -11,15 +11,17 @@
     <main class="main">
       <div class="page">
         <div class="wrapper">
-          <button class="btn btn-primary" id="btnConfirmOrderSendSuccess">Отправить заказ (успешно)</button>
+          <button class="btn btn-primary" id="btnConfirmOrderSendSuccess--stub">Отправить заказ (успешно)</button>
         </div>
       </div>
     </main>
 <div class="modal modal-order-send-success" id="modalOrderSendSuccess"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
-  <header class="modal__header">
-    <h1 class="modal__title">Ваш заказ отправлен в обработку</h1>
-  </header>
-  <footer class="modal__footer align-right">
+  <div class="modal__content">
+    <div class="modal__wrapper align-center">
+      <h1>Ваш заказ отправлен в обработку</h1>
+    </div>
+  </div>
+  <footer class="modal__footer">
     <button class="btn btn-transparent btn-done" id="modalCancel" type="button">Готово</button>
   </footer>
 </div>

@@ -4,8 +4,6 @@
   display: none;
   min-width: 25em;
   max-height: 90%;
-  overflow: auto;
-  padding: 1.6em 1.5em;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -22,26 +20,59 @@
     position: absolute;
     top: 1.2em;
     right: 1.4em;
+    z-index: 2;
 
     &:hover {color: $blue;}
     i {font-size: $font-size24;}
   }
 
   &__header {
-    padding-right: 2.5em;
+    background-color: $white;
+    padding: 1.6em 5em .8em 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      background-color: $gray-lightest;
+      position: absolute;
+      bottom: 0;
+      left: 1.5em;
+      height: 1px;
+      width: calc(100% - 3em);
+    }
 
     h1 {
+      color: $blue-dark;
       line-height: 1.15em;
     }
   }
 
   &__footer {
-    border-top: 1px solid $gray-lightest;
+    background-color: $white;
     display: flex;
     justify-content: flex-end;
-    padding-top: 1.7em;
+    padding: 1.7em 1.5em 1.6em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     flex: 0 0 100%;
     width: 100%;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      background-color: $gray-lightest;
+      position: absolute;
+      top: 0;
+      left: 1.5em;
+      height: 1px;
+      width: calc(100% - 3em);
+    }
 
     .btn-cancel {
       margin-right: 1em;

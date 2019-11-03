@@ -11,15 +11,17 @@
     <main class="main">
       <div class="page">
         <div class="wrapper">
-          <button class="btn btn-primary product__cancel">Отменить заказ</button>
+          <button class="btn btn-primary" id="btnProductCancel--stub">Отменить заказ</button>
         </div>
       </div>
     </main>
 <div class="modal modal-product-cancel" id="modalProductCancel"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
-  <header class="modal__header">
-    <h1 class="modal__title">Вы действительно хотите удалить товар?</h1>
-  </header>
-  <footer class="modal__footer align-right">
+  <div class="modal__content">
+    <div class="modal__wrapper align-center">
+      <h1>Вы действительно хотите удалить товар?</h1>
+    </div>
+  </div>
+  <footer class="modal__footer">
     <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Отмена</button>
     <button class="btn btn-transparent btn-confirm" type="button">Подтвердить</button>
   </footer>

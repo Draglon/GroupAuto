@@ -8,6 +8,21 @@ function openModal(modal) {
   $(modal).addClass('active');
   $('#overlay').addClass('active');
   $('body').addClass('not-scroll');
+
+  let modalHeight = $('.modal').innerHeight();
+  let headerHeight = $('.modal__header').innerHeight() || 0;
+  let contentHeight = $('.modal__content').innerHeight();
+  let footerHeight = $('.modal__footer').innerHeight() || 0;
+
+  if(contentHeight > modalHeight) {
+    $('.modal__content').css({
+      'overflow': 'auto',
+      'height': modalHeight - (headerHeight + footerHeight),
+    });
+  }
+  $('.modal__content').css({
+    'padding': `${headerHeight}px 1.5em ${footerHeight}px`,
+  });
 }
 
 function closeModal(modal) {
@@ -146,6 +161,11 @@ $(document).ready(function() {
     $(this).on('click', function() { openModal('#modalOrderSendSuccess'); });
   });
 });
+
+// STUBS - (remove after deploy)
+$('#btnOrderSend--stub').on('click', function() { openModal('#modalOrderSend'); });
+$('#btnConfirmOrderSendSuccess--stub').on('click', function() { openModal('#modalOrderSendSuccess'); });
+$('#btnProductCancel--stub').on('click', function() { openModal('#modalProductCancel'); });
 
 // =========================================== Window Resize and Document Ready ====================
 var callback = function() {

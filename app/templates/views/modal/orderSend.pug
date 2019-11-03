@@ -8,12 +8,11 @@
   span.modal__close#modalClose
     i.icon-cross
 
-  header.modal__header
-    h1.modal__title #{title}
-
   .modal__content
-    p #{text1}
-    p #{text2}
+    .modal__wrapper.align-center
+      h1 #{title}
+      p #{text1}
+      p #{text2}
 
   footer.modal__footer.align-right
     button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}

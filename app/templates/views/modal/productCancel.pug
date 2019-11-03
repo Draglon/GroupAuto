@@ -6,9 +6,10 @@
   span.modal__close#modalClose
     i.icon-cross
 
-  header.modal__header
-    h1.modal__title #{title}
+  .modal__content
+    .modal__wrapper.align-center
+      h1 #{title}
 
-  footer.modal__footer.align-right
+  footer.modal__footer
     button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
     button.btn.btn-transparent.btn-confirm(type="button") #{btnConfirm}

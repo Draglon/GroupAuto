@@ -69,13 +69,15 @@
 -     ],
 -   },
 - ];
+- var btnCancel = 'Отмена';
+- var btnConfirm = 'Подтвердить';
 
 .modal.modal-contracts#modalContracts
   span.modal__close#modalClose
     i.icon-cross
 
   header.modal__header
-    h2.modal__title #{title}
+    h1.modal__title #{title}
 
   .modal__content
     .contracts
@@ -92,12 +94,9 @@
             .contracts__list
               each item in contract.fields
                 .contracts__list-item
-                  label.contracts__label(required=item.required) #{item.label}
+                  label.contracts__label #{item.label}
                   label.contracts__value #{item.value}
 
-            if contract.conditions
-              .contracts__conditions #{contract.conditions}
-
-  footer.modal__footer.align-right
-    button.btn.btn-transparent.btn-close#modalCancel #{btnClose}
+  footer.modal__footer
+    button.btn.btn-transparent.btn-cancel#modalCancel #{btnCancel}
     button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}
