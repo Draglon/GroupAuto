@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап фильтр заказов
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnFilter Фильтр заказов
+
+block modal
+  include ../../views/modal/filter
+  include ../../views/shared/overlay

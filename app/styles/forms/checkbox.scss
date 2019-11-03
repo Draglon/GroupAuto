@@ -1,0 +1,50 @@
+input[type=checkbox] {
+  display: none;
+
+  & + label {
+    color: $gray-dark;
+    font-size: $font-size12;
+    padding-left: 30px;
+    position: relative;
+    padding-top: 2px;
+    min-height: 20px;
+    display: flex;
+
+    &:before, &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:before {
+      content: '';
+      background-color: $white;
+      border: 1px solid $gray-lightest;
+      border-radius: 2px;
+      width: 20px;
+      height: 20px;
+      transition: background-color .3s;
+    }
+    &:after {
+      content: '\e910';
+      color: $white_00;
+      font-family: 'GroupAuto' !important;
+      font-size: 22px;
+      line-height: 18px;
+      transition: color .3s;
+    }
+  }
+
+  &:checked {
+    & + label {
+      &:before {
+        background-color: $blue;
+        border: 1px solid $blue;
+      }
+
+      &:after {
+        color: $white;
+      }
+    }
+  }
+}

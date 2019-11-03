@@ -33,9 +33,14 @@
 
     .form__btns {
       text-align: center;
+
       .btn-link {
         font-size: $font-size12;
         margin-top: 1.6em;
+      }
+
+      .form__btns {
+        color: $blue;
       }
     }
   }

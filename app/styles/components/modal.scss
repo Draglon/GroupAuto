@@ -28,7 +28,7 @@
   }
 
   &__header {
-    margin-right: 2.5em;
+    padding-right: 2.5em;
 
     h1 {
       line-height: 1.15em;
@@ -37,10 +37,14 @@
 
   &__footer {
     border-top: 1px solid $gray-lightest;
+    display: flex;
+    justify-content: flex-end;
     padding-top: 1.7em;
+    flex: 0 0 100%;
+    width: 100%;
 
-    .btn {
-      margin-left: 13px;
+    .btn-cancel {
+      margin-right: 1em;
     }
 
     .btn-confirm {

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <title>Попап фильтр заказов
+    </title>
+  <link href="./css/index_01.css" rel="stylesheet"></head>
+  <body>
+    <main class="main">
+      <div class="page">
+        <div class="wrapper">
+          <button class="btn btn-primary" id="btnFilter">Фильтр заказов</button>
+        </div>
+      </div>
+    </main>
+<div class="modal modal-filter" id="modalFilter"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+  <header class="modal__header">
+    <h1 class="modal__title">Фильтр заказов</h1>
+  </header>
+  <div class="modal__content">
+    <form class="form filter" action="">
+      <div class="form__field form__field--full">
+        <label class="form__label">Показать заказы со статусами:</label>
+        <div class="form__field--half">
+          <input type="checkbox" id="formed">
+          <label for="formed">Формируется</label>
+        </div>
+        <div class="form__field--half">
+          <input type="checkbox" id="closed">
+          <label for="closed">Закрыт</label>
+        </div>
+        <div class="form__field--half">
+          <input type="checkbox" id="onProcessing">
+          <label for="onProcessing">На обработке</label>
+        </div>
+        <div class="form__field--half">
+          <input type="checkbox" id="canceled">
+          <label for="canceled">Аннулирован</label>
+        </div>
+        <div class="form__field--half">
+          <input type="checkbox" id="accepted">
+          <label for="accepted">Принят</label>
+        </div>
+        <div class="form__field--half">
+          <input type="checkbox" id="all">
+          <label for="all">Все</label>
+        </div>
+      </div>
+      <div class="form__field form__field--full">
+        <label class="form__label"><span>За последние</span>
+          <input class="input--days" type="text" value="3"><span>дней</span>
+        </label>
+      </div>
+      <div class="form__field form__field--full">
+        <label class="form__label">За период</label>
+        <div class="filter__date"><span>c</span>
+          <input class="input--date" type="date" value="2019-08-24"><span>по</span>
+          <input class="input--date" type="date" value="2019-09-19">
+        </div>
+      </div>
+      <footer class="modal__footer">
+        <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">По умолчанию</button>
+        <button class="btn btn-transparent btn-confirm" type="submit">Применить</button>
+      </footer>
+    </form>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+  <script type="text/javascript" src="js/common_01.js"></script><script type="text/javascript" src="js/index_01.js"></script></body>
+</html>

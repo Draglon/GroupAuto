@@ -1,0 +1,46 @@
+- var title = 'Фильтр заказов';
+- var label = 'Показать заказы со статусами:'
+- var fields = [
+-   {type: 'checkbox', id: 'formed', label: 'Формируется' },
+-   {type: 'checkbox', id: 'closed', label: 'Закрыт'},
+-   {type: 'checkbox', id: 'onProcessing', label: 'На обработке'},
+-   {type: 'checkbox', id: 'canceled', label: 'Аннулирован'},
+-   {type: 'checkbox', id: 'accepted', label: 'Принят'},
+-   {type: 'checkbox', id: 'all', label: 'Все'},
+- ];
+- var btnCancel = 'По умолчанию';
+- var btnConfirm = 'Применить';
+
+.modal.modal-filter#modalFilter
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  .modal__content
+    form.form.filter(action="")
+      .form__field.form__field--full
+        label.form__label #{label}
+        each field in fields
+          .form__field--half
+            input(type=field.type id=field.id)
+            label(for=field.id) #{field.label}
+
+      .form__field.form__field--full
+        label.form__label
+          span За последние
+          input.input--days(type="text" value=3)
+          span дней
+
+      .form__field.form__field--full
+        label.form__label За период
+        .filter__date
+          span c
+          input.input--date(type="date" value="2019-08-24")
+          span по
+          input.input--date(type="date" value="2019-09-19")
+
+      footer.modal__footer
+        button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
+        button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}

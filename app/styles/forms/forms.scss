@@ -4,6 +4,7 @@ input[type=text],
 input[type=password],
 input[type=email],
 input[type=tel],
+input[type=date],
 textarea,
 select {
   background-color: $input-bg;
@@ -22,6 +23,7 @@ select {
   &:focus {
     border-color: $input-border-color-focus;
   }
+
   &.error {
     border-color: $input-border-color-error;
   }
@@ -44,38 +46,36 @@ textarea {
   &:-ms-input-placeholder {color: $placeholder-color;}
 }
 
-// ========================= Buttons =========================
-.btn {
-  @include btn();
-  @include btn-border();
-  @include btn-color();
-  @include btn-font();
-  @include btn-size();
-}
-
-.btn-primary {
-  @include btn-color($primary-bg-color, $primary-color);
-}
-
-.btn-transparent {
-  @include btn-color($transparent-bg-color, $transparent-color);
-  @include btn-size($transparent-padding, $transparent-height, $transparent-width);
-  display: inline;
-  font-size: $font-size13;
-  text-transform: uppercase;
-
-  &:hover {
-    @include btn-color($transparent-bg-color-hover, $transparent-color-hover);
+input[type=date] {
+  &::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
   }
 }
 
-.btn-link {
-  @include btn-color($link-bg-color, $link-color);
-  @include btn-size($link-padding, $link-height, $link-width);
-  display: inline;
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 1.5em;
 
-  &:active {
-    border-bottom: 1px solid $blue !important;
-    border-radius: 0;
+  .form__label {
+    color: $gray-dark;
+    display: block;
+    font-size: $font-size14;
+  }
+
+  .form__field {
+    margin-bottom: 2em;
+    width: 100%;
+
+    &--half {
+      flex: 0 0 50%;
+      width: 50%;
+    }
+    &--full {
+      flex: 0 0 100%;
+      width: 100%;
+    }
   }
 }

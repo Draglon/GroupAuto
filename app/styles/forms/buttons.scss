@@ -1,0 +1,34 @@
+.btn {
+  @include btn();
+  @include btn-border();
+  @include btn-color();
+  @include btn-font();
+  @include btn-size();
+}
+
+.btn-primary {
+  @include btn-color($primary-bg-color, $primary-color);
+}
+
+.btn-transparent {
+  @include btn-color($transparent-bg-color, $transparent-color);
+  @include btn-size($transparent-padding, $transparent-height, $transparent-width);
+  display: inline;
+  font-size: $font-size13;
+  text-transform: uppercase;
+
+  &:hover {
+    @include btn-color($transparent-bg-color-hover, $transparent-color-hover);
+  }
+}
+
+.btn-link {
+  @include btn-color($link-bg-color, $link-color);
+  @include btn-size($link-padding, $link-height, $link-width);
+  display: inline;
+
+  &:active {
+    border-bottom: 1px solid $blue !important;
+    border-radius: 0;
+  }
+}

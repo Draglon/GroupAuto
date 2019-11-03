@@ -105,6 +105,7 @@ $(document).ready(function() {
   $('.btn-cart').on('click', function() { openModal('#modalCart'); });
   $('#btnShowProduct').on('click', function() { openModal('#modalProductDescription'); });
   $('#btnContracts').on('click', function() { openModal('#modalContracts'); });
+  $('#btnFilter').on('click', function() { openModal('#modalFilter'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 

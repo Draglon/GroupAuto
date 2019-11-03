@@ -10,6 +10,8 @@
 @import 'basic/main';
 // Forms
 @import 'forms/forms';
+@import 'forms/checkbox';
+@import 'forms/buttons';
 // Components
 @import 'components/header';
 @import 'components/footer';
@@ -22,6 +24,7 @@
 @import 'components/overlay';
 // Modals
 @import 'components/modal/details';
+@import 'components/modal/filter';
 // Stubs pages
 @import 'components/stubs/stub-pages';
 // Login - page
