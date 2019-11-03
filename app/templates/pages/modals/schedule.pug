@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап расписание
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnSchedule Расписание
+
+block modal
+  include ../../views/modal/schedule
+  include ../../views/shared/overlay

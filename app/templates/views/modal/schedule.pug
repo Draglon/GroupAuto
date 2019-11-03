@@ -1,0 +1,46 @@
+- var title = 'Выберите расписание';
+- var schedule = {
+-  thead: [
+-     'Время отгрузки со склада',
+-     'Способ доставки',
+-     'Планируемое время',
+-   ],
+-  tbody: [
+-     {shipmentTime: '8:00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: false},
+-     {shipmentTime: '9:00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: false},
+-     {shipmentTime: '10:00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: false},
+-     {shipmentTime: '11.00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: false},
+-     {shipmentTime: '12.00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: true},
+-     {shipmentTime: '13.00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: false},
+-     {shipmentTime: '14.00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: false},
+-     {shipmentTime: '15.00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: false},
+-     {shipmentTime: '16.00', delivery: 'Доставка по городу', date: '01.09.2019', time: '10:00', selected: false},
+-   ],
+- }
+- var btnCancel = 'Закрыть';
+- var btnConfirm = 'Готово';
+
+.modal.modal-schedule#modalSchedule
+  span.modal__close#modalClose
+    i.icon-cross
+
+  header.modal__header
+    h1.modal__title #{title}
+
+  .modal__content
+    .schedule
+      .schedule__head
+        each thead in schedule.thead
+          .schedule__item #{thead}
+      .schedule__body
+        each tbody in schedule.tbody
+          .schedule__row(class=(tbody.selected && 'selected'))
+            .schedule__item #{tbody.shipmentTime}
+            .schedule__item #{tbody.delivery}
+            .schedule__item
+              span #{tbody.date}
+              span #{tbody.time}
+
+  footer.modal__footer
+    button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
+    button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}

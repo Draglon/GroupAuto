@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <title>Попап расписание
+    </title>
+  <link href="./css/index_01.css" rel="stylesheet"></head>
+  <body>
+    <main class="main">
+      <div class="page">
+        <div class="wrapper">
+          <button class="btn btn-primary" id="btnSchedule">Расписание</button>
+        </div>
+      </div>
+    </main>
+<div class="modal modal-schedule" id="modalSchedule"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+  <header class="modal__header">
+    <h1 class="modal__title">Выберите расписание</h1>
+  </header>
+  <div class="modal__content">
+    <div class="schedule">
+      <div class="schedule__head">
+        <div class="schedule__item">Время отгрузки со склада</div>
+        <div class="schedule__item">Способ доставки</div>
+        <div class="schedule__item">Планируемое время</div>
+      </div>
+      <div class="schedule__body">
+        <div class="schedule__row">
+          <div class="schedule__item">8:00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__item">9:00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__item">10:00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__item">11.00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+        <div class="schedule__row selected">
+          <div class="schedule__item">12.00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__item">13.00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__item">14.00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__item">15.00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+        <div class="schedule__row">
+          <div class="schedule__item">16.00</div>
+          <div class="schedule__item">Доставка по городу</div>
+          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="modal__footer">
+    <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Закрыть</button>
+    <button class="btn btn-transparent btn-confirm" type="submit">Готово</button>
+  </footer>
+</div>
+<div class="overlay" id="overlay"></div>
+  <script type="text/javascript" src="js/common_01.js"></script><script type="text/javascript" src="js/index_01.js"></script></body>
+</html>

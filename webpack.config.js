@@ -129,6 +129,11 @@ const common = merge([
         template: PATHS.source + '/templates/pages/modals/details.pug'
       }),
       new HtmlWebpackPlugin({
+        filename: 'scheduleModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/schedule.pug'
+      }),
+      new HtmlWebpackPlugin({
         filename: 'contractsModal.html',
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/modals/contracts.pug'

@@ -12105,6 +12105,7 @@ $(document).ready(function() {
   $('#btnFilter').on('click', function() { openModal('#modalFilter'); });
   $('#btnSearch').on('click', function() { openModal('#modalSearch'); });
   $('#btnSelectModel').on('click', function() { openModal('#modalSelectModel'); });
+  $('#btnSchedule').on('click', function() { openModal('#modalSchedule'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 

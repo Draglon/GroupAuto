@@ -1,0 +1,56 @@
+.modal-schedule {
+  min-width: 29em;
+}
+
+.schedule {
+  &__head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: .8em;
+
+    & > div {
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  &__body {
+
+  }
+
+  &__row {
+    border-bottom: 1px solid $gray-lightest;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: .8em;
+
+    &.selected {
+      background-color: $blue;
+      margin: 0 -1.5em;
+      padding-right: 1.5em;
+      padding-left: 1.5em;
+      
+      & > div {
+        color: $white;
+      }
+    }
+
+    & > div {
+      color: $gray-dark;
+      font-size: $font-size12;
+    }
+  }
+
+  &__item {
+    flex: 0 0 33.33%;
+    padding: 0 5px;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+}
