@@ -1,39 +1,28 @@
-- var title = 'Таблица применимости в Toyota';
-- var list = [
--   [
--     {label: 'Марка:', value: 'Toyota'},
--     {label: 'Модификация:', value: 'Yaris Verso (_NLP2_, _NCP2_)'},
--     {label: 'Двигатель:', value: '1.4D-4D'},
--     {label: 'Год:', value: '12.2001-09.2005'},
--     {label: 'Мощность(лс):', value: '106 лс'},
--     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
+- var title = 'Детали';
+- var order_1 = {
+-   title: 'Test 33',
+-   items: [
+-     {label: 'Дата заказа:', value: '1189-10'},
+-     {label: 'Сумма:', value: '4598-54 Нал/ДН'},
 -   ],
--   [
--     {label: 'Марка:', value: 'Toyota'},
--     {label: 'Модификация:', value: 'Yaris Verso (_NLP2_, _NCP2_)'},
--     {label: 'Двигатель:', value: '1.4D-4D'},
--     {label: 'Год:', value: '12.2001-09.2005'},
--     {label: 'Мощность(лс):', value: '106 лс'},
--     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
+- };
+- var order_2 = {
+-   title: '“Euro Gold” г.Днепр',
+-   items: [
+-     {label: 'Кред.условия:', value: '100 y.e/14 дн.'},
+-     {label: 'Переплата:', value: '0,00 у.е'},
 -   ],
--   [
--     {label: 'Марка:', value: 'Toyota'},
--     {label: 'Модификация:', value: 'Yaris Verso (_NLP2_, _NCP2_)'},
--     {label: 'Двигатель:', value: '1.4D-4D'},
--     {label: 'Год:', value: '12.2001-09.2005'},
--     {label: 'Мощность(лс):', value: '106 лс'},
--     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
--   ],
+-   button: 'Создать счет на оплату',
+- };
+- var orderTotal = [
+-   {label: 'Unit-резерв:', value: '0'},
+-   {label: 'Unit-баланс:', value: '0'},
+-   {label: 'Резерв:', value: '0,00 у.е'},
 - ];
+- var currency = {label: 'Курс валют:', value: '1у.е = 28,20 грн'};
+- var btnGreen = 'Отгрузка разрешена';
+- var btnPink = 'Отгрузка разрешена';
+- var btnRed = 'Отгрузка запрещена';
 - var btnCancel = 'Закрыть';
 
 .modal.modal-model-details#modalModelDetails
@@ -44,4 +33,35 @@
     h1.modal__title #{title}
 
   .modal__content
+    .orders__content
+      .order
+        .order__title #{order_1.title}
+        each item in order_1.items
+          .order__item.active
+            label.order__label #{item.label}
+            span.order__value #{item.value}
 
+      .order
+        .order__title #{order_2.title}
+        each item in order_2.items
+          .order__item.active
+            label.order__label #{item.label}
+            span.order__value #{item.value}
+        button.btn.btn-primary #{order_2.button}
+
+      .order__total
+        each total in orderTotal
+          .order__item.active
+            label.order__label #{total.label}
+            span.order__value #{total.value}
+        .order__currency
+          label.order__label #{currency.label}
+          span.order__value #{currency.value}
+
+      .order__btns
+        button.btn.btn-primary #{btnGreen}
+        button.btn.btn-primary #{btnPink}
+        button.btn.btn-primary #{btnRed}
+
+  footer.modal__footer
+    button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
