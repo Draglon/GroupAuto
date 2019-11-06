@@ -1,5 +1,5 @@
 - var title = 'Таблица применимости в Toyota';
-- var list = [
+- var applicability = [
 -   [
 -     {label: 'Марка:', value: 'Toyota'},
 -     {label: 'Модификация:', value: 'Yaris Verso (_NLP2_, _NCP2_)'},
@@ -7,9 +7,6 @@
 -     {label: 'Год:', value: '12.2001-09.2005'},
 -     {label: 'Мощность(лс):', value: '106 лс'},
 -     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
 -   ],
 -   [
 -     {label: 'Марка:', value: 'Toyota'},
@@ -18,9 +15,6 @@
 -     {label: 'Год:', value: '12.2001-09.2005'},
 -     {label: 'Мощность(лс):', value: '106 лс'},
 -     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
 -   ],
 -   [
 -     {label: 'Марка:', value: 'Toyota'},
@@ -29,10 +23,12 @@
 -     {label: 'Год:', value: '12.2001-09.2005'},
 -     {label: 'Мощность(лс):', value: '106 лс'},
 -     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
 -   ],
+- ];
+- var clarification = [
+-   {label: 'Узел:', value: 'Амортизатор'},
+-   {label: 'Место установки:', value: 'Задний мост'},
+-   {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
 - ];
 - var btnCancel = 'Закрыть';
 
@@ -44,4 +40,22 @@
     h1.modal__title #{title}
 
   .modal__content
+    .applicability
+      each list, index in applicability
+        .applicability__content
+          each item in list
+            .applicability__item
+              label.applicability__label #{item.label}
+              span.applicability__value #{item.value}
+          
+          .applicability__clarification
+            each item in clarification
+              .applicability__item
+                label.applicability__label #{item.label}
+                span.applicability__value #{item.value}
 
+          .applicability__btn
+            i.icon-arrow-down
+  
+  footer.modal__footer
+    button.btn.btn-transparent.btn-cancel#modalCancel #{btnCancel}

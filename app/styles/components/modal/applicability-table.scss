@@ -1,4 +1,75 @@
 .modal-applicability-table {
   min-width: 29em;
   
+  .btn-cancel {
+    color: $blue;
+    margin-right: 0;
+  }
+}
+
+.applicability {
+  padding: 1.5em 0;
+
+  &__content {
+    padding: 1em 1.5em 0;
+    margin: 0 -1.5em 1em;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: .6em;
+  }
+
+  &__label {
+    font-size: $font-size12;
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  &__value {
+    color: $gray-dark;
+    font-size: $font-size12;
+    flex: 0 0 50%;
+    width: 50%;
+    text-align: right;
+  }
+
+  &__btn {
+    border-top: 1px solid $gray-lightest;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2em;
+    height: 3.6em;
+
+    &.active {
+      margin-top: 0;
+      i {
+        transform: rotate(180deg);
+      }
+    }
+
+    i {
+      color: $gray-light;
+      font-size: $font-size24;
+    }
+  }
+
+  &__clarification {
+    background-color: $blue-lightest;
+    border-top: 1px solid $gray-lightest;
+    border-bottom: 1px solid $gray-lightest;
+    display: none;
+    padding: 1.2em 1.5em;
+    margin: 1.2em -1.5em -1px;
+
+    &.active {
+      display: block;
+    }
+  }
 }

@@ -12107,10 +12107,10 @@ $(document).ready(function() {
   $('#btnSelectModel').on('click', function() { openModal('#modalSelectModel'); });
   $('#btnSchedule').on('click', function() { openModal('#modalSchedule'); });
   $('#btnApplicabilityTable').on('click', function() { openModal('#modalApplicabilityTable'); });
-  $('#btnCheckAvailabilityModal').on('click', function() { openModal('#modalCheckAvailability'); });
-  $('#btnCheckAvailabilityAnalogsModal').on('click', function() { openModal('#modalCheckAvailabilityAnalogs'); });
-  $('#btnModelDetailsModal').on('click', function() { openModal('#modalModelDetails'); });
-  $('#btnSelectOrderModal').on('click', function() { openModal('#modalSelectOrder'); });
+  $('#btnCheckAvailability').on('click', function() { openModal('#modalCheckAvailability'); });
+  $('#btnCheckAvailabilityAnalogs').on('click', function() { openModal('#modalCheckAvailabilityAnalogs'); });
+  $('#btnModelDetails').on('click', function() { openModal('#modalModelDetails'); });
+  $('#btnSelectOrder').on('click', function() { openModal('#modalSelectOrder'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 
@@ -12149,6 +12149,12 @@ $(document).ready(function() {
   $('#btnConfirmOrderSendSuccess').on('click', function() {
     closeModal('.modal');
     $(this).on('click', function() { openModal('#modalOrderSendSuccess'); });
+  });
+
+  // applicability__btn
+  $('.applicability__btn').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).prev().toggleClass('active');
   });
 });
 

@@ -1285,6 +1285,79 @@ input[type=radio]:checked + label:after {
   min-width: 29em;
 }
 
+.modal-applicability-table .btn-cancel {
+  color: #2c80c9;
+  margin-right: 0;
+}
+
+.applicability {
+  padding: 1.5em 0;
+}
+
+.applicability__content {
+  padding: 1em 1.5em 0;
+  margin: 0 -1.5em 1em;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.applicability__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: .6em;
+}
+
+.applicability__label {
+  font-size: 1.2em;
+  flex: 0 0 50%;
+  width: 50%;
+}
+
+.applicability__value {
+  color: #6e7788;
+  font-size: 1.2em;
+  flex: 0 0 50%;
+  width: 50%;
+  text-align: right;
+}
+
+.applicability__btn {
+  border-top: 1px solid #e3e3e3;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2em;
+  height: 3.6em;
+}
+
+.applicability__btn.active {
+  margin-top: 0;
+}
+
+.applicability__btn.active i {
+  transform: rotate(180deg);
+}
+
+.applicability__btn i {
+  color: #b7bcc4;
+  font-size: 2.4em;
+}
+
+.applicability__clarification {
+  background-color: #f7fafd;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  display: none;
+  padding: 1.2em 1.5em;
+  margin: 1.2em -1.5em -1px;
+}
+
+.applicability__clarification.active {
+  display: block;
+}
+
 .stub-pages {
   padding: 2.5em;
 }
