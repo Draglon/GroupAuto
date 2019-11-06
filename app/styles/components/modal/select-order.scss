@@ -1,0 +1,22 @@
+.modal-select-order {
+  min-width: 29em;
+
+  .order.selected {
+    background-color: $blue;
+
+    .order__label {
+      color: $white;
+      font-size: $font-size12;
+    }
+    .order__value {
+      color: $white;
+      font-size: $font-size12;
+    }
+    .order__show-more {
+
+      i {
+        color: $white;
+      }
+    }
+  }
+}

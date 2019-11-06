@@ -12151,7 +12151,7 @@ $(document).ready(function() {
     $(this).on('click', function() { openModal('#modalOrderSendSuccess'); });
   });
 
-  // applicability__btn
+  // Applicability
   $('.applicability__btn').on('click', function() {
     $(this).toggleClass('active');
     $(this).prev().toggleClass('active');

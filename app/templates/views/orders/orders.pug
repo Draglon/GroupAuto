@@ -1,4 +1,4 @@
-- var title = 'Заказы'
+- var title = 'Заказы';
 - var orders = [
 -   {
 -     orderNumber: '101_W_189',
@@ -7,6 +7,7 @@
 -     status: 'formed',
 -     contract: '7248-12 Нал/ДН',
 -     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
+-     selected: false,
 -   },
 -   {
 -     orderNumber: '101_W_354',
@@ -15,6 +16,7 @@
 -     status: 'onProcessing',
 -     contract: '7248-12 Нал/ДН',
 -     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
+-     selected: true,
 -   },
 -   {
 -     orderNumber: '101_W_354',
@@ -24,6 +26,7 @@
 -     contract: '7248-12 Нал/ДН',
 -     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
 -     document: 'Заявка',
+-     selected: false,
 -   },
 -   {
 -     orderNumber: '101_W_354',
@@ -33,6 +36,7 @@
 -     contract: '7248-12 Нал/ДН',
 -     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
 -     document: 'Продажа',
+-     selected: false,
 -   },
 -   {
 -     orderNumber: '101_W_354',
@@ -41,16 +45,17 @@
 -     status: 'canceled',
 -     contract: '7248-12 Нал/ДН',
 -     mark: 'заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4',
+-     selected: false,
 -   },
-- ]
+- ];
 - var status = {
 -   formed: 'Формируется',
 -   onProcessing: 'На обработке',
 -   accepted: 'Принят',
 -   closed: 'Закрыт',
 -   canceled: 'Аннулирован',
-- }
-- var startProcessing = ' с 21.02.2019'
+- };
+- var startProcessing = ' с 21.02.2019';
 
 section.section.section--orders
   .wrapper
