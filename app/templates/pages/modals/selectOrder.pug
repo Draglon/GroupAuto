@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап выбор заказа
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnSelectOrderModal Выбор заказа
+
+block modal
+  include ../../views/modal/selectOrder
+  include ../../views/shared/overlay

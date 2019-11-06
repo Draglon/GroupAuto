@@ -1281,6 +1281,10 @@ input[type=radio]:checked + label:after {
   display: block;
 }
 
+.modal-applicability-table {
+  min-width: 29em;
+}
+
 .stub-pages {
   padding: 2.5em;
 }

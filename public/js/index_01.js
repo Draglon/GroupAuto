@@ -12106,6 +12106,11 @@ $(document).ready(function() {
   $('#btnSearch').on('click', function() { openModal('#modalSearch'); });
   $('#btnSelectModel').on('click', function() { openModal('#modalSelectModel'); });
   $('#btnSchedule').on('click', function() { openModal('#modalSchedule'); });
+  $('#btnApplicabilityTable').on('click', function() { openModal('#modalApplicabilityTable'); });
+  $('#btnCheckAvailabilityModal').on('click', function() { openModal('#modalCheckAvailability'); });
+  $('#btnCheckAvailabilityAnalogsModal').on('click', function() { openModal('#modalCheckAvailabilityAnalogs'); });
+  $('#btnModelDetailsModal').on('click', function() { openModal('#modalModelDetails'); });
+  $('#btnSelectOrderModal').on('click', function() { openModal('#modalSelectOrder'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
 

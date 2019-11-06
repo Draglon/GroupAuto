@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап таблица применимости
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnApplicabilityTableModal Таблица применимости
+
+block modal
+  include ../../views/modal/applicabilityTable
+  include ../../views/shared/overlay

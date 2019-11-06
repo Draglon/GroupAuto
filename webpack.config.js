@@ -129,6 +129,31 @@ const common = merge([
         template: PATHS.source + '/templates/pages/modals/details.pug'
       }),
       new HtmlWebpackPlugin({
+        filename: 'applicabilityTableModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/applicabilityTable.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'checkAvailabilityModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/checkAvailability.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'checkAvailabilityAnalogsModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/checkAvailabilityAnalogs.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'modelDetailsModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/modelDetails.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'selectOrderModal.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/modals/selectOrder.pug'
+      }),
+      new HtmlWebpackPlugin({
         filename: 'scheduleModal.html',
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/modals/schedule.pug'

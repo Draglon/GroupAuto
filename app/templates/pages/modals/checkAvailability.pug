@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Попап проверить наличие
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnCheckAvailabilityModal проверить наличие
+
+block modal
+  include ../../views/modal/checkAvailability
+  include ../../views/shared/overlay

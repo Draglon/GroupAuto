@@ -6,49 +6,45 @@ block content
   .stub-pages
     h1.stub-pages__title Страницы
 
-    .stub-pages__item
-      a(href='/login.html') Вход
-    .stub-pages__item
-      a(href='/contacts.html') Контакты
-    .stub-pages__item
-      a(href='/orders.html') Заказы
-    .stub-pages__item
-      a(href='/order.html') Заказ
-    .stub-pages__item
-      a(href='/orderAccepted.html') Заказ принят
-    .stub-pages__item
-      a(href='/searchResults.html') Результаты поиска
-    .stub-pages__item
-      a(href='/productDescription.html') Описание товара
-    .stub-pages__item
-      a(href='/contracts.html') Контракты
+    - var pages = [
+    -   {href: '/login.html', text: 'Вход'},
+    -   {href: '/contacts.html', text: 'Контакты'},
+    -   {href: '/orders.html', text: 'Заказы'},
+    -   {href: '/order.html', text: 'Заказ'},
+    -   {href: '/orderAccepted.html', text: 'Заказ принят'},
+    -   {href: '/searchResults.html', text: 'Результаты поиска'},
+    -   {href: '/productDescription.html', text: 'Описание товара'},
+    -   {href: '/contracts.html', text: 'Контракты'},
+    - ];
+
+    each page in pages
+      .stub-pages__item
+        a(href=page.href) #{page.text}
 
     hr
     h1.stub-pages__title Модальные окна
 
-    .stub-pages__item
-      a(href='/forgotPasswordModal.html') Напоминание пароля
-    .stub-pages__item
-      a(href='/forgotPasswordSuccessModal.html') Напоминание пароля (успешен)
-    .stub-pages__item
-      a(href='/orderSendModal.html') Отправить заказ
-    .stub-pages__item
-      a(href='/orderSendSuccessModal.html') Отправить заказ (успешен)
-    .stub-pages__item
-      a(href='/productCancelModal.html') Отменить заказ
-    .stub-pages__item
-      a(href='/filterModal.html') Фильтер заказов
-    .stub-pages__item
-      a(href='/searchModal.html') Уточнение запроса
-    .stub-pages__item
-      a(href='/selectModelModal.html') Выбор модели
-    .stub-pages__item
-      a(href='/contactsModal.html') Контакты
-    .stub-pages__item
-      a(href='/cartModal.html') Корзина
-    .stub-pages__item
-      a(href='/detailsModal.html') Детали
-    .stub-pages__item
-      a(href='/scheduleModal.html') Расписание
-    .stub-pages__item
-      a(href='/contractsModal.html') Контракты
+    - var modals = [
+    -   {href: '/forgotPasswordModal.html', text: 'Напоминание пароля'},
+    -   {href: '/forgotPasswordSuccessModal.html', text: 'Напоминание пароля (успешен)'},
+    -   {href: '/orderSendModal.html', text: 'Отправить заказ'},
+    -   {href: '/orderSendSuccessModal.html', text: 'Отправить заказ (успешен)'},
+    -   {href: '/productCancelModal.html', text: 'Отменить заказ'},
+    -   {href: '/filterModal.html', text: 'Фильтер заказов'},
+    -   {href: '/searchModal.html', text: 'Уточнение запроса'},
+    -   {href: '/selectModelModal.html', text: 'Выбор модели'},
+    -   {href: '/contactsModal.html', text: 'Контакты'},
+    -   {href: '/cartModal.html', text: 'Корзина'},
+    -   {href: '/detailsModal.html', text: 'Детали'},
+    -   {href: '/applicabilityTableModal.html', text: 'Таблица применимости'},
+    -   {href: '/checkAvailabilityModal.html', text: 'Проверить наличие'},
+    -   {href: '/checkAvailabilityAnalogsModal.html', text: 'Проверить наличие (Аналоги)'},
+    -   {href: '/modelDetailsModal.html', text: 'Детали модели'},
+    -   {href: '/selectOrderModal.html', text: 'Выбор заказа'},
+    -   {href: '/scheduleModal.html', text: 'Расписание'},
+    -   {href: '/contractsModal.html', text: 'Контракты'},
+    - ];
+
+    each modal in modals
+      .stub-pages__item
+        a(href=modal.href) #{modal.text}
