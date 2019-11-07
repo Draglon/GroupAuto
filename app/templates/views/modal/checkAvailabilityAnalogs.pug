@@ -1,42 +1,35 @@
-- var title = 'Таблица применимости в Toyota';
-- var list = [
--   [
--     {label: 'Марка:', value: 'Toyota'},
--     {label: 'Модификация:', value: 'Yaris Verso (_NLP2_, _NCP2_)'},
--     {label: 'Двигатель:', value: '1.4D-4D'},
--     {label: 'Год:', value: '12.2001-09.2005'},
--     {label: 'Мощность(лс):', value: '106 лс'},
--     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
--   ],
--   [
--     {label: 'Марка:', value: 'Toyota'},
--     {label: 'Модификация:', value: 'Yaris Verso (_NLP2_, _NCP2_)'},
--     {label: 'Двигатель:', value: '1.4D-4D'},
--     {label: 'Год:', value: '12.2001-09.2005'},
--     {label: 'Мощность(лс):', value: '106 лс'},
--     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
--   ],
--   [
--     {label: 'Марка:', value: 'Toyota'},
--     {label: 'Модификация:', value: 'Yaris Verso (_NLP2_, _NCP2_)'},
--     {label: 'Двигатель:', value: '1.4D-4D'},
--     {label: 'Год:', value: '12.2001-09.2005'},
--     {label: 'Мощность(лс):', value: '106 лс'},
--     {label: 'Код двигателя:', value: '1NZ-NF'},
--     {label: 'Узел:', value: 'Амортизатор'},
--     {label: 'Место установки:', value: 'Задний мост'},
--     {label: 'Тип подвески:', value: 'Для автомобилей с подвеской на спиральных пружинах'},
--   ],
-- ];
-- var btnCancel = 'Закрыть';
+- var title = 'Проверка наличия';
+- var checkLabel = 'Запрошено кол-во';
+- var btnCheck = 'Проверить';
 
-.modal.modal-check-availability-analogs#modalCheckAvailabilityAnalogs
+- var badge = {
+-   stock: 'Акция',
+-   sale: 'Sale',
+-   markdown: 'Уценка',
+- };
+
+- var checkProduct = {
+-   badge: 'stock',
+-   title: 'MANN W 914/2',
+- };
+
+
+- var titleAnalogs = 'Аналоги FE FCDO139/1P';
+- var products = [
+-   {
+-     badge: 'sale',
+-     title: 'MANN W 914/2',
+-   },
+-   {
+-     badge: 'markdown',
+-     title: 'MANN W 914/2',
+-   },
+- ];
+
+- var btnCancel = 'Закрыть';
+- var btnConfirm = 'В заказ';
+
+.modal.modal-check-availability#modalCheckAvailabilityAnalogs
   span.modal__close#modalClose
     i.icon-cross
 
@@ -44,4 +37,91 @@
     h1.modal__title #{title}
 
   .modal__content
+    .checkProduct
+      .checkProduct__counter
+        label.checkProduct__label #{checkLabel}
+        .counter
+          .counter__button
+            i.icon-minus
+          .counter__amount
+            input(type='text' value=3)
+          .counter__button
+            i.icon-plus
+      button.btn.btn-primary.btnCheckProduct #{btnCheck}
 
+    .product.product--check
+      .product__badge(class=checkProduct.badge data-badge=badge[checkProduct.badge])
+      h2.product__title #{checkProduct.title}
+      .product__content
+        .product__list
+          .product__item
+            label.product__item-label Входн.
+            span.product__item-value 4007,44 y.e
+          .product__item
+            label.product__item-label Розн.
+            span.product__item-value 70 890,77 грн
+
+        .availability
+          header.availability__header
+            h3.availability__title Доступен,ЦС
+            h3.availability__title Кол-во
+          .availability__item
+            .availability__label Сегодня
+            .availability__value
+              span.availability__count.red 2
+          .availability__item
+            .availability__label 29.08.2019 чтв., после 09:00
+            .availability__value
+              span.availability__count.green 3
+          .availability__item
+            .availability__label В заказ
+            .availability__value
+              .counter
+                .counter__button
+                  i.icon-minus
+                .counter__amount
+                  input(type='text' value=3)
+                .counter__button
+                  i.icon-plus
+
+    .products
+      h2.products__title #{titleAnalogs}
+      each product in products
+        .product.product--check
+          .product__badge(class=product.badge data-badge=badge[product.badge])
+          h2.product__title #{product.title}
+          .product__content
+            .product__list
+              .product__item
+                label.product__item-label Входн.
+                span.product__item-value 4007,44 y.e
+              .product__item
+                label.product__item-label Розн.
+                span.product__item-value 70 890,77 грн
+
+            .availability
+              header.availability__header
+                h3.availability__title Доступен,ЦС
+                h3.availability__title Кол-во
+              .availability__item
+                .availability__label Сегодня
+                .availability__value
+                  span.availability__count.red 2
+              .availability__item
+                .availability__label 29.08.2019 чтв., после 09:00
+                .availability__value
+                  span.availability__count.green 3
+              .availability__item
+                .availability__label В заказ
+                .availability__value
+                  .counter
+                    .counter__button
+                      i.icon-minus
+                    .counter__amount
+                      input(type='text' value=3)
+                    .counter__button
+                      i.icon-plus
+
+  footer.modal__footer
+    button.btn.btn-transparent.btn-cancel#modalCancel #{btnCancel}
+    button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}

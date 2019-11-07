@@ -22,6 +22,10 @@
 @import 'components/alert';
 @import 'components/slider';
 @import 'components/pagination';
+@import 'components/exchange';
+@import 'components/products';
+@import 'components/products-check';
+@import 'components/counter';
 @import 'components/overlay';
 // Modals
 @import 'components/modal/details';
@@ -29,8 +33,9 @@
 @import 'components/modal/select-model';
 @import 'components/modal/schedule';
 @import 'components/modal/applicability-table';
-@import 'components/modal/select-order';
 @import 'components/modal/details-model';
+@import 'components/modal/select-order';
+@import 'components/modal/check-availability';
 // Stubs pages
 @import 'components/stubs/stub-pages';
 // Login - page
@@ -46,8 +51,6 @@
 @import 'components/orders/orders';
 // Order - page
 @import 'components/order/order';
-@import 'components/order/exchange';
-@import 'components/order/products';
 @import 'components/modal/product-cancel';
 @import 'components/modal/order-send';
 @import 'components/modal/order-send-success';

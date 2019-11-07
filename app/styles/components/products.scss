@@ -1,6 +1,10 @@
 .products {
   padding-top: 1.5em;
 
+  &__title {
+    margin-bottom: .5em;
+  }
+
   &__total {
     border-top: 1px solid $gray-lightest;
     margin-top: 2em;
@@ -89,8 +93,8 @@
     }
 
     &.stock {
-      background-color: $green_20;
-      color: $green;
+      background-color: $green-light_20;
+      color: $green-light;
     }
     &.sale {
       background-color: $red_20;
@@ -317,41 +321,6 @@
       font-size: $font-size13;
       margin-top: .5em;
       margin-left: .5em;
-    }
-  }
-}
-
-.counter {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 11.1em;
-
-  &__button {
-    background-color: $gray-lightest;
-    color: $white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.3em;
-    height: 3.3em;
-
-    i {
-      font-size: $font-size24;
-    }
-  }
-
-  &__amount {
-
-    input {
-      background-color: $white;
-      font-size: $font-size18;
-      font-weight: $font-weight-medium;
-      width: 33px;
-      height: 33px;
-      padding: 0 5px;
-      text-align: center;
     }
   }
 }
