@@ -1,3 +1,42 @@
 .modal-details-model {
   min-width: 29em;
+
+  .orders__content {
+    padding-top: 1.5em;
+  }
+
+  .order {
+    padding-bottom: 1em;
+  }
+
+  .order__title {
+    margin-bottom: 5px;
+  }
+
+  .order__item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Order total
+  .order__total {
+    background-color: $white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    margin: 0 -1.5em;
+    padding: 1.2em 1.5em;
+  }
+  .order__currency {
+    border-top: 1px solid $gray-lightest;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.2em;
+  }
+  .order__btns {
+    padding: 1.5em 0;
+    .btn {
+      margin-bottom: 10px;
+      &:last-child {margin: 0;}
+    }
+  }
 }

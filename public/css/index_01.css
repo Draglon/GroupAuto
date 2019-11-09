@@ -534,6 +534,24 @@ input[type=checkbox]:checked + label:after {
   border-radius: 0;
 }
 
+.btn-green {
+  background-color: #00d763;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
+.btn-pink {
+  background-color: #d70074;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
+.btn-red {
+  background-color: #f00;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+
 input[type=radio] {
   display: none;
 }
@@ -1848,6 +1866,48 @@ input[type=radio]:checked + label:after {
 
 .modal-details-model {
   min-width: 29em;
+}
+
+.modal-details-model .orders__content {
+  padding-top: 1.5em;
+}
+
+.modal-details-model .order {
+  padding-bottom: 1em;
+}
+
+.modal-details-model .order__title {
+  margin-bottom: 5px;
+}
+
+.modal-details-model .order__item:last-child {
+  margin-bottom: 0;
+}
+
+.modal-details-model .order__total {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  margin: 0 -1.5em;
+  padding: 1.2em 1.5em;
+}
+
+.modal-details-model .order__currency {
+  border-top: 1px solid #e3e3e3;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.2em;
+}
+
+.modal-details-model .order__btns {
+  padding: 1.5em 0;
+}
+
+.modal-details-model .order__btns .btn {
+  margin-bottom: 10px;
+}
+
+.modal-details-model .order__btns .btn:last-child {
+  margin: 0;
 }
 
 .modal-select-order {

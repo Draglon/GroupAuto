@@ -32,3 +32,15 @@
     border-radius: 0;
   }
 }
+
+.btn-green {
+  @include btn-color($green, $primary-color);
+}
+
+.btn-pink {
+  @include btn-color($pink, $primary-color);
+}
+
+.btn-red{
+  @include btn-color($red, $primary-color);
+}

@@ -2,15 +2,15 @@
 - var order_1 = {
 -   title: 'Test 33',
 -   items: [
--     {label: 'Дата заказа:', value: '1189-10'},
--     {label: 'Сумма:', value: '4598-54 Нал/ДН'},
+-     {label: 'Дата заказа:', value: '1189-10', selected: false},
+-     {label: 'Сумма:', value: '4598-54 Нал/ДН', selected: true},
 -   ],
 - };
 - var order_2 = {
 -   title: '“Euro Gold” г.Днепр',
 -   items: [
--     {label: 'Кред.условия:', value: '100 y.e/14 дн.'},
--     {label: 'Переплата:', value: '0,00 у.е'},
+-     {label: 'Кред.условия:', value: '100 y.e/14 дн.', selected: false},
+-     {label: 'Переплата:', value: '0,00 у.е', selected: false},
 -   ],
 -   button: 'Создать счет на оплату',
 - };
@@ -25,7 +25,7 @@
 - var btnRed = 'Отгрузка запрещена';
 - var btnCancel = 'Закрыть';
 
-.modal.modal-model-details#modalModelDetails
+.modal.modal-details-model#modalModelDetails
   span.modal__close#modalClose
     i.icon-cross
 
@@ -35,14 +35,20 @@
   .modal__content
     .orders__content
       .order
-        .order__title #{order_1.title}
+        h1.order__title #{order_1.title}
         each item in order_1.items
           .order__item.active
             label.order__label #{item.label}
-            span.order__value #{item.value}
+            span.order__value
+              if item.selected
+                span.order__select
+                  | #{item.value}
+                  i.icon-arrow-down
+              if !item.selected
+                | #{item.value}
 
       .order
-        .order__title #{order_2.title}
+        h1.order__title #{order_2.title}
         each item in order_2.items
           .order__item.active
             label.order__label #{item.label}
@@ -59,9 +65,15 @@
           span.order__value #{currency.value}
 
       .order__btns
-        button.btn.btn-primary #{btnGreen}
-        button.btn.btn-primary #{btnPink}
-        button.btn.btn-primary #{btnRed}
+        button.btn.btn-green
+          i.icon-delivery
+          | #{btnGreen}
+        button.btn.btn-pink
+          i.icon-delivery
+          | #{btnPink}
+        button.btn.btn-red
+          i.icon-delivery
+          | #{btnRed}
 
   footer.modal__footer
     button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
