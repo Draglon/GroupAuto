@@ -163,6 +163,16 @@ const common = merge([
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/modals/contracts.pug'
       }),
+      new HtmlWebpackPlugin({
+        filename: 'orderSendPanel.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/sidebar/orderSend.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'orderDeliveryPanel.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/sidebar/orderDelivery.pug'
+      }),
 
       new webpack.optimize.CommonsChunkPlugin({
         name: 'common'

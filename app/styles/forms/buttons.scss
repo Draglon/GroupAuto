@@ -10,6 +10,10 @@
   @include btn-color($primary-bg-color, $primary-color);
 }
 
+.btn-white {
+  @include btn-color($white, $blue, $blue);
+}
+
 .btn-transparent {
   @include btn-color($transparent-bg-color, $transparent-color);
   @include btn-size($transparent-padding, $transparent-height, $transparent-width);
@@ -43,4 +47,8 @@
 
 .btn-red{
   @include btn-color($red, $primary-color);
+}
+
+.btn-turquoise{
+  @include btn-color($turquoise, $primary-color);
 }

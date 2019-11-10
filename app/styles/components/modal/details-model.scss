@@ -37,6 +37,10 @@
     .btn {
       margin-bottom: 10px;
       &:last-child {margin: 0;}
+      i {
+        font-size: 22px;
+        margin-right: 10px;
+      }
     }
   }
 }

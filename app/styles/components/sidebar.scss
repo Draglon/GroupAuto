@@ -1,0 +1,41 @@
+.sidebar {
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  transition: left .3s;
+  z-index: 102;
+
+  &.active {
+    left: 0;
+  }
+
+  &__close {
+    color: $gray;
+    cursor: pointer;
+    position: absolute;
+    top: 1.2em;
+    right: 1.4em;
+    z-index: 3;
+
+    &:hover {color: $blue;}
+    i {font-size: $font-size24;}
+  }
+
+  &__header {
+    background-color: $white;
+    padding: 1.6em 5em .8em 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    h1 {
+      color: $blue-dark;
+      line-height: 1.15em;
+    }
+  }
+}

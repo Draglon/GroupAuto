@@ -48,3 +48,15 @@ block content
     each modal in modals
       .stub-pages__item
         a(href=modal.href) #{modal.text}
+
+    hr
+    h1.stub-pages__title Боковые панели (Sidebar)
+
+    - var panels = [
+    -   {href: '/orderSendPanel.html', text: 'Самовывоз'},
+    -   {href: '/orderDeliveryPanel.html', text: 'Доставка'},
+    - ];
+
+    each panel in panels
+      .stub-pages__item
+        a(href=panel.href) #{panel.text}

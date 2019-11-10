@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Самовывоз
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnOrderSendPanel Самовывоз
+
+block modal
+  include ../../views/sidebar/orderSend
+  include ../../views/shared/overlay

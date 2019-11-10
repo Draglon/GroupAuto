@@ -48,6 +48,9 @@ $green_20: rgba($green, .2);
 $green-light: #6dd230;
 $green-light_20: rgba($green-light, .2);
 
+// Turquoise
+$turquoise: #2cc9c4;
+
 // ==================== TEXT COLORS ====================
 $text-color-base: $black;
 $text-color-active: $blue;
@@ -126,7 +129,7 @@ $border-solid-base: $border-solid $border-color-base;
 
 // ==================== FORMS: Buttons =======================
 $btn-bg-color: $white_00;
-$btn-border-color: $white_00 !important;
+$btn-border-color: $white_00;
 $btn-border: $border-solid;
 $btn-color: $gray;
 $btn-radius: $border-radius-base;

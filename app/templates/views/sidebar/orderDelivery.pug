@@ -1,0 +1,68 @@
+- var deliveryMethods = [
+-   {type: 'radio', id: 'model_1', name: 'delivery', label: 'Доставка', checked: true},
+-   {type: 'radio', id: 'model_2', name: 'delivery', label: 'Самовывоз', checked: false},
+- ];
+
+aside.sidebar#sidebar
+  span.sidebar__close#sidebarClose
+    i.icon-cross
+
+  header.sidebar__header
+    h1.sidebar__title Форма для отправки заказа в обработку
+
+  .sidebar__content
+    form.form.delivery(action="")
+      .delivery__item
+        label.delivery__label Способ получения товара
+        .delivery__field
+          each field in deliveryMethods
+            .form__field.form__field--half
+              input(type=field.type id=field.id name=field.name checked=field.checked)
+              label(for=field.id) #{field.label}
+
+      .delivery__item
+        label.delivery__label Дата и торговая точка
+        .delivery__field
+          .form__field.form__field--half
+            label.form__label Дата
+            .form__select
+              select
+                option 9:15
+                option 10:30
+                option 11:45
+                option 14:30
+            .form__error Выберите дату
+          .form__field.form__field--full
+            label.form__label Торговая точка
+            .form__select
+              select.error
+                option 9:15
+                option 10:30
+                option 11:45
+                option 14:30
+            .form__error Выберите торговую точку
+
+      .delivery__item
+        label.delivery__label Расписание
+        button.btn.btn-turquoise Выберите расписание
+        ul.delivery__schedule
+          li.delivery__schedule-item
+            label.delivery__schedule-label Время отгрузки со склада
+            span.delivery__schedule-value 8:00
+          li.delivery__schedule-item
+            label.delivery__schedule-label Способ доставки
+            span.delivery__schedule-value Доставка по городу
+          li.delivery__schedule-item
+            label.delivery__schedule-label Планируемое время доставки
+            span.delivery__schedule-value 01.09.2019 10:00
+
+      .delivery__item
+        label.delivery__label Комментарий
+        .form__field
+          textarea.delivery__comment(name="comment", cols="30", rows="10")
+
+      .delivery__btns
+        button.btn.btn-primary
+          i.icon-cube
+          | Отправить на обработку
+        button.btn.btn-white Сохранить

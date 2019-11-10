@@ -3,24 +3,24 @@ var win_scroll = 0;
 var win_width = 0;
 var win_height = 0;
 
-// =========================================== Modal =======================================
+// =========================================== Modal & Sidebar ====================================
 function openModal(modal) {
   $(modal).addClass('active');
   $('#overlay').addClass('active');
   $('body').addClass('not-scroll');
 
-  let modalHeight = $('.modal').innerHeight();
-  let headerHeight = $('.modal__header').innerHeight() || 0;
-  let contentHeight = $('.modal__content').innerHeight();
-  let footerHeight = $('.modal__footer').innerHeight() || 0;
+  let modalHeight = $('.modal, .sidebar').innerHeight();
+  let headerHeight = $('.modal__header, .sidebar__header').innerHeight() || 0;
+  let contentHeight = $('.modal__content, .sidebar__content').innerHeight();
+  let footerHeight = $('.modal__footer, .sidebar__footer').innerHeight() || 0;
 
   if(contentHeight > modalHeight) {
-    $('.modal__content').css({
+    $('.modal__content, .sidebar__content').css({
       'overflow': 'auto',
-      'height': modalHeight - (headerHeight + footerHeight),
+      'height': modalHeight,
     });
   }
-  $('.modal__content').css({
+  $('.modal__content, .sidebar__content').css({
     'padding': `${headerHeight}px 1.5em ${footerHeight}px`,
   });
 }
@@ -134,8 +134,11 @@ $(document).ready(function() {
 
   // Open aside panel
   $('#btnMenu').on('click', function() { openModal('#asidePanel'); });
+  $('#btnOrderSendPanel').on('click', function() { openModal('#sidebar'); });
+  $('#btnOrderDeliveryPanel').on('click', function() { openModal('#sidebar'); });
   // Close aside panel
   $('#asidePanelClose').on('click', function() { closeModal('#asidePanel'); });
+  $('#sidebarClose').on('click', function() { closeModal('#sidebar'); });
 
   // Close alert
   $('#alertClose').on('click', function() {
@@ -174,12 +177,13 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     $(this).prev().toggleClass('active');
   });
+  
+  // STUBS - (remove after deploy)
+  $('#btnOrderSend--stub').on('click', function() { openModal('#modalOrderSend'); });
+  $('#btnConfirmOrderSendSuccess--stub').on('click', function() { openModal('#modalOrderSendSuccess'); });
+  $('#btnProductCancel--stub').on('click', function() { openModal('#modalProductCancel'); });
 });
 
-// STUBS - (remove after deploy)
-$('#btnOrderSend--stub').on('click', function() { openModal('#modalOrderSend'); });
-$('#btnConfirmOrderSendSuccess--stub').on('click', function() { openModal('#modalOrderSendSuccess'); });
-$('#btnProductCancel--stub').on('click', function() { openModal('#modalProductCancel'); });
 
 // =========================================== Window Resize and Document Ready ====================
 var callback = function() {
