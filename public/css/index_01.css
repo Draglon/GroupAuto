@@ -323,7 +323,7 @@ input[type=tel]:focus,
 input[type=date]:focus,
 textarea:focus,
 select:focus {
-  border-color: #2c80c9;
+  border-color: #2c80c9 !important;
 }
 
 input[type=text].error,
@@ -333,7 +333,7 @@ input[type=tel].error,
 input[type=date].error,
 textarea.error,
 select.error {
-  border-color: #f00;
+  border-color: #f00 !important;
 }
 
 ::-webkit-input-placeholder {
@@ -448,8 +448,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   transform: translateY(-50%);
 }
 
-.form .form__error {
+.form input.invalid,
+.form select.invalid {
+  border-color: #f00 !important;
+}
+
+.form span.invalid {
   color: #f00;
+  display: inline-block;
   margin-top: 3px;
 }
 
@@ -2020,6 +2026,7 @@ input[type=radio]:checked + label:after {
 }
 
 .login {
+  display: block;
   padding-top: 9em;
 }
 

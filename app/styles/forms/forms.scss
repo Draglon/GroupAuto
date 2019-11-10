@@ -21,11 +21,11 @@ select {
   width: 100%;
 
   &:focus {
-    border-color: $input-border-color-focus;
+    border-color: $input-border-color-focus !important;
   }
 
   &.error {
-    border-color: $input-border-color-error;
+    border-color: $input-border-color-error !important;
   }
 }
 ::-webkit-input-placeholder {color: $placeholder-color;opacity: 1;}
@@ -99,8 +99,12 @@ input[type=date] {
     }
   }
 
-  .form__error {
+  input.invalid, select.invalid {
+    border-color: $input-border-color-error !important;
+  }
+  span.invalid {
     color: $red;
+    display: inline-block;
     margin-top: 3px;
   }
 }

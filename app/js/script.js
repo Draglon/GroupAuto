@@ -85,19 +85,15 @@ var form = function(formContact) {
   });
   $(formContact).validate({
     rules: {
-      "Form[email]": {
-        required: true,
-        customemail: true
-      },
-      "Form[ssn]": {
-        required: true,
-        minlength: 4,
-        enonly: true
-      },
-      "Form[zip]": {
+      "Form[login]": {
         required: true,
         enonly: true
-      }
+      },
+      "Form[password]": {
+        required: true,
+        minlength: 8,
+        pass: true,
+      },
     },
     errorElement: "span",
     errorClass: "invalid",
@@ -182,6 +178,8 @@ $(document).ready(function() {
   $('#btnOrderSend--stub').on('click', function() { openModal('#modalOrderSend'); });
   $('#btnConfirmOrderSendSuccess--stub').on('click', function() { openModal('#modalOrderSendSuccess'); });
   $('#btnProductCancel--stub').on('click', function() { openModal('#modalProductCancel'); });
+
+  form("#loginForm");
 });
 
 

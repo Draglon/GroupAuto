@@ -1,17 +1,17 @@
 - var fields = [
--   {type: 'text', label: 'Логин', placeholder: 'Введите логин'},
--   {type: 'password', label: 'Пароль', placeholder: 'Введите пароль'},
+-   {type: 'text', label: 'Логин', name: 'login', placeholder: 'Введите логин'},
+-   {type: 'password', label: 'Пароль', name: 'password', placeholder: 'Введите пароль'},
 -]
 - var button = 'Войти'
 - var forgotPassword = 'Забыли пароль?'
 
 section.section.login
   .wrapper
-    form.form.login__form(action="")
+    form.form.login__form#loginForm(action="" method="get")
       each field in fields
         .form__field
           label #{field.label}
-          input(type=field.type placeholder=field.placeholder autocomplete='off')
+          input(type=field.type name=field.name placeholder=field.placeholder autocomplete='off' required) 
 
       .form__btns
         button.btn.btn-primary(type="submit") #{button}
