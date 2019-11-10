@@ -1,5 +1,4 @@
 .login {
-  display: block;
   padding-top: $header-login-height;
 
   &__form {
@@ -34,6 +33,7 @@
 
     .form__btns {
       text-align: center;
+      width: 100%;
 
       .btn-link {
         font-size: $font-size12;

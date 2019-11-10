@@ -2026,7 +2026,6 @@ input[type=radio]:checked + label:after {
 }
 
 .login {
-  display: block;
   padding-top: 9em;
 }
 
@@ -2065,6 +2064,7 @@ input[type=radio]:checked + label:after {
 
 .login__form .form__btns {
   text-align: center;
+  width: 100%;
 }
 
 .login__form .form__btns .btn-link {
