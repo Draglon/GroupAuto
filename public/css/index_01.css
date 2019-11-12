@@ -1089,6 +1089,98 @@ input[type=radio]:checked + label:after {
   margin-bottom: 1.5em;
 }
 
+.slider__figure {
+  position: relative;
+}
+
+.slider__badge {
+  border-radius: 1.5em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  min-width: 5.4em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+.slider__badge:before {
+  content: attr(data-badge);
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.slider__badge.stock {
+  background-color: rgba(109, 210, 48, 0.2);
+  color: #6dd230;
+}
+
+.slider__badge.sale {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #f00;
+}
+
+.slider__badge.markdown {
+  background-color: rgba(255, 199, 0, 0.2);
+  color: #ffc700;
+}
+
+.nbs-flexisel-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.nbs-flexisel-ul {
+  position: relative;
+  width: 9999px;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.nbs-flexisel-inner {
+  overflow: hidden;
+  width: 100%;
+}
+
+.nbs-flexisel-item {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  position: relative;
+  line-height: 0px;
+}
+
+.nbs-flexisel-item > img {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100px;
+  max-height: 45px;
+}
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.5;
+}
+
+.nbs-flexisel-nav-left {
+  left: 10px;
+}
+
+.nbs-flexisel-nav-right {
+  right: 5px;
+}
+
 .pagination {
   text-align: center;
   display: flex;

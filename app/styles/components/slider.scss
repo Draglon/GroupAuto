@@ -4,4 +4,94 @@
   border-radius: $border-radius-base;
   padding: 1em;
   margin-bottom: 1.5em;
+
+  &__figure {
+    position: relative;
+  }
+
+  &__badge {
+    border-radius: 1.5em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    min-width: 5.4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+
+    &:before {
+      content: attr(data-badge);
+      font-size: $font-size11;
+      font-weight: $font-weight-medium;
+    }
+
+    &.stock {
+      background-color: $green-light_20;
+      color: $green-light;
+    }
+    &.sale {
+      background-color: $red_20;
+      color: $red;
+    }
+    &.markdown {
+      background-color: $yellow_20;
+      color: $yellow;
+    }
+  }
 }
+
+.nbs-flexisel-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.nbs-flexisel-ul {
+  position: relative;
+  width: 9999px;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.nbs-flexisel-inner {
+  overflow: hidden;
+  width: 100%;
+}
+
+.nbs-flexisel-item {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  position: relative;
+  line-height: 0px;
+}
+
+.nbs-flexisel-item > img {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100px;
+  max-height: 45px;
+}
+
+.nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.5;
+}
+
+.nbs-flexisel-nav-left {
+  left: 10px;
+}
+
+.nbs-flexisel-nav-right {
+  right: 5px;
+}
+  

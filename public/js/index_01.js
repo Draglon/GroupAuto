@@ -12493,6 +12493,22 @@ var form = function(formContact) {
   });
 };
 
+// =========================================== Slider ==========================
+var slider = function (nameId) {
+  $(nameId).flexisel({
+      visibleItems: 1,
+      itemsToScroll: 1,
+      animationSpeed: 500,
+      infinite: true,
+      navigationTargetSelector: null,
+      autoPlay: {
+        enable: true,
+        interval: 3000,
+        pauseOnHover: true,
+      }
+  });
+};
+
 // =========================================== Document Ready ======================================
 $(document).ready(function() {
   // Open modal
@@ -12567,7 +12583,11 @@ $(document).ready(function() {
   $('#btnConfirmOrderSendSuccess--stub').on('click', function() { openModal('#modalOrderSendSuccess'); });
   $('#btnProductCancel--stub').on('click', function() { openModal('#modalProductCancel'); });
 
+  // Forms
   form("#loginForm");
+
+  // Slider
+  slider('#slider');
 });
 
 
