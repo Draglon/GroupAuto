@@ -37,6 +37,7 @@
     }
 
     &__number {
+      color: $gray;
       font-size: $font-size18;
       font-weight: $font-weight-medium;
     }
@@ -65,7 +66,7 @@
     }
   }
   
-  .schedule {
+  .work-schedule {
     padding-top: 1em;
     padding-left: 3.5em;
     position: relative;

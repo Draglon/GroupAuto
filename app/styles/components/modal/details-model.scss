@@ -26,17 +26,23 @@
     margin: 0 -1.5em;
     padding: 1.2em 1.5em;
   }
+
   .order__currency {
     border-top: 1px solid $gray-lightest;
     display: flex;
     justify-content: space-between;
     padding-top: 1.2em;
   }
+
   .order__btns {
     padding: 1.5em 0;
     .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-bottom: 10px;
       &:last-child {margin: 0;}
+
       i {
         font-size: 22px;
         margin-right: 10px;

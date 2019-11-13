@@ -3,6 +3,7 @@
 -   {
 -     title: '№ 4598-54 Нал/ДН',
 -     group: true,
+-     selected: false,
 -     fields: [
 -       {label: 'Сумма кредита', value: '250,00', required: true},
 -       {label: 'Отсрочка, дн', value: ' 10', required: true},
@@ -20,6 +21,8 @@
 -   },
 -   {
 -     title: '№ 4598-54 Нал/ДН',
+-     group: false,
+-     selected: false,
 -     fields: [
 -       {label: 'Сумма кредита', value: '250,00', required: true},
 -       {label: 'Отсрочка, дн', value: ' 10', required: true},
@@ -37,6 +40,7 @@
 -   },
 -   {
 -     title: '№ 4598-54 Нал/ДН',
+-     group: false,
 -     selected: true,
 -     fields: [
 -       {label: 'Сумма кредита', value: '250,00', required: true},
@@ -54,6 +58,8 @@
 -   },
 -   {
 -     title: '№ 4598-54 Нал/ДН',
+-     group: false,
+-     selected: false,
 -     fields: [
 -       {label: 'Сумма кредита', value: '250,00', required: true},
 -       {label: 'Отсрочка, дн', value: ' 10', required: true},
@@ -78,7 +84,7 @@ section.section.section--contacts
     .contracts
       each contract in contracts
         .contracts__item(class=`${contract.group && 'group'}`)
-          .contracts__header.active
+          .contracts__header
             h2.contracts__title
               if contract.selected
                 i.icon-check

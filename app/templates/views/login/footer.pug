@@ -3,6 +3,7 @@
 -     title: 'Центр Обслуживания Клиентов',
 -     phone: {
 -       number: '0-800-30-15-15',
+-       tel: '0800301515',
 -       text: 'Звонки в пределах Украины бесплатны',
 -     },
 -     email: 'order@groupautoukraine.com',
@@ -15,6 +16,7 @@
 -     },
 -     phone: {
 -       number: '0-800-30-20-02',
+-       tel: '0800302002',
 -       text: 'Звонки в пределах Украины бесплатны',
 -     },
 -     email: 'customerservice@groupautoukraine.com',
@@ -37,14 +39,14 @@ footer.login-footer
           img.logo__img(src=contact.logo.src alt=contact.logo.alt)
       if contact.phone
         .phone
-          p.phone__number #{contact.phone.number}
+          a(href=`tel:${contact.phone.tel}`).phone__number #{contact.phone.number}
           p.phone__text #{contact.phone.text}
       if contact.email
         .email 
           a.email__link(href="mailto:"+contact.email) #{contact.email}
       if contact.list
-        ul.schedule
+        ul.work-schedule
           each item in contact.list
-            li.schedule__item
-              span.schedule__day #{item.day}
-              span.schedule__time #{item.time}
+            li.work-schedule__item
+              span.work-schedule__day #{item.day}
+              span.work-schedule__time #{item.time}

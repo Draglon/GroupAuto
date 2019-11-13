@@ -12577,6 +12577,27 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     $(this).prev().toggleClass('active');
   });
+
+  // Contracts
+  $('.contracts__header').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).next().toggleClass('active');
+
+    let modalHeight = $('.modal').innerHeight();
+    let headerHeight = $('.modal__header').innerHeight() || 0;
+    let contentHeight = $('.modal__content').innerHeight();
+    let footerHeight = $('.modal__footer').innerHeight() || 0;
+
+    if(contentHeight > modalHeight) {
+      $('.modal__content').css({
+        'overflow': 'auto',
+        'height': modalHeight,
+      });
+    }
+    $('.modal__content').css({
+      'padding': `${headerHeight}px 1.5em ${footerHeight}px`,
+    });
+  });
   
   // STUBS - (remove after deploy)
   $('#btnOrderSend--stub').on('click', function() { openModal('#modalOrderSend'); });

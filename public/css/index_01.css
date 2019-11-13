@@ -2077,6 +2077,9 @@ input[type=radio]:checked + label:after {
 }
 
 .modal-details-model .order__btns .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -2252,6 +2255,7 @@ input[type=radio]:checked + label:after {
 }
 
 .login-footer .phone__number {
+  color: #333;
   font-size: 2.8em;
   font-weight: 500;
 }
@@ -2265,20 +2269,20 @@ input[type=radio]:checked + label:after {
   font-size: 1.4em;
 }
 
-.login-footer .schedule {
+.login-footer .work-schedule {
   padding-top: .2em;
 }
 
-.login-footer .schedule__item {
+.login-footer .work-schedule__item {
   margin-bottom: .2em;
 }
 
-.login-footer .schedule__day {
+.login-footer .work-schedule__day {
   font-size: 1.2em;
   font-weight: 500;
 }
 
-.login-footer .schedule__time {
+.login-footer .work-schedule__time {
   color: #b7bcc4;
   font-size: 1.2em;
   font-weight: 500;
@@ -2362,6 +2366,7 @@ input[type=radio]:checked + label:after {
 }
 
 .contacts .phone__number {
+  color: #333;
   font-size: 1.8em;
   font-weight: 500;
 }
@@ -2390,26 +2395,26 @@ input[type=radio]:checked + label:after {
   font-weight: 500;
 }
 
-.contacts .schedule {
+.contacts .work-schedule {
   padding-top: 1em;
   padding-left: 3.5em;
   position: relative;
 }
 
-.contacts .schedule i {
+.contacts .work-schedule i {
   top: 1.4em;
 }
 
-.contacts .schedule__item {
+.contacts .work-schedule__item {
   margin-bottom: .2em;
 }
 
-.contacts .schedule__day {
+.contacts .work-schedule__day {
   color: #6e7788;
   font-size: 1.2em;
 }
 
-.contacts .schedule__time {
+.contacts .work-schedule__time {
   color: #6e7788;
   font-size: 1.2em;
   font-weight: 500;
@@ -2849,6 +2854,14 @@ input[type=radio]:checked + label:after {
   font-size: 22px;
   margin-top: -2px;
   margin-right: .5em;
+}
+
+.contracts__content {
+  display: none;
+}
+
+.contracts__content.active {
+  display: block;
 }
 
 .contracts__list {

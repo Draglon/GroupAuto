@@ -51,6 +51,13 @@
     } 
   }
 
+  &__content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
   &__list {
     padding-top: 1.2em;
   }

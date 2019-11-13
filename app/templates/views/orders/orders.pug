@@ -70,7 +70,9 @@ section.section.section--orders
           .order__item.active
             label.order__label Номер заказа:
             span.order__value
-              a(href="/order.html") #{order.orderNumber}
+              span.order__select
+                a(href="/order.html") #{order.orderNumber}
+                  i.icon-arrow-down
 
           .order__item.active
             label.order__label Дата заказа:
@@ -89,7 +91,10 @@ section.section.section--orders
 
           .order__item
             label.order__label Контракт:
-            span.order__value.contract #{order.contract}
+            span.order__value.contract
+              span.order__select
+                | #{order.contract}
+                i.icon-arrow-down
 
           .order__item
             label.order__label Пометка:
