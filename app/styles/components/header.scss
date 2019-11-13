@@ -40,6 +40,7 @@
   justify-content: space-between;
 
   &__field {
+    background-color: $white;
     position: relative;
     width: calc(100% - 50px);
 
@@ -50,10 +51,14 @@
       top: 50%;
       right: 16px;
       transform: translateY(-50%);
+      z-index: 1;
     }
 
     input {
+      background-color: $white_00;
+      position: relative;
       height: 40px;
+      z-index: 2;
     }
   }
 
