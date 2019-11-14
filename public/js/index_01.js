@@ -12397,18 +12397,18 @@ function openModal(modal) {
   $('#overlay').addClass('active');
   $('body').addClass('not-scroll');
 
-  let modalHeight = $('.modal, .sidebar').innerHeight();
-  let headerHeight = $('.modal__header, .sidebar__header').innerHeight() || 0;
-  let contentHeight = $('.modal__content, .sidebar__content').innerHeight();
-  let footerHeight = $('.modal__footer, .sidebar__footer').innerHeight() || 0;
+  let modalHeight = $(`${modal}, .sidebar`).innerHeight();
+  let headerHeight = $(`${modal} .modal__header, .sidebar__header`).innerHeight() || 0;
+  let contentHeight = $(`${modal} .modal__content, .sidebar__content`).innerHeight();
+  let footerHeight = $(`${modal} .modal__footer, .sidebar__footer`).innerHeight() || 0;
 
   if(contentHeight > modalHeight) {
-    $('.modal__content, .sidebar__content').css({
+    $(`${modal} .modal__content, .sidebar__content`).css({
       'overflow': 'auto',
       'height': modalHeight,
     });
   }
-  $('.modal__content, .sidebar__content').css({
+  $(`${modal} .modal__content, .sidebar__content`).css({
     'padding': `${headerHeight}px 1.5em ${footerHeight}px`,
   });
 }
@@ -12419,7 +12419,7 @@ function closeModal(modal) {
   $('body').removeClass('not-scroll');
 }
 
-// =========================================== Form - validation =======================================
+// =========================================== Form - validation ==================================
 $.validator.addMethod("customemail",
   function(value, element) {
     return /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value);
@@ -12466,7 +12466,7 @@ $.validator.addMethod("nphone",
   "Invalid phone"
 );
 
-// ============================================ Form =====================================
+// ============================================ Form =============================================
 var form = function(formContact) {
   $(formContact + " input").change(function(){
     $(this).val($.trim($(this).val()));
@@ -12493,7 +12493,7 @@ var form = function(formContact) {
   });
 };
 
-// =========================================== Slider ==========================
+// =========================================== Slider ============================================
 var slider = function (nameId) {
   $(nameId).flexisel({
       visibleItems: 1,
@@ -12509,7 +12509,7 @@ var slider = function (nameId) {
   });
 };
 
-// =========================================== Document Ready ======================================
+// =========================================== Document Ready ====================================
 $(document).ready(function() {
   // Open modal
   $('#btnForgotPassword').on('click', function() { openModal('#modalForgotPassword'); });
@@ -12527,7 +12527,7 @@ $(document).ready(function() {
   $('#btnApplicabilityTable').on('click', function() { openModal('#modalApplicabilityTable'); });
   $('#btnCheckAvailability').on('click', function() { openModal('#modalCheckAvailability'); });
   $('#btnCheckAvailabilityAnalogs').on('click', function() { openModal('#modalCheckAvailabilityAnalogs'); });
-  $('#btnModelDetails').on('click', function() { openModal('#modalModelDetails'); });
+  $('#btnDetailsModel').on('click', function() { openModal('#modalDetailsModel'); });
   $('#btnSelectOrder').on('click', function() { openModal('#modalSelectOrder'); });
   // Close modal
   $('#modalCancel, #modalClose, #overlay').on('click', function() { closeModal('.modal'); });
@@ -12612,13 +12612,13 @@ $(document).ready(function() {
 });
 
 
-// =========================================== Window Resize and Document Ready ====================
+// =========================================== Window Resize and Document Ready ==================
 var callback = function() {
   win_width = window.innerWidth;
   win_height = window.innerHeight;
 };
 
-// =========================================== Window Scroll ====================
+// =========================================== Window Scroll =====================================
 var callbackScroll = function() {
   win_scroll = $(this).scrollTop();
 };

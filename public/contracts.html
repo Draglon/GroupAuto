@@ -14,7 +14,7 @@
     <figure class="logo"><img class="logo-img" src="./images/logo-small.png" alt="Groupauto"></figure>
     <ul class="menu">
       <li class="menu__item" id="btnContacts"><i class="icon-phone"></i></li>
-      <li class="menu__item" id="btnDetails"><i class="icon-details"></i></li>
+      <li class="menu__item" id="btnDetailsModel"><i class="icon-details"></i></li>
       <li class="menu__item" id="btnMenu"><i class="icon-menu"></i></li>
     </ul>
   </div>
@@ -315,64 +315,54 @@
     </div>
   </div>
 </div>
-<div class="modal modal-details" id="modalDetails"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
+<div class="modal modal-details-model" id="modalDetailsModel"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
   <header class="modal__header">
-    <h1 class="modal__title">Дополнительная информация</h1>
+    <h1 class="modal__title">Детали</h1>
   </header>
   <div class="modal__content">
-    <div class="modal-details__info">
-      <div class="modal-details__item">
-        <h2 class="modal-details__title">Способ получения</h2>
-        <div class="modal-details__text">Доставка</div>
+    <div class="orders__content">
+      <div class="order">
+        <h1 class="order__title">Test 33</h1>
+        <div class="order__item active">
+          <label class="order__label">Дата заказа:</label><span class="order__value">1189-10</span>
+        </div>
+        <div class="order__item active">
+          <label class="order__label">Сумма:</label><span class="order__value"><span class="order__select">4598-54 Нал/ДН<i class="icon-arrow-down"></i></span></span>
+        </div>
       </div>
-      <div class="modal-details__item">
-        <h2 class="modal-details__title">Торговая точка</h2>
-        <div class="modal-details__text">Основная, д.154, ул.Чорновола, г.Хмельницкий, Хмелн-ая обл. Украина</div>
+      <div class="order">
+        <h1 class="order__title">“Euro Gold” г.Днепр</h1>
+        <div class="order__item active">
+          <label class="order__label">Кред.условия:</label><span class="order__value">100 y.e/14 дн.</span>
+        </div>
+        <div class="order__item active">
+          <label class="order__label">Переплата:</label><span class="order__value">0,00 у.е</span>
+        </div>
+        <button class="btn btn-primary">Создать счет на оплату</button>
       </div>
-      <div class="modal-details__item">
-        <h2 class="modal-details__title">Время отгрузки со склада</h2>
-        <div class="modal-details__text">02.09.2019 в 14:00</div>
+      <div class="order__total">
+        <div class="order__item active">
+          <label class="order__label">Unit-резерв:</label><span class="order__value">0</span>
+        </div>
+        <div class="order__item active">
+          <label class="order__label">Unit-баланс:</label><span class="order__value">0</span>
+        </div>
+        <div class="order__item active">
+          <label class="order__label">Резерв:</label><span class="order__value">0,00 у.е</span>
+        </div>
+        <div class="order__currency">
+          <label class="order__label">Курс валют:</label><span class="order__value">1у.е = 28,20 грн</span>
+        </div>
       </div>
-      <div class="modal-details__item">
-        <h2 class="modal-details__title">Способ доставки</h2>
-        <div class="modal-details__text">Доставка по городу</div>
-      </div>
-      <div class="modal-details__item">
-        <h2 class="modal-details__title">Планируемое прибытие</h2>
-        <div class="modal-details__text">03.09.2019 в 16:00</div>
-      </div>
-      <div class="modal-details__item">
-        <h2 class="modal-details__title">Комментарий</h2>
-        <div class="modal-details__text">Заказ для Ford Kuga II 1.6 2013г. Ecoboost 4х4</div>
-      </div>
-    </div>
-    <div class="modal-details__request">
-      <h2 class="modal-details__title">Заявка</h2>
-      <div class="modal-details__item">
-        <label class="modal-details__label">Номер заявки</label><span class="modal-details__value">538393</span>
-      </div>
-      <div class="modal-details__item">
-        <label class="modal-details__label">Дата заявки</label><span class="modal-details__value">02.09.2019</span>
-      </div>
-      <div class="modal-details__item">
-        <label class="modal-details__label">Сумма заявки</label><span class="modal-details__value">4,42 у.е</span>
-      </div>
-    </div>
-    <div class="modal-details__sale">
-      <h2 class="modal-details__title">Продажа</h2>
-      <div class="modal-details__item">
-        <label class="modal-details__label">Номер продажи</label><span class="modal-details__value">-</span>
-      </div>
-      <div class="modal-details__item">
-        <label class="modal-details__label">Дата продажи</label><span class="modal-details__value">-</span>
-      </div>
-      <div class="modal-details__item">
-        <label class="modal-details__label">Сумма продажи</label><span class="modal-details__value">-</span>
+      <div class="order__btns">
+        <button class="btn btn-green"><i class="icon-delivery"></i>Отгрузка разрешена</button>
+        <button class="btn btn-pink"><i class="icon-delivery"></i>Отгрузка разрешена</button>
+        <button class="btn btn-red"><i class="icon-delivery"></i>Отгрузка запрещена</button>
       </div>
     </div>
   </div>
   <footer class="modal__footer">
-    <button class="btn btn-transparent btn-close" id="modalCancel">Закрыть</button>
+    <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Закрыть</button>
   </footer>
 </div>
 <div class="overlay" id="overlay"></div>
