@@ -868,6 +868,10 @@ input[type=radio]:checked + label:after {
   line-height: 1.15em;
 }
 
+.modal__content {
+  overflow: auto;
+}
+
 .modal__footer {
   background-color: #fff;
   display: flex;

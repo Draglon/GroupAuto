@@ -50,6 +50,10 @@
       line-height: 1.15em;
     }
   }
+  
+  &__content {
+    overflow: auto;
+  }
 
   &__footer {
     background-color: $white;

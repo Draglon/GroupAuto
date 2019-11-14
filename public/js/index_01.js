@@ -12404,7 +12404,6 @@ function openModal(modal) {
 
   if(contentHeight > modalHeight) {
     $(`${modal} .modal__content, .sidebar__content`).css({
-      'overflow': 'auto',
       'height': modalHeight,
     });
   }
