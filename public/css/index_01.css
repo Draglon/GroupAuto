@@ -400,8 +400,22 @@ select {
   appearance: none;
 }
 
+input[type=date] {
+  font-size: 1.2em;
+}
+
+input[type=date]::-webkit-clear-button {
+  display: none;
+}
+
 input[type=date]::-webkit-calendar-picker-indicator {
-  -webkit-appearance: none;
+  background: url(.././images/calendar.svg) 100% center no-repeat;
+  border-width: thin;
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .form {
@@ -1897,13 +1911,17 @@ input[type=radio]:checked + label:after {
   color: #6e7788;
   font-size: 14px;
   font-weight: 500;
+  margin: 0 3px;
+}
+
+.modal-filter .filter__date span:first-child {
+  margin-left: 0;
 }
 
 .modal-filter .filter__date .input--date {
   display: inline;
-  margin: 0 5px;
   padding: 0 5px;
-  width: 100px;
+  width: 110px;
 }
 
 .modal-select-model {

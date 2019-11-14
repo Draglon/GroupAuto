@@ -53,8 +53,16 @@ select {
 }
 
 input[type=date] {
+  font-size: $font-size12;
+  &::-webkit-clear-button { display: none; }
   &::-webkit-calendar-picker-indicator {
-    -webkit-appearance: none;
+    background: url('../images/calendar.svg') 100% center no-repeat;
+    border-width: thin;
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    width: 20px;
+    height: 20px;
   }
 }
 
