@@ -144,9 +144,9 @@ const common = merge([
         template: PATHS.source + '/templates/pages/modals/checkAvailabilityAnalogs.pug'
       }),
       new HtmlWebpackPlugin({
-        filename: 'modelDetailsModal.html',
+        filename: 'detailsModelModal.html',
         chunks: ['index', 'common'],
-        template: PATHS.source + '/templates/pages/modals/modelDetails.pug'
+        template: PATHS.source + '/templates/pages/modals/detailsModel.pug'
       }),
       new HtmlWebpackPlugin({
         filename: 'selectOrderModal.html',
