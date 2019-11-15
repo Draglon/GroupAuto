@@ -13,15 +13,21 @@ function openModal(modal) {
   let headerHeight = $(`${modal} .modal__header, .sidebar__header`).innerHeight() || 0;
   let contentHeight = $(`${modal} .modal__content, .sidebar__content`).innerHeight();
   let footerHeight = $(`${modal} .modal__footer, .sidebar__footer`).innerHeight() || 0;
+  let blockFixedToTopHeight = $(`${modal} .blockFixedToTop`).innerHeight() || 0;
 
   if(contentHeight > modalHeight) {
     $(`${modal} .modal__content, .sidebar__content`).css({
       'height': modalHeight,
+      'padding': `${headerHeight + blockFixedToTopHeight}px 1.5em ${footerHeight}px`,
+    });
+    $(`${modal} .blockFixedToTop`).css({
+      'top': headerHeight,
+    });
+  } else {
+    $(`${modal} .modal__content, .sidebar__content`).css({
+      'padding': `${headerHeight}px 1.5em ${footerHeight}px`,
     });
   }
-  $(`${modal} .modal__content, .sidebar__content`).css({
-    'padding': `${headerHeight}px 1.5em ${footerHeight}px`,
-  });
 }
 
 function closeModal(modal) {

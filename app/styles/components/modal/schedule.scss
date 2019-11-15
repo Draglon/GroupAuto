@@ -4,6 +4,7 @@
 
 .schedule {
   &__head {
+    background-color: $white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -13,10 +14,6 @@
     & > div {
       font-weight: $font-weight-medium;
     }
-  }
-
-  &__body {
-
   }
 
   &__row {

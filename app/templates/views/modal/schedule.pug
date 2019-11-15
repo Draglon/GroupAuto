@@ -29,9 +29,10 @@
 
   .modal__content
     .schedule
-      .schedule__head
-        each thead in schedule.thead
-          .schedule__item #{thead}
+      .blockFixedToTop
+        .schedule__head
+          each thead in schedule.thead
+            .schedule__item #{thead}
       .schedule__body
         each tbody in schedule.tbody
           .schedule__row(class=(tbody.selected && 'selected'))
