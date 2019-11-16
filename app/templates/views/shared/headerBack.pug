@@ -1,0 +1,44 @@
+- var logo = {
+-   src: require('../../../images/logo-small.png'),
+-   alt: 'Groupauto',
+- }
+- var results = [
+-   'фильтр маслянный',
+-   'насос',
+-   '914/5',
+-   'тяга стабилизатора',
+-   'W 912/8',
+-   'DS DOX-1349',
+- ]
+- var backLink = "Назад";
+
+header.header
+  .header__top
+    //- figure.logo
+    //-   img.logo-img(src=logo.src alt=logo.alt)
+    a.back-link(href="#") #{backLink}
+    ul.menu
+      li.menu__item#btnContacts
+        i.icon-phone
+      li.menu__item#btnDetailsModel
+        i.icon-details
+      li.menu__item#btnMenu
+        i.icon-menu
+
+  .search
+    .search__field
+      i.icon-arrow-down
+      input#searchField(type="text" placeholder="Поиск")
+      .search__dropdown#searchDropdown
+        .search__results
+          each result in results
+            .search__item
+              a(href="#") #{result}
+        .search__btns
+          .search__btn
+            a(href="#").btn.btn-transparent Распродажа
+          .search__btn
+            a(href="#").btn.btn-transparent Уценка
+
+    button.btn.btn-primary.btn-search#btnSearch(type="button")
+      i.icon-search

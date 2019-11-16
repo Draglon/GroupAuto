@@ -15,6 +15,21 @@
     justify-content: space-between;
     margin-bottom: 1.5em;
   }
+
+  .back-link {
+    color: $gray-dark;
+    display: flex;
+    align-items: center;
+    font-size: $font-size14;
+    font-weight: $font-weight-medium;
+    height: 24px;
+
+    &:before {
+      content: '\e920';
+      font-family: 'GroupAuto';
+      font-size: 26px;
+    }
+  }
 }
 
 .menu {

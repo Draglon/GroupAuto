@@ -134,6 +134,10 @@
   content: "\E904";
 }
 
+.icon-arrow-left:before {
+  content: "\E920";
+}
+
 .icon-arrow-down:before {
   content: "\E903";
 }
@@ -677,6 +681,21 @@ input[type=radio]:checked + label:after {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5em;
+}
+
+.header .back-link {
+  color: #6e7788;
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: 500;
+  height: 24px;
+}
+
+.header .back-link:before {
+  content: '\E920';
+  font-family: 'GroupAuto';
+  font-size: 26px;
 }
 
 .menu {
