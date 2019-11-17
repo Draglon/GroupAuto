@@ -46,12 +46,6 @@ textarea {
   &:-ms-input-placeholder {color: $placeholder-color;}
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 input[type=date] {
   font-size: $font-size12;
   &::-webkit-clear-button { display: none; }
