@@ -398,12 +398,6 @@ textarea:-ms-input-placeholder {
   color: #b7bcc4;
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 input[type=date] {
   font-size: 1.2em;
 }
@@ -662,6 +656,60 @@ input[type=radio]:checked + label:before {
 
 input[type=radio]:checked + label:after {
   background-color: #2c80c9;
+}
+
+select {
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select-selected {
+  background-color: inherit;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: none;
+  color: #6e7788;
+  font-size: 1.4em;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  padding: 0 15px;
+  height: 36px;
+  line-height: 36px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.select-selected.error {
+  border-color: #f00 !important;
+}
+
+.select-selected.select-arrow-active {
+  border-color: #2c80c9 !important;
+}
+
+.select-items {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: .7em 1em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.select-items > div {
+  color: #6e7788;
+  font-size: 1.2em;
+  padding: .3em 0;
+  white-space: nowrap;
+}
+
+.select-hide {
+  display: none;
 }
 
 .header {

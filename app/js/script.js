@@ -136,7 +136,7 @@ $(document).ready(function() {
   $('#btnShowProduct').on('click', function() { openModal('#modalProductDescription'); });
   $('#btnContracts').on('click', function() { openModal('#modalContracts'); });
   $('#btnFilter').on('click', function() { openModal('#modalFilter'); });
-  $('#btnSearch').on('click', function() { openModal('#modalSearch'); });
+  $('.btn-search').on('click', function() { openModal('#modalSearch'); });
   $('#btnSelectModel').on('click', function() { openModal('#modalSelectModel'); });
   $('#btnSchedule').on('click', function() { openModal('#modalSchedule'); });
   $('#btnApplicabilityTable').on('click', function() { openModal('#modalApplicabilityTable'); });
