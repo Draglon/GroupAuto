@@ -1142,11 +1142,12 @@ input[type=radio]:checked + label:after {
 
 .slider__content {
   position: relative;
-  padding: 2em 0;
+  padding-bottom: 2em;
 }
 
 .slider__figure {
   position: relative;
+  max-width: 100%;
 }
 
 .slider__figure img {
@@ -3024,6 +3025,15 @@ input[type=radio]:checked + label:after {
   font-size: 2.4em;
 }
 
+.sidebar .blockFixedToTop {
+  background-color: #fff;
+  padding: 0 1.5em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
 .sidebar__header {
   background-color: #fff;
   padding: 1.6em 5em .8em 1.5em;
@@ -3037,6 +3047,19 @@ input[type=radio]:checked + label:after {
 .sidebar__header h1 {
   color: #1e588a;
   line-height: 1.15em;
+}
+
+.sidebar__content {
+  overflow: auto;
+  height: 100%;
+}
+
+.sidebar .advertising {
+  padding: 0;
+}
+
+.sidebar .footer {
+  margin: 0 -1.5em;
 }
 
 .delivery {

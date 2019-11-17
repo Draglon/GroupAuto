@@ -1,0 +1,12 @@
+extends ../../base
+block title
+  | Описание товара
+
+block content
+  .page
+    .wrapper
+      button.btn.btn-primary#btnProductDescriptionPanel Описание товара
+
+block modal
+  include ../../views/sidebar/productDescription
+  include ../../views/shared/overlay

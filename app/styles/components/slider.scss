@@ -7,11 +7,12 @@
 
   &__content {
     position: relative;
-    padding: 2em 0;
+    padding-bottom: 2em;
   }
 
   &__figure {
     position: relative;
+    max-width: 100%;
 
     img {
       display: inline-block;

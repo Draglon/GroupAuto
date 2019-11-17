@@ -4,22 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
-    <title>Попап Корзина
+    <title>Корзина
     </title>
   <link href="./css/index_01.css" rel="stylesheet"></head>
   <body>
     <main class="main">
       <div class="page">
         <div class="wrapper">
-          <button class="btn btn-primary btn-cart">Корзина</button>
+          <button class="btn btn-primary" id="btnCartPanel">Корзина</button>
         </div>
       </div>
     </main>
-<div class="modal modal-cart" id="modalCart"><span class="modal__close" id="modalClose"><i class="icon-cross"></i></span>
-  <header class="modal__header">
-    <h1 class="modal__title">Выбранный товар</h1>
+<aside class="sidebar" id="sidebar"><span class="sidebar__close" id="sidebarClose"><i class="icon-cross"></i></span>
+  <header class="sidebar__header">
+    <h1 class="sidebar__title">Выбранный товар</h1>
   </header>
-  <div class="modal__content">
+  <div class="sidebar__content">
     <div class="blockFixedToTop">
       <div class="product product--select">
         <div class="product__badge stock" data-badge="Акция"></div>
@@ -110,7 +110,7 @@
       </div>
     </div>
   </div>
-</div>
+</aside>
 <div class="overlay" id="overlay"></div>
   <script type="text/javascript" src="js/common_01.js"></script><script type="text/javascript" src="js/index_01.js"></script></body>
 </html>

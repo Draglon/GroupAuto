@@ -119,11 +119,6 @@ const common = merge([
         template: PATHS.source + '/templates/pages/modals/productCancel.pug'
       }),
       new HtmlWebpackPlugin({
-        filename: 'cartModal.html',
-        chunks: ['index', 'common'],
-        template: PATHS.source + '/templates/pages/modals/cart.pug'
-      }),
-      new HtmlWebpackPlugin({
         filename: 'detailsModal.html',
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/modals/details.pug'
@@ -172,6 +167,16 @@ const common = merge([
         filename: 'orderDeliveryPanel.html',
         chunks: ['index', 'common'],
         template: PATHS.source + '/templates/pages/sidebar/orderDelivery.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'cartPanel.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/sidebar/cart.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'productDescriptionPanel.html',
+        chunks: ['index', 'common'],
+        template: PATHS.source + '/templates/pages/sidebar/productDescription.pug'
       }),
 
       new webpack.optimize.CommonsChunkPlugin({

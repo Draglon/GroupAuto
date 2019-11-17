@@ -9,25 +9,23 @@ function openModal(modal) {
   $('#overlay').addClass('active');
   $('body').addClass('not-scroll');
 
-  let modalHeight = $(`${modal}, .sidebar`).innerHeight();
-  let headerHeight = $(`${modal} .modal__header, .sidebar__header`).innerHeight() || 0;
-  let contentHeight = $(`${modal} .modal__content, .sidebar__content`).innerHeight();
-  let footerHeight = $(`${modal} .modal__footer, .sidebar__footer`).innerHeight() || 0;
+  let modalHeight = $(`${modal}`).innerHeight();
+  let headerHeight = $(`${modal} .modal__header, ${modal} .sidebar__header`).innerHeight() || 0;
+  let contentHeight = $(`${modal} .modal__content, ${modal} .sidebar__content`).innerHeight();
+  let footerHeight = $(`${modal} .modal__footer, ${modal} .sidebar__footer`).innerHeight() || 0;
   let blockFixedToTopHeight = $(`${modal} .blockFixedToTop`).innerHeight() || 0;
 
   if(contentHeight > modalHeight) {
-    $(`${modal} .modal__content, .sidebar__content`).css({
+    $(`${modal} .modal__content, ${modal} .sidebar__content`).css({
       'height': modalHeight,
-      'padding': `${headerHeight + blockFixedToTopHeight}px 1.5em ${footerHeight}px`,
-    });
-    $(`${modal} .blockFixedToTop`).css({
-      'top': headerHeight,
-    });
-  } else {
-    $(`${modal} .modal__content, .sidebar__content`).css({
-      'padding': `${headerHeight}px 1.5em ${footerHeight}px`,
     });
   }
+  $(`${modal} .modal__content, ${modal} .sidebar__content`).css({
+    'padding': `${headerHeight + blockFixedToTopHeight}px 1.5em ${footerHeight}px`,
+  });
+  $(`${modal} .blockFixedToTop`).css({
+    'top': headerHeight,
+  });
 }
 
 function closeModal(modal) {
@@ -134,7 +132,7 @@ $(document).ready(function() {
   $('#btnContacts').on('click', function() { openModal('#modalContacts'); });
   $('#btnDetails').on('click', function() { openModal('#modalDetails'); });
   $('#btnDetailsInfo').on('click', function() { openModal('#modalDetails'); });
-  $('.btn-cart').on('click', function() { openModal('#modalCart'); });
+  $('.btn-cart').on('click', function() { openModal('#sidebar'); });
   $('#btnShowProduct').on('click', function() { openModal('#modalProductDescription'); });
   $('#btnContracts').on('click', function() { openModal('#modalContracts'); });
   $('#btnFilter').on('click', function() { openModal('#modalFilter'); });
@@ -153,6 +151,8 @@ $(document).ready(function() {
   $('#btnMenu').on('click', function() { openModal('#asidePanel'); });
   $('#btnOrderSendPanel').on('click', function() { openModal('#sidebar'); });
   $('#btnOrderDeliveryPanel').on('click', function() { openModal('#sidebar'); });
+  $('#btnCartPanel').on('click', function() { openModal('#sidebar'); });
+  $('#btnProductDescriptionPanel').on('click', function() { openModal('#sidebar'); });
   // Close aside panel
   $('#asidePanelClose').on('click', function() { closeModal('#asidePanel'); });
   $('#sidebarClose').on('click', function() { closeModal('#sidebar'); });

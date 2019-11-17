@@ -24,6 +24,15 @@
     i {font-size: $font-size24;}
   }
 
+  .blockFixedToTop {
+    background-color: $white;
+    padding: 0 1.5em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
   &__header {
     background-color: $white;
     padding: 1.6em 5em .8em 1.5em;
@@ -37,5 +46,18 @@
       color: $blue-dark;
       line-height: 1.15em;
     }
+  }
+
+  &__content {
+    overflow: auto;
+    height: 100%;
+  }
+
+  .advertising {
+    padding: 0;
+  }
+
+  .footer {
+    margin: 0 -1.5em;
   }
 }
