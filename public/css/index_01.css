@@ -1987,24 +1987,40 @@ input[type=radio]:checked + label:after {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 1em;
-  padding-bottom: .8em;
 }
 
-.schedule__row.selected {
-  background-color: #2c80c9;
-  margin: 0 -1.5em;
-  padding-right: 1.5em;
-  padding-left: 1.5em;
-}
-
-.schedule__row.selected > div {
-  color: #fff;
+.schedule__row:last-child {
+  border: none;
 }
 
 .schedule__row > div {
   color: #6e7788;
   font-size: 1.2em;
+}
+
+.schedule__radio + .schedule__label {
+  display: flex;
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 1em 0 .8em;
+}
+
+.schedule__radio + .schedule__label:before,
+.schedule__radio + .schedule__label:after {
+  display: none;
+}
+
+.schedule__radio:checked + .schedule__label {
+  background-color: #2c80c9;
+  flex: 0 0 calc(100% + 3em);
+  width: calc(100% + 3em);
+  margin: 0 -1.5em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+}
+
+.schedule__radio:checked + .schedule__label > div {
+  color: #fff;
 }
 
 .schedule__item {

@@ -20,7 +20,7 @@
     <h1 class="modal__title">Выберите расписание</h1>
   </header>
   <div class="modal__content">
-    <div class="schedule">
+    <form class="schedule">
       <div class="blockFixedToTop">
         <div class="schedule__head">
           <div class="schedule__item">Время отгрузки со склада</div>
@@ -30,57 +30,84 @@
       </div>
       <div class="schedule__body">
         <div class="schedule__row">
-          <div class="schedule__item">8:00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          <input class="schedule__radio" type="radio" id="schedule_0" name="schedule">
+          <label class="schedule__label" for="schedule_0">
+            <div class="schedule__item">8:00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
         </div>
         <div class="schedule__row">
-          <div class="schedule__item">9:00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          <input class="schedule__radio" type="radio" id="schedule_1" name="schedule">
+          <label class="schedule__label" for="schedule_1">
+            <div class="schedule__item">9:00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
         </div>
         <div class="schedule__row">
-          <div class="schedule__item">10:00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          <input class="schedule__radio" type="radio" id="schedule_2" name="schedule">
+          <label class="schedule__label" for="schedule_2">
+            <div class="schedule__item">10:00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
         </div>
         <div class="schedule__row">
-          <div class="schedule__item">11.00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
-        </div>
-        <div class="schedule__row selected">
-          <div class="schedule__item">12.00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          <input class="schedule__radio" type="radio" id="schedule_3" name="schedule">
+          <label class="schedule__label" for="schedule_3">
+            <div class="schedule__item">11.00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
         </div>
         <div class="schedule__row">
-          <div class="schedule__item">13.00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          <input class="schedule__radio" type="radio" id="schedule_4" name="schedule" checked>
+          <label class="schedule__label" for="schedule_4">
+            <div class="schedule__item">12.00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
         </div>
         <div class="schedule__row">
-          <div class="schedule__item">14.00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          <input class="schedule__radio" type="radio" id="schedule_5" name="schedule">
+          <label class="schedule__label" for="schedule_5">
+            <div class="schedule__item">13.00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
         </div>
         <div class="schedule__row">
-          <div class="schedule__item">15.00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          <input class="schedule__radio" type="radio" id="schedule_6" name="schedule">
+          <label class="schedule__label" for="schedule_6">
+            <div class="schedule__item">14.00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
         </div>
         <div class="schedule__row">
-          <div class="schedule__item">16.00</div>
-          <div class="schedule__item">Доставка по городу</div>
-          <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          <input class="schedule__radio" type="radio" id="schedule_7" name="schedule">
+          <label class="schedule__label" for="schedule_7">
+            <div class="schedule__item">15.00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
+        </div>
+        <div class="schedule__row">
+          <input class="schedule__radio" type="radio" id="schedule_8" name="schedule">
+          <label class="schedule__label" for="schedule_8">
+            <div class="schedule__item">16.00</div>
+            <div class="schedule__item">Доставка по городу</div>
+            <div class="schedule__item"><span>01.09.2019</span><span>10:00</span></div>
+          </label>
         </div>
       </div>
-    </div>
+      <footer class="modal__footer">
+        <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Закрыть</button>
+        <button class="btn btn-transparent btn-confirm" type="submit">Готово</button>
+      </footer>
+    </form>
   </div>
-  <footer class="modal__footer">
-    <button class="btn btn-transparent btn-cancel" id="modalCancel" type="button">Закрыть</button>
-    <button class="btn btn-transparent btn-confirm" type="submit">Готово</button>
-  </footer>
 </div>
 <div class="overlay" id="overlay"></div>
   <script type="text/javascript" src="js/common_01.js"></script><script type="text/javascript" src="js/index_01.js"></script></body>

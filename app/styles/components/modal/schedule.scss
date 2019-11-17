@@ -21,23 +21,36 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 1em;
-    padding-bottom: .8em;
 
-    &.selected {
-      background-color: $blue;
-      margin: 0 -1.5em;
-      padding-right: 1.5em;
-      padding-left: 1.5em;
-      
-      & > div {
-        color: $white;
-      }
-    }
+    &:last-child {border: none;}
 
     & > div {
       color: $gray-dark;
       font-size: $font-size12;
+    }
+  }
+
+  &__radio + &__label {
+    display: flex;
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 1em 0 .8em;
+    
+    &:before, &:after {
+      display: none;
+    }
+  }
+
+  &__radio:checked + &__label {
+    background-color: $blue;
+    flex: 0 0 calc(100% + 3em);
+    width: calc(100% + 3em);
+    margin: 0 -1.5em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+
+    & > div {
+      color: $white;
     }
   }
 
