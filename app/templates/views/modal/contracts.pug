@@ -83,7 +83,7 @@
     .contracts
       each contract in contracts
         .contracts__item(class=`${contract.group && 'group'}`)
-          .contracts__header.active
+          .contracts__header
             h2.contracts__title
               if contract.selected
                 i.icon-check

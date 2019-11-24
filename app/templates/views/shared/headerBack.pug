@@ -33,12 +33,12 @@ header.header
         .search__results
           each result in results
             .search__item
-              a(href="#") #{result}
+              span.search__value #{result}
         .search__btns
           .search__btn
-            a(href="#").btn.btn-transparent Распродажа
+            span.btn.btn-transparent.btn-search Распродажа
           .search__btn
-            a(href="#").btn.btn-transparent Уценка
+            span.btn.btn-transparent.btn-search Уценка
 
     button.btn.btn-primary.btn-search#btnSearch(type="button")
       i.icon-search

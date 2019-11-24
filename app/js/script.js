@@ -21,7 +21,8 @@ function openModal(modal) {
     });
   }
   $(`${modal} .modal__content, ${modal} .sidebar__content`).css({
-    'padding': `${headerHeight + blockFixedToTopHeight}px 1.5em ${footerHeight}px`,
+    'padding-top': headerHeight + blockFixedToTopHeight,
+    'padding-bottom': footerHeight,
   });
   $(`${modal} .blockFixedToTop`).css({
     'top': headerHeight,
@@ -118,7 +119,7 @@ var slider = function (nameId) {
       navigationTargetSelector: null,
       autoPlay: {
         enable: true,
-        interval: 3000,
+        interval: 103000,
         pauseOnHover: true,
       }
   });
@@ -166,6 +167,10 @@ $(document).ready(function() {
   $('#searchField').on('click', function() {
     $('#searchDropdown').toggleClass('active');
   });
+  $('.search__value').on('click', function() {
+    $('#searchField').val($(this).text());
+    $('#searchDropdown').toggleClass('active');
+  });
 
   // Orders Show more
   $('.order__show-more').on('click', function() {
@@ -178,15 +183,11 @@ $(document).ready(function() {
   });
 
   // Product cancel
-  $('.product__cancel').on('click', function() {
-    $(this).on('click', function() { openModal('#modalProductCancel'); });
-  });
-  $('#btnOrderSend').on('click', function() {
-    $(this).on('click', function() { openModal('#modalOrderSend'); });
-  });
+  $('.product__cancel').on('click', function() { openModal('#modalProductCancel'); });
+  $('#btnOrderSend').on('click', function() { openModal('#modalOrderSend'); });
   $('#btnConfirmOrderSendSuccess').on('click', function() {
     closeModal('.modal');
-    $(this).on('click', function() { openModal('#modalOrderSendSuccess'); });
+    openModal('#modalOrderSendSuccess');
   });
 
   // Applicability
@@ -226,8 +227,25 @@ $(document).ready(function() {
 
   // Slider
   slider('#slider');
-});
 
+  // Counter
+  $('[data-counter="minus"]').on('click', function() {
+    let inputAmount = $(this).next().find('input');
+    let amount = inputAmount.val();
+    if(amount > 1) amount--;
+    inputAmount.val(amount);
+  });
+  $('[data-counter="amount"] input').blur(function() {
+    let amount = $(this).val();
+    if(amount < 1 || amount === '') amount = 1;
+    $(this).val(amount);
+  });
+  $('[data-counter="plus"]').on('click', function() {
+    let inputAmount = $(this).prev().find('input');
+    let amount = inputAmount.val();
+    inputAmount.val(++amount);
+  });
+});
 
 // =========================================== Window Resize and Document Ready ==================
 var callback = function() {

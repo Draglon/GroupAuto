@@ -4,6 +4,7 @@
 -     title: 'Центр Обслуживания Клиентов',
 -     phone: {
 -       number: '0-800-30-15-15',
+-       tel: '0800301515',
 -       text: 'Звонки в пределах Украины бесплатны',
 -     },
 -   },
@@ -11,6 +12,7 @@
 -     title: 'СЛУЖБА ПОДДЕРЖКИ / ГОРЯЧАЯ ЛИНИЯ',
 -     phone: {
 -       number: '0-800-30-20-02',
+-       tel: '0800302002',
 -       text: 'Звонки в пределах Украины бесплатны',
 -     },
 -     logo: {
@@ -38,5 +40,5 @@
 
         if contact.phone
           .modal-contacts__phone
-            .modal-contacts__phone-number #{contact.phone.number}
+            a.modal-contacts__phone-number(href=`tel:${contact.phone.tel}`) #{contact.phone.number}
             .modal-contacts__phone-text #{contact.phone.text}

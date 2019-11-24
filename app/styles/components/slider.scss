@@ -2,17 +2,18 @@
   background-color: $white;
   border: 1px solid $gray-lightest;
   border-radius: $border-radius-base;
-  padding: 1em;
   margin-bottom: 1.5em;
 
   &__content {
     position: relative;
-    padding-bottom: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
 
   &__figure {
+    display: flex;
+    justify-content: center;
     position: relative;
-    max-width: 100%;
 
     img {
       display: inline-block;
@@ -55,7 +56,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom: 1em;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -83,7 +84,7 @@
 
 .nbs-flexisel-ul {
   position: relative;
-  width: 9999px;
+  width: 99999px;
   margin: 0px;
   padding: 0px;
   list-style-type: none;
@@ -115,6 +116,7 @@
 }
 
 .nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
+  display: none;
   width: 22px;
   height: 22px;
   position: absolute;

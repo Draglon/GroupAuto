@@ -824,7 +824,8 @@ select {
   margin-bottom: 1em;
 }
 
-.search__item a {
+.search__value {
+  cursor: pointer;
   color: #6e7788;
   font-size: 1.4em;
   font-weight: normal;
@@ -945,6 +946,8 @@ select {
 }
 
 .modal__content {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   overflow: auto;
 }
 
@@ -1184,18 +1187,19 @@ select {
   background-color: #fff;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
-  padding: 1em;
   margin-bottom: 1.5em;
 }
 
 .slider__content {
   position: relative;
-  padding-bottom: 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .slider__figure {
+  display: flex;
+  justify-content: center;
   position: relative;
-  max-width: 100%;
 }
 
 .slider__figure img {
@@ -1240,7 +1244,7 @@ select {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 0;
+  bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -1270,7 +1274,7 @@ select {
 
 .nbs-flexisel-ul {
   position: relative;
-  width: 9999px;
+  width: 99999px;
   margin: 0px;
   padding: 0px;
   list-style-type: none;
@@ -1303,6 +1307,7 @@ select {
 
 .nbs-flexisel-nav-left,
 .nbs-flexisel-nav-right {
+  display: none;
   width: 22px;
   height: 22px;
   position: absolute;
@@ -1498,7 +1503,7 @@ select {
 
 .product--description {
   background-color: rgba(255, 255, 255, 0);
-  padding: 2em 0 0;
+  padding: 4.5em 0 0;
   box-shadow: none;
 }
 
@@ -3098,6 +3103,8 @@ select {
 }
 
 .sidebar__content {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   overflow: auto;
   height: 100%;
 }

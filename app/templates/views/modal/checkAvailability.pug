@@ -33,11 +33,11 @@
       .checkProduct__counter
         label.checkProduct__label #{checkLabel}
         .counter
-          .counter__button
+          .counter__button(data-counter='minus')
             i.icon-minus
-          .counter__amount
+          .counter__amount(data-counter='amount')
             input(type='text' value=3)
-          .counter__button
+          .counter__button(data-counter='plus')
             i.icon-plus
       button.btn.btn-primary.btnCheckProduct #{btnCheck}
 
@@ -69,11 +69,11 @@
             .availability__label В заказ
             .availability__value
               .counter
-                .counter__button
+                .counter__button(data-counter='minus')
                   i.icon-minus
-                .counter__amount
+                .counter__amount(data-counter='amount')
                   input(type='text' value=3)
-                .counter__button
+                .counter__button(data-counter='plus')
                   i.icon-plus
 
   footer.modal__footer

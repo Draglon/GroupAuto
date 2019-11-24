@@ -107,11 +107,13 @@
 
   &__item {
     margin-bottom: 1em;
-    a {
-      color: $gray-dark;
-      font-size: $font-size14;
-      font-weight: $font-weight-base;
-    }
+  }
+
+  &__value {
+    cursor: pointer;
+    color: $gray-dark;
+    font-size: $font-size14;
+    font-weight: $font-weight-base;
   }
 
   &__btns {
