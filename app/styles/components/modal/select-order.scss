@@ -1,22 +1,23 @@
 .modal-select-order {
   min-width: 29em;
 
-  .order.selected {
-    background-color: $blue;
+  .order__btns {
+    position: relative;
+  }
 
-    .order__label {
-      color: $white;
-      font-size: $font-size12;
-    }
-    .order__value {
-      color: $white;
-      font-size: $font-size12;
-    }
-    .order__show-more {
+  .order__select {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
 
-      i {
-        color: $white;
-      }
+  .order__show-more {
+    justify-content: flex-end;
+    span {
+      color: $gray-dark;
+      font-size: 1.2em;
+      font-weight: $font-weight-medium;
     }
   }
 }

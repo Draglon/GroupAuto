@@ -67,45 +67,51 @@
     h1.modal__title #{title}
 
   .modal__content
-    .orders__content
-      each order in orders
-        .order(class=(order.selected && 'selected'))
-          .order__item.active
-            label.order__label Номер заказа:
-            span.order__value
-              a(href="/order.html") #{order.orderNumber}
+    form.form(action="")
+      .orders__content
+        each order, index in orders
+          .order
+            .order__item.active
+              label.order__label Номер заказа:
+              span.order__value
+                a(href="/order.html") #{order.orderNumber}
 
-          .order__item.active
-            label.order__label Дата заказа:
-            span.order__value #{order.orderDate}
+            .order__item.active
+              label.order__label Дата заказа:
+              span.order__value #{order.orderDate}
 
-          .order__item.active
-            label.order__label Сумма:
-            span.order__value #{order.amount}
+            .order__item.active
+              label.order__label Сумма:
+              span.order__value #{order.amount}
 
-          .order__item.active
-            label.order__label Статус:
-            span.order__value(class=order.status)
-              | #{status[order.status]}
-              if order.status === 'onProcessing'
-                span #{startProcessing}
+            .order__item.active
+              label.order__label Статус:
+              span.order__value(class=order.status)
+                | #{status[order.status]}
+                if order.status === 'onProcessing'
+                  span #{startProcessing}
 
-          .order__item
-            label.order__label Контракт:
-            span.order__value.contract #{order.contract}
-
-          .order__item
-            label.order__label Пометка:
-            span.order__value #{order.mark}
-
-          if order.document
             .order__item
-              label.order__label Тип документа:
-              span.order__value #{order.document}
+              label.order__label Контракт:
+              span.order__value.contract #{order.contract}
 
-          .order__show-more
-            i.icon-arrow-down
+            .order__item
+              label.order__label Пометка:
+              span.order__value #{order.mark}
 
-  footer.modal__footer
-    button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
-    button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}
+            if order.document
+              .order__item
+                label.order__label Тип документа:
+                span.order__value #{order.document}
+
+          .order__btns
+            .order__select
+              input(type="checkbox" id=`order_${index}` checked=order.selected)
+              label(for=`order_${index}`) Выбрать
+            .order__show-more
+              i.icon-arrow-down
+              span Детальнее
+
+      footer.modal__footer
+        button.btn.btn-transparent.btn-cancel#modalCancel(type="button") #{btnCancel}
+        button.btn.btn-transparent.btn-confirm(type="submit") #{btnConfirm}
