@@ -2222,22 +2222,25 @@ select {
   min-width: 29em;
 }
 
-.modal-select-order .order.selected {
-  background-color: #2c80c9;
+.modal-select-order .order__btns {
+  position: relative;
 }
 
-.modal-select-order .order.selected .order__label {
-  color: #fff;
+.modal-select-order .order__select {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.modal-select-order .order__show-more {
+  justify-content: flex-end;
+}
+
+.modal-select-order .order__show-more span {
+  color: #6e7788;
   font-size: 1.2em;
-}
-
-.modal-select-order .order.selected .order__value {
-  color: #fff;
-  font-size: 1.2em;
-}
-
-.modal-select-order .order.selected .order__show-more i {
-  color: #fff;
+  font-weight: 500;
 }
 
 .modal-check-availability {
@@ -2646,6 +2649,10 @@ select {
 .orders__filter i {
   color: #6e7788;
   font-size: 2.4em;
+}
+
+.orders__content {
+  width: 100%;
 }
 
 .section--order {
