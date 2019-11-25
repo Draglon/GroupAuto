@@ -1,23 +1,37 @@
 .modal-select-order {
   min-width: 29em;
 
-  .order__btns {
-    position: relative;
-  }
+  input[type=radio] + label {
+    display: block;
+    padding: 1.2em 1.5em 0;
+    font-size: $font-size-base;
 
-  .order__select {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .order__show-more {
-    justify-content: flex-end;
-    span {
-      color: $gray-dark;
-      font-size: 1.2em;
-      font-weight: $font-weight-medium;
+    &:before, &:after {
+      display: none;
     }
+  }
+  
+  input[type=radio]:checked + label {
+    background-color: $blue;
+
+    .order__label,
+    .icon-arrow-down {
+      color: $white;
+    }
+
+    .order__value {
+      color: $white;
+      & > a, & > span {
+        color: $white;
+      }
+    }
+
+    .order__show-more {
+      border-color: $white;
+    }
+  }
+
+  .order {
+    padding: 0;
   }
 }
