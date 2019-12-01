@@ -109,22 +109,6 @@ var form = function(formContact) {
   });
 };
 
-// =========================================== Slider ============================================
-var slider = function (nameId) {
-  $(nameId).flexisel({
-      visibleItems: 1,
-      itemsToScroll: 1,
-      animationSpeed: 500,
-      infinite: true,
-      navigationTargetSelector: null,
-      autoPlay: {
-        enable: true,
-        interval: 103000,
-        pauseOnHover: true,
-      }
-  });
-};
-
 // =========================================== Document Ready ====================================
 $(document).ready(function() {
   // Open modal
@@ -226,7 +210,7 @@ $(document).ready(function() {
   form("#loginForm");
 
   // Slider
-  slider('#slider');
+  $('.slider').bxSlider();
 
   // Counter
   $('[data-counter="minus"]').on('click', function() {

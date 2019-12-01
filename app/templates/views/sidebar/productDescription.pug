@@ -64,18 +64,13 @@ aside.sidebar#sidebar
 
   .sidebar__content
     .product.product--description
-      .slider
-        .slider__content
-          ul#slider
-            each slide in slider
-              li.slider__item
-                figure.slider__figure
-                  .slider__badge(class=product.badge data-badge=badge[product.badge])
-                  img(src=slide.src alt=slide.alt)
-          //- nav.slider__nav
-          //-   a.slider__nav-link(href="#")
-          //-   a.slider__nav-link.active(href="#")
-          //-   a.slider__nav-link(href="#")
+      .product__slider
+        .slider
+          each slide in slider
+            .slider__item
+              figure.slider__figure
+                .slider__badge(class=product.badge data-badge=badge[product.badge])
+                img(src=slide.src alt=slide.alt)
 
       h1.product__title #{product.title}
       .product__label #{product.label}
