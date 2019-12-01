@@ -12529,7 +12529,7 @@ $(document).ready(function() {
   $('#btnSelectModel').on('click', function() { openModal('#modalSelectModel'); });
   $('#btnSchedule').on('click', function() { openModal('#modalSchedule'); });
   $('#btnApplicabilityTable').on('click', function() { openModal('#modalApplicabilityTable'); });
-  $('#btnCheckAvailability').on('click', function() { openModal('#modalCheckAvailability'); });
+  $('#btnCheckAvailability, [data-status="checkAvailability"]').on('click', function() { openModal('#modalCheckAvailability'); });
   $('#btnCheckAvailabilityAnalogs').on('click', function() { openModal('#modalCheckAvailabilityAnalogs'); });
   $('#btnDetailsModel').on('click', function() { openModal('#modalDetailsModel'); });
   $('#btnSelectOrder').on('click', function() { openModal('#modalSelectOrder'); });

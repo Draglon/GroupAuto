@@ -154,6 +154,26 @@
   content: "\E900";
 }
 
+.icon-word:before {
+  content: "\E921";
+}
+
+.icon-pdf:before {
+  content: "\E922";
+}
+
+.icon-document:before {
+  content: "\E923";
+}
+
+.icon-user:before {
+  content: "\E971";
+}
+
+.icon-user-tie:before {
+  content: "\E976";
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
