@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-user:before {
+  content: "\e924";
+}
 .icon-search:before {
   content: "\e90f";
 }
@@ -132,10 +135,4 @@
 }
 .icon-document:before {
   content: "\e923";
-}
-.icon-user:before {
-  content: "\e971";
-}
-.icon-user-tie:before {
-  content: "\e976";
 }
