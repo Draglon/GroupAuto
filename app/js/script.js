@@ -1,3 +1,6 @@
+const moment = require('moment');
+moment().format();
+
 // =========================================== Window Size ========================================
 var win_scroll = 0;
 var win_width = 0;
@@ -229,6 +232,14 @@ $(document).ready(function() {
     let amount = inputAmount.val();
     inputAmount.val(++amount);
   });
+
+  $("input[type=date]").on("change", function() {
+    this.setAttribute(
+        "data-date",
+        moment(this.value, "YYYY-MM-DD")
+        .format( this.getAttribute("data-date-format") )
+    )
+  }).trigger("change");
 });
 
 // =========================================== Window Resize and Document Ready ==================

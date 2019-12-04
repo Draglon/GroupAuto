@@ -47,16 +47,32 @@ textarea {
 }
 
 input[type=date] {
+  color: $white_00;
   font-size: $font-size12;
-  &::-webkit-clear-button { display: none; }
+  position: relative;
+  white-space: nowrap;
+  &::-webkit-clear-button,
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button { display: none; }
   &::-webkit-calendar-picker-indicator {
     background: url('../images/calendar.svg') 100% center no-repeat;
     border-width: thin;
-    color: rgba(0, 0, 0, 0);
+    color: $white_00;
     opacity: 1;
     display: block;
     width: 20px;
     height: 20px;
+  }
+
+  &:before {
+    content: attr(data-date);
+    background-color: $white;
+    color: $input-color;
+    padding-left: 9px;
+    position: absolute;
+    top: 0; left: 0;
+    height: $input-height;
+    line-height: $input-height;
   }
 }
 

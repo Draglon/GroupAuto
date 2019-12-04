@@ -415,21 +415,38 @@ textarea:-ms-input-placeholder {
 }
 
 input[type=date] {
+  color: rgba(255, 255, 255, 0);
   font-size: 1.2em;
+  position: relative;
+  white-space: nowrap;
 }
 
-input[type=date]::-webkit-clear-button {
+input[type=date]::-webkit-clear-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
   display: none;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
   background: url(.././images/calendar.svg) 100% center no-repeat;
   border-width: thin;
-  color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0);
   opacity: 1;
   display: block;
   width: 20px;
   height: 20px;
+}
+
+input[type=date]:before {
+  content: attr(data-date);
+  background-color: #fff;
+  color: #6e7788;
+  padding-left: 9px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36px;
+  line-height: 36px;
 }
 
 .form {
@@ -1978,7 +1995,7 @@ select {
 .modal-filter .filter__date .input--date {
   display: inline;
   padding: 0 5px;
-  width: 110px;
+  width: 100px;
 }
 
 .modal-select-model {
@@ -3034,6 +3051,7 @@ select {
 
 .modal-contracts {
   min-width: 29em;
+  height: 80%;
 }
 
 .modal-contracts .contracts {

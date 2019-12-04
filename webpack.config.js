@@ -10,6 +10,7 @@ const extractCSS = require('./webpack/css.extract');
 const uglifyJS = require('./webpack/js.uglify');
 const images = require('./webpack/images');
 const fonts = require('./webpack/fonts');
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 const PATHS = {
   source: path.join(__dirname, 'app'),
@@ -185,6 +186,9 @@ const common = merge([
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery'
+      }),
+      new MomentLocalesPlugin({
+        localesToKeep: ['es-us', 'ru'],
       })
     ]
   },
