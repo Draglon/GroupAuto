@@ -1624,6 +1624,7 @@ select {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  align-content: center;
 }
 
 .product__status {
@@ -1645,13 +1646,23 @@ select {
   background-color: #ffc700;
 }
 
+.product__pr {
+  cursor: pointer;
+  color: #2c80c9;
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-right: 1em;
+  height: 20px;
+}
+
 .product__article {
-  color: #6e7788;
+  cursor: pointer;
+  color: #2c80c9;
   font-size: 3.6em;
   font-weight: 500;
-  line-height: 1;
-  height: 33px;
   margin-top: -7px;
+  height: 33px;
+  line-height: 1;
 }
 
 .product__sum {
@@ -2584,6 +2595,14 @@ select {
   color: #6e7788;
   font-size: 1.2em;
   margin-bottom: 2px;
+}
+
+.contacts .location__link {
+  color: #6e7788;
+}
+
+.contacts .location__link:hover {
+  color: #6e7788;
 }
 
 .contacts .location__map img {

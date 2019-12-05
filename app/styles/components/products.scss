@@ -183,6 +183,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    align-content: center;
   }
 
   &__status {
@@ -204,13 +205,23 @@
     }
   }
 
+  &__pr {
+    cursor: pointer;
+    color: $blue;
+    font-size: $font-size14;
+    font-weight: $font-weight-medium;
+    margin-right: 1em;
+    height: 20px;
+  }
+
   &__article {
-    color: $gray-dark;
+    cursor: pointer;
+    color: $blue;
     font-size: $font-size36;
     font-weight: $font-weight-medium;
-    line-height: 1;
-    height: 33px;
     margin-top: -7px;
+    height: 33px;
+    line-height: 1;
   }
 
   &__sum {

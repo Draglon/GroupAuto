@@ -76,6 +76,7 @@ section.section.section--contacts
             .location
               i.icon-location
               each item in contact.address
-                .location__item #{item}
+                .location__item
+                  a.location__link(href='#' target='_blank') #{item}
             .location__map
               img(src=require('../../../images/map.png') alt="Map")

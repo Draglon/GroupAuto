@@ -110,6 +110,11 @@
       margin-bottom: 2px;
     }
 
+    &__link {
+      color: $gray-dark;
+      &:hover {color: $gray-dark;}
+    }
+
     &__map {
       img {
         max-width: 100%;
