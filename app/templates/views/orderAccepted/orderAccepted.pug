@@ -3,9 +3,12 @@
 
 section.section.section--order
   .wrapper
-    header.order__header
-      h1.order__title(data-subtitle=subTitle) #{title}
+    .blockFixed
+      header.order__header
+        h1.order__title(data-subtitle=subTitle) #{title}
 
-    include ./content/orderContract.pug
-    include ./content/orderExchange.pug
-    include ./content/orderProducts.pug
+      include ./content/orderContract.pug
+      include ./content/orderExchange.pug
+
+    .afterBlockFixed
+      include ./content/orderProducts.pug

@@ -19050,6 +19050,13 @@ $(document).ready(function() {
         .format( this.getAttribute("data-date-format") )
     )
   }).trigger("change");
+
+  $(".blockFixed").css({
+    'top': $('.header').innerHeight() + 'px',
+  });
+  $('.afterBlockFixed').css({
+    'padding-top': $('.blockFixed').innerHeight() + 'px',
+  });
 });
 
 // =========================================== Window Resize and Document Ready ==================
