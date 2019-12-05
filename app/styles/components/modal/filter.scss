@@ -32,6 +32,9 @@
   }
 
   .filter__date {
+    display: flex;
+    align-content: center;
+    align-items: center;
     padding-top: 1em;
 
     span {
