@@ -114,6 +114,44 @@ var form = function(formContact) {
 
 // =========================================== Document Ready ====================================
 $(document).ready(function() {
+  // Forms
+  form("#loginForm");
+
+  // Slider
+  $('.slider').bxSlider();
+
+  // Counter
+  $('[data-counter="minus"]').on('click', function() {
+    let inputAmount = $(this).next().find('input');
+    let amount = inputAmount.val();
+    if(amount > 1) amount--;
+    inputAmount.val(amount);
+  });
+  $('[data-counter="amount"] input').blur(function() {
+    let amount = $(this).val();
+    if(amount < 1 || amount === '') amount = 1;
+    $(this).val(amount);
+  });
+  $('[data-counter="plus"]').on('click', function() {
+    let inputAmount = $(this).prev().find('input');
+    let amount = inputAmount.val();
+    inputAmount.val(++amount);
+  });
+
+  $("input[type=date]").on("change", function() {
+    this.setAttribute(
+        "data-date",
+        moment(this.value, "YYYY-MM-DD")
+        .format( this.getAttribute("data-date-format") )
+    )
+  }).trigger("change");
+});
+
+// =========================================== Window Resize and Document Ready ==================
+var callback = function() {
+  win_width = window.innerWidth;
+  win_height = window.innerHeight;
+
   // Open modal
   $('#btnForgotPassword').on('click', function() { openModal('#modalForgotPassword'); });
   $('#btnForgotPasswordSuccess').on('click', function() { openModal('#modalForgotPasswordSuccess'); });
@@ -209,50 +247,21 @@ $(document).ready(function() {
   $('#btnConfirmOrderSendSuccess--stub').on('click', function() { openModal('#modalOrderSendSuccess'); });
   $('#btnProductCancel--stub').on('click', function() { openModal('#modalProductCancel'); });
 
-  // Forms
-  form("#loginForm");
-
-  // Slider
-  $('.slider').bxSlider();
-
-  // Counter
-  $('[data-counter="minus"]').on('click', function() {
-    let inputAmount = $(this).next().find('input');
-    let amount = inputAmount.val();
-    if(amount > 1) amount--;
-    inputAmount.val(amount);
-  });
-  $('[data-counter="amount"] input').blur(function() {
-    let amount = $(this).val();
-    if(amount < 1 || amount === '') amount = 1;
-    $(this).val(amount);
-  });
-  $('[data-counter="plus"]').on('click', function() {
-    let inputAmount = $(this).prev().find('input');
-    let amount = inputAmount.val();
-    inputAmount.val(++amount);
-  });
-
-  $("input[type=date]").on("change", function() {
-    this.setAttribute(
-        "data-date",
-        moment(this.value, "YYYY-MM-DD")
-        .format( this.getAttribute("data-date-format") )
-    )
-  }).trigger("change");
-
   $(".blockFixed").css({
     'top': $('.header').innerHeight() + 'px',
   });
   $('.afterBlockFixed').css({
     'padding-top': $('.blockFixed').innerHeight() + 'px',
   });
-});
 
-// =========================================== Window Resize and Document Ready ==================
-var callback = function() {
-  win_width = window.innerWidth;
-  win_height = window.innerHeight;
+  // Page - padding-bottom
+  $(".page").css({
+    'padding-bottom': $('.page .footer').innerHeight() + $('.page .advertising').innerHeight() + 'px',
+  });
+
+  $('.page .advertising').css({
+    'bottom': $('.page .footer').innerHeight() + 'px',
+  });
 };
 
 // =========================================== Window Scroll =====================================

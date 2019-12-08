@@ -191,6 +191,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 figure {
   display: block;
 }
@@ -284,10 +289,24 @@ ul li {
 
 .main {
   position: relative;
+  height: 100%;
 }
 
 .page {
   padding-top: 12em;
+  position: relative;
+  min-height: 100%;
+}
+
+.page .advertising {
+  position: absolute;
+  width: 100%;
+}
+
+.page .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .section {
@@ -923,6 +942,7 @@ select {
   background-color: #fff;
   border-radius: 2px;
   display: none;
+  overflow: hidden;
   min-width: 25em;
   max-height: 90%;
   position: fixed;
@@ -1162,7 +1182,7 @@ select {
 }
 
 .advertising {
-  margin: 3em 0;
+  padding: 3em 0;
   text-align: center;
 }
 

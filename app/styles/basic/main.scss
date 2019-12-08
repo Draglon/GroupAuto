@@ -9,6 +9,7 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
+html, body {height: 100%;}
 figure {display: block;}
 img {border: none;display: block;}
 h1, h2, h3, label {font-weight: $font-weight-medium;}
@@ -50,10 +51,24 @@ ul {list-style-type: none;
 // Main
 .main {
   position: relative;
+  height: 100%;
 }
 
 .page {
   padding-top: $header-height;
+  position: relative;
+  min-height: 100%;
+
+  .advertising {
+    position: absolute;
+    width: 100%;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 // Section
