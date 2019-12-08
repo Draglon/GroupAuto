@@ -9,7 +9,9 @@ var win_height = 0;
 // =========================================== Modal & Sidebar ====================================
 function openModal(modal) {
   $(modal).addClass('active');
-  $('#overlay').addClass('active');
+  if (modal !== '#sidebar') {
+    $('#overlay').addClass('active');
+  }
   $('body').addClass('not-scroll');
 
   let modalHeight = $(`${modal}`).innerHeight();
@@ -34,7 +36,9 @@ function openModal(modal) {
 
 function closeModal(modal) {
   $(modal).removeClass('active');
-  $('#overlay').removeClass('active');
+  if (modal !== '#sidebar') {
+    $('#overlay').removeClass('active');
+  }
   $('body').removeClass('not-scroll');
 }
 

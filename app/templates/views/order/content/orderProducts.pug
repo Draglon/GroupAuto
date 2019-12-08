@@ -45,8 +45,8 @@
               input(type='tel' value=3)
             .counter__button(data-counter='plus')
               i.icon-plus
-          .product__status(class=product.status)
-          .product__pr Пр.
+          .product__status(class=product.status data-status="checkAvailability")
+          .product__pr(data-status="checkAvailability") Пр.
         .product__total-item
           .product__sum #{parseFloat(product.price) * 3} y.e
 
