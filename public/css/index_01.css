@@ -471,10 +471,11 @@ input[type=date]:before {
   color: #6e7788;
   padding-left: 9px;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 36px;
-  line-height: 36px;
+  top: 50%;
+  left: 1px;
+  transform: translateY(-50%);
+  height: 30px;
+  line-height: 30px;
 }
 
 .form {

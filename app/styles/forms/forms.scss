@@ -70,9 +70,10 @@ input[type=date] {
     color: $input-color;
     padding-left: 9px;
     position: absolute;
-    top: 0; left: 0;
-    height: $input-height;
-    line-height: $input-height;
+    top: 50%; left: 1px;
+    transform: translateY(-50%);
+    height: 30px;
+    line-height: 30px;
   }
 }
 
